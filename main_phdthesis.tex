@@ -1,0 +1,180 @@
+\documentclass[a4paper,pra,preprintnumbers,amsmath,amssymb,nofootinbib,floatfix,titlepage,openany,12pt]{book}
+
+
+  \usepackage{graphicx}
+%  \usepackage[italian]{babel}
+  \usepackage{amsmath}
+  \usepackage{listings}
+  \usepackage{mathtools}
+  \usepackage{amsfonts}
+  \usepackage{amssymb}
+  \usepackage{booktabs}
+  \usepackage{braket}
+  \usepackage{amsthm}
+  \usepackage{siunitx}
+  \usepackage{pdfpages}
+  \usepackage{bm}
+  \usepackage[suftesi]{frontespizio}
+  \usepackage{color}
+  \usepackage{newfloat}
+  \usepackage{wrapfig}
+  \usepackage{tikz}
+  \usetikzlibrary{patterns}
+  \usepackage{comment}
+  \usepackage{fancyhdr}
+  \usepackage{geometry}
+  \usepackage{chngcntr}
+  \counterwithin*{footnote}{page}
+  \usepackage{mathrsfs}
+  \usepackage{epstopdf}
+  \usepackage[breaklinks]{hyperref}
+
+  \geometry{a4paper,top=2.0cm,bottom=3.0cm,left=3.8cm,right=2.0cm,%
+heightrounded,bindingoffset=5mm}
+
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyfoot{}
+
+  \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+  \renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{#1}}
+
+  \fancyhead[LO]{ \rightmark}
+  \fancyhead[RE]{ \leftmark}
+
+  \fancyfoot[RO]{\thepage}
+  \fancyfoot[LO]{\footnotesize{PhD PreThesis}}
+  \fancyfoot[LE]{\thepage}
+  \fancyfoot[RE]{\footnotesize{PhD PreThesis}}
+
+  \renewcommand{\headrulewidth}{0.01pt}
+  \renewcommand{\footrulewidth}{0.0pt}
+  
+
+  \theoremstyle{plain}
+  \newtheorem{theorem}{Theorem}[section]
+
+  \theoremstyle{plain}
+  \newtheorem{corollario}{Corollario}[section]
+
+  \theoremstyle{plain}
+  \newtheorem{lemma}{Lemma}[section]
+
+  \theoremstyle{definition}
+  \newtheorem{definizione}{Definizione}[section]
+
+  \theoremstyle{definition}
+  \newtheorem{oss}{Osservazione}[section]
+
+  \theoremstyle{plain}
+  \newtheorem{prop}{Proposizione}[section]
+
+
+  \newcommand{\numberset}{\mathbb}
+  \newcommand{\C}{\numberset{C}}
+  \newcommand{\R}{\numberset{R}}
+  \newcommand{\N}{\numberset{N}}
+  \newcommand{\Z}{\numberset{Z}}
+  \newcommand{\D}{\numberset{D}}
+
+  \renewcommand{\vec}{\bm}
+
+  \DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+  \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+  
+
+  \DeclareFloatingEnvironment[
+      fileext=lox,
+      listname={Lista di Codici},
+      name=Codice,
+      placement=tbhp,
+      within=section,
+      chapterlistsgaps=off
+  ]{codice}
+  
+
+  \definecolor{codegreen}{rgb}{0,0.6,0}
+  \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+  \definecolor{codepurple}{rgb}{0.58,0,0.82}
+  \definecolor{backcolour}{rgb}{1.,1.,1.}
+ 
+  \lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+   }
+ 
+  \lstset{style=mystyle}
+
+
+
+\begin{document}
+   
+\begin{frontespizio}
+
+  \Logo{imm/logo.pdf}
+  \Istituzione{University of Pisa}
+  \Divisione{Physics Department}
+  \Scuola{PhD PreThesis}
+  %\Titoletto{Tesi di laurea triennale}
+  \Titolo{Quantum phase transition behavior in\\unitary and dissipation time evolution}
+  \Sottotitolo{Analysis of out-of-equilibrium regimes: round trip and dissipation protocols}
+  \NCandidato{Candidate}
+  \Candidato{Francesco Tarantelli}
+  \NRelatore{Supervisor}{Supervisor}
+  \Relatore{Prof. Ettore Vicari}
+  \Piede{Session 2023/2024}
+
+\end{frontespizio}
+
+%   \includepdf[pages=-,pagecommand={},width=\textwidth]{ .pdf}   
+
+
+\frontmatter  
+   
+%   \include{cpt/ } 
+   
+\tableofcontents
+
+   \include{cpt/0intro}
+   
+\mainmatter
+
+  \renewcommand{\chaptermark}[1]{%
+  \markboth{\chaptername
+  \ \thechapter.\ #1}{}}
+
+   \include{cpt/1outeq}
+
+%\backmatter
+
+   \include{cpt/8concls}
+
+%\mainmatter
+
+  \renewcommand{\chaptermark}[1]{%
+  \markboth{Appendix
+  \ \thechapter.\ #1}{}}
+ 
+  %\include{cpt/9app}
+
+\backmatter
+
+   \bibliography{refs.bib}
+
+\end{document}
