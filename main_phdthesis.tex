@@ -1,8 +1,12 @@
-\documentclass[a4paper,pra,preprintnumbers,amsmath,amssymb,nofootinbib,floatfix,titlepage,openany,12pt]{book}
+\documentclass[a4paper,pra,aps,longbibliography,preprintnumbers,amsmath,amssymb,nofootinbib,floatfix,titlepage,openany,12pt]{book}
 
-
+%  \usepackage[numbers, square]{natbib}
+  \usepackage[style=numeric, backend=bibtex]{biblatex}
+  \addbibresource{bib/refs.bib}
+  \input{bib/biblatex.cfg}
   \usepackage{graphicx}
 %  \usepackage[italian]{babel}
+%  \usepackage[numbers, sectionbib]{natlib}
   \usepackage{amsmath}
   \usepackage{listings}
   \usepackage{mathtools}
@@ -15,7 +19,7 @@
   \usepackage{pdfpages}
   \usepackage{bm}
   \usepackage[suftesi]{frontespizio}
-  \usepackage{color}
+  \usepackage{xcolor}
   \usepackage{newfloat}
   \usepackage{wrapfig}
   \usepackage{tikz}
@@ -27,7 +31,10 @@
   \counterwithin*{footnote}{page}
   \usepackage{mathrsfs}
   \usepackage{epstopdf}
-  \usepackage[breaklinks]{hyperref}
+%  \usepackage{hyperref} %[breaklinks]
+   \usepackage[ocgcolorlinks, linkcolor={green!30!black},citecolor={red!40!black},urlcolor={blue}]{hyperref}
+%   \renewcommand{\ref}[1]{\textcolor{red}{\fbox{\textcolor{green}{\ref{#1}}}}}
+%  \hypersetup{colorlinks, linkcolor={},citecolor={red},urlcolor={blue}}
 
   \geometry{a4paper,top=2.0cm,bottom=3.0cm,left=3.8cm,right=2.0cm,%
 heightrounded,bindingoffset=5mm}
@@ -35,6 +42,19 @@ heightrounded,bindingoffset=5mm}
   \pagestyle{fancy}
   \fancyhead{}
   \fancyfoot{}
+
+  \newcommand{\pt}{\,\, .}
+  \newcommand{\cm}{\,\, ,}
+  \newcommand{\pc}{\,\, ;}
+  \newcommand{\be}[1]{\begin{equation}
+	  \label{#1}}
+  %\newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\ee}{\end{equation}}
+
+  \newcommand{\ba}[2]{ \begin{align}
+  \label{#1} #2 \end{align} }
+  %\newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\ea}{\end{align}}
 
   \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
@@ -121,20 +141,18 @@ heightrounded,bindingoffset=5mm}
  
   \lstset{style=mystyle}
 
-
-
 \begin{document}
    
 \begin{frontespizio}
 
   \Logo{imm/logo.pdf}
-  \Istituzione{University of Pisa}
+  \Istituzione{Universit\`a di Pisa}
   \Divisione{Physics Department}
   \Scuola{PhD PreThesis}
   %\Titoletto{Tesi di laurea triennale}
   \Titolo{Quantum phase transition behavior in\\unitary and dissipation time evolution}
   \Sottotitolo{Analysis of out-of-equilibrium regimes: round trip and dissipation protocols}
-  \NCandidato{Candidate}
+  \NCandidato{Author}
   \Candidato{Francesco Tarantelli}
   \NRelatore{Supervisor}{Supervisor}
   \Relatore{Prof. Ettore Vicari}
@@ -151,7 +169,7 @@ heightrounded,bindingoffset=5mm}
    
 \tableofcontents
 
-   \include{cpt/0intro}
+   \include{intro/intro}
    
 \mainmatter
 
@@ -160,10 +178,11 @@ heightrounded,bindingoffset=5mm}
   \ \thechapter.\ #1}{}}
 
    \include{cpt/1outeq}
+   \include{cpt/2rtrip}
+   \include{cpt/3dissp}
+\backmatter
 
-%\backmatter
-
-   \include{cpt/8concls}
+   \include{concs/concs}
 
 %\mainmatter
 
@@ -174,7 +193,10 @@ heightrounded,bindingoffset=5mm}
   %\include{cpt/9app}
 
 \backmatter
-
-   \bibliography{refs.bib}
+%   \bibliographystyle{apsrev4-1}
+%   \bibliography{bib/refs.bib}
+   
+   \printbibliography[heading=myheading]
+   %\addcontentsline{toc}{chapter}{References}
 
 \end{document}

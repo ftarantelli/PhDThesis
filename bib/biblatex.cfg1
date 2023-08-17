@@ -1,0 +1,35 @@
+\renewbibmacro{in:}{} % Remove the "In:" before the journal title
+
+\ProvidesFile{biblatex.cfg}
+
+% Customize the citation style
+\DeclareNameAlias{sortname}{given-family}
+\DeclareNameAlias{default}{given-family}
+\renewcommand*{\labelnamepunct}{\addcomma\addspace}
+\renewcommand*{\newunitpunct}{\addcomma\addspace}
+\DeclareFieldFormat{title}{\mkbibquote{#1}}
+\DeclareFieldFormat[article]{journaltitle}{#1}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[article]{year}{#1}
+
+% Custom format for DOI link with journal information
+\newbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\printfield{doi}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}%
+}
+
+% Use the "et al." abbreviation if more than two authors
+%\DefineBibliographyStrings{english}{
+%  andothers = {\textit{et al}\adddot}
+%}
+
