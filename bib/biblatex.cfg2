@@ -21,13 +21,24 @@
 
 % Custom format for DOI link with journal information
 \renewbibmacro*{journal+issuetitle}{%
- \iffieldundef{doi}{
-  \addcomma\addspace\thefield{journaltitle}\addspace\textbf{\thefield{volume}}, \thefield{pages} (\thefield{year}).
-}}
+%  \usebibmacro{journal}%
+%  \setunit*{\addspace}%
+%  \printtext[bibhyperref]{%
+%    \printfield{volume}%
+%    \addcomma\space
+%    \printfield{pages}%
+%    \addspace
+%    \printtext{(}%
+%    \printfield{year}%
+%    \printtext{)}%
+%  }%
+%  \setunit{\addcomma\addspace}%
+%  \printfield{doi}%
+%  \newunit
+}
 \DeclareFieldFormat[article]{doi}{%
   \ifhyperref
     {\href{https://doi.org/#1}{\thefield{journaltitle}\addspace\textbf{\thefield{volume}}, \thefield{pages} (\thefield{year})}}
-    {}
 }
 
 % Use the "et al." abbreviation if more than two authors

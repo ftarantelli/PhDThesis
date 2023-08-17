@@ -1,7 +1,7 @@
 \documentclass[a4paper,pra,aps,longbibliography,preprintnumbers,amsmath,amssymb,nofootinbib,floatfix,titlepage,openany,12pt]{book}
 
 %  \usepackage[numbers, square]{natbib}
-  \usepackage[style=numeric, backend=bibtex]{biblatex}
+  \usepackage[style=numeric, backend=bibtex, sorting=none]{biblatex}
   \addbibresource{bib/refs.bib}
   \input{bib/biblatex.cfg}
   \usepackage{graphicx}
@@ -31,10 +31,10 @@
   \counterwithin*{footnote}{page}
   \usepackage{mathrsfs}
   \usepackage{epstopdf}
-%  \usepackage{hyperref} %[breaklinks]
-   \usepackage[ocgcolorlinks, linkcolor={green!30!black},citecolor={red!40!black},urlcolor={blue}]{hyperref}
+  \usepackage[breaklinks]{hyperref}
+  %\usepackage[ocgcolorlinks, linkcolor={green!30!black},citecolor={red!40!black},urlcolor={blue}, breaklinks=true]{hyperref}
 %   \renewcommand{\ref}[1]{\textcolor{red}{\fbox{\textcolor{green}{\ref{#1}}}}}
-%  \hypersetup{colorlinks, linkcolor={},citecolor={red},urlcolor={blue}}
+  \hypersetup{colorlinks, linkcolor={green!30!black},citecolor={red!40!black},urlcolor={blue}}
 
   \geometry{a4paper,top=2.0cm,bottom=3.0cm,left=3.8cm,right=2.0cm,%
 heightrounded,bindingoffset=5mm}

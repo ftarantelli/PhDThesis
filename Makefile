@@ -4,11 +4,19 @@ frn: main_phdthesis-frn.pdf
 main_phdthesis.pdf: main_phdthesis.tex bib/ concs/ cpt/ imm/ intro/
 	pdflatex main_phdthesis.tex; pdflatex main_phdthesis-frn.tex; bibtex main_phdthesis.aux; pdflatex main_phdthesis.tex; pdflatex main_phdthesis.tex
 	make clear
+	clear
 
 main_phdthesis-frn.pdf: main_phdthesis.tex
 	pdflatex main_phdthesis.tex; pdflatex main_phdthesis-frn.tex; pdflatex main_phdthesis.tex; pdflatex main_phdthesis.tex
 	make clear
 	#rm *frn.*
+
+pdf:
+	pdflatex main_phdthesis.tex
+	clear
+
+aux: 
+	pdflatex main_phdthesis.tex; bibtex main_phdthesis.aux; pdflatex main_phdthesis.tex; pdflatex main_phdthesis.tex
 
 show:
 	evince main_phdthesis.pdf &
