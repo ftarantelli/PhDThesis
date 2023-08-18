@@ -1,6 +1,7 @@
 \section{Equilibrium Quantum Transitions}
 
 \subsection{Continuous Quantum Transition (CQT)}
+\label{CQTeq}
 
 In the thermodynamic limit, i.e. infinite volume limit, same specific models could undergo a continuous phase transition. With the word phase, we intend the physical properties of the ground stare associated with the Hamiltonian and characterized by the values of the Hamiltonian parameters. If this phase changes driving one of this parameter, we are in the presence of a quantum transition and the point, in which that happens, is called transition point.
 
@@ -21,11 +22,39 @@ havior in the thermodynamic limit and their quantum functions satisfy scaling
 power laws characterized by universal critical exponents.
 
 \subsection{First Order Quantum Transition (FOQT)}
+\label{FOQTeq}
 
 Quasi-degenerate vacua naturally arise in the context of quantum phase transitions, after a spontaneous symmetry breaking. Their behavior and coexistence in the non-critical regime is governed by a first-order quantum transition.
+
+It is characterized by the crossings of the lowest-energy states in the infinite-volume limit and in the absence of conservation laws \cite{plissetto2023scaling}.
+Instead, in a finite system, the energy gap among these states remain different from zero, giving rise to the phenomenon of avoided level crossing.
+
 FOQTs are associated with many important out-of-equilibrium effects s, including nucleations and metastability \cite{binder1987theory,bray2002theory}, coarsening \cite{chandran2012kibble}, and anomalous dependence on the boundary conditions \cite{pelissetto2020scaling,panagopoulos2018dynamic,campostrini2015quantum,pelissetto2018finite,rossini2018ground}.
 
 \subsection{Models}
+\label{Models}
 
+\subsubsection{Quantum Ising}
+\label{QIsing}
 
+As a first toy model for the study of quantum phase transitions, we consider the quantum 1D Ising Model whose Hamiltonian is given by:
+
+\be{HIsing}
+	H(g, h) = - \sum_{x=1}^{L-1} \sigma^{(1)}_x \sigma^{(1)}_{x+1}
+	- h \sum_{x=1}^L \sigma^{(1)}_x - g \sum_{x=1}^L \sigma^{(3)}_x \pc
+\ee
+
+where $L$ is the system size and $\sigma_x^{(k)}$ are the Pauli matrices on the 
+$x^{\rm th}$ site. This system develops a quantum critical behavior at $g = g_c = 1$
+and $h=0$, belonging to the 2D Classical Ising universality class. Instead, when $h$
+is different from zero, the lowest states energy gap is not vanish.
+
+Along the RG flux, the relevant parameters associated with the RG perturbations at the 
+fixed point are $r = g-g_c$ and $h$. Their RG dimensions are respectively $y_r=1/\nu=1$
+and $y_h = 15/8$, so that the length scale $\xi$ of the critical modes behaves as
+$\xi \sim \abs{g-g_c}^{-1/y_r}$ for $h=0$, and $\xi \sim \abs{h}^{-1/y_h}$ for $g=g_c$.
+The dynamic exponent $z$ associated with the vanish critical gap $\Delta \sim \xi^{-z}$
+at the transition point, is given by $z=1$. The order parameter field, which distinguishes 
+the two phases and is associated with the longitudinal operators $\sigma_x^{(1)}$, has a
+RG dimension 
 

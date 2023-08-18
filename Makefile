@@ -19,8 +19,8 @@ aux:
 	pdflatex main_phdthesis.tex; bibtex main_phdthesis.aux; pdflatex main_phdthesis.tex; pdflatex main_phdthesis.tex
 
 show:
-	evince main_phdthesis.pdf &
-
+	$(alias_stdout) evince main_phdthesis.pdf &
+	#export alias_stdout='bash ~/Desktop/stdout.sh'
 main:
 	vim main_phdthesis.tex
 
@@ -29,6 +29,9 @@ biblatex:
 
 ref:
 	vim bib/refs.bib
+
+sref:
+	grep bib/refs.bib -e "$(word 2, $(MAKECMDGOALS))" -A 4 -B 4
 
 clear:
 	find -name "main_phdthesis*" | grep -v "s.tex" | grep -v "s.pdf"| xargs rm
