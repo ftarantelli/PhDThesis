@@ -1,1 +1,120 @@
-\section{Lindblad framework}
+\section{Time-evolution in Open Quantum Systems}
+
+
+\subsection{Lindblad framework}
+
+To model the weak interaction between the previous quantum model and the surrounding
+environment, we consider local external baths each in contact with only site of the system
+chain. We work under the Born-Markov and secular approximations, so dissipators 
+can be effectively modeled employing Lindblad quantum jump operators $\hat L_x\,$. 
+In this limit, the time evolution of the density matrix can be described by Markovian
+master equations in the Lindblad form as \cite{BP-openquantumsystembook, TV-21}:
+\ba{eqlindblad}
+	\frac{d\rho}{dt} = {\cal L}[\rho] = 
+		-i \Bigr[ H, \rho \Bigr] + \mathbb{D}[\rho] \pc
+\ea
+
+where ${\cal L}$ is the Liouville superoperator, and $\mathbb{D}$ is the corresponding 
+dissipation term, whose strength is regulated by the homogeneous coupling $w$:
+\ba{dissipator}
+	\mathbb{D}[\rho] = & w \sum_{x \in {\cal I}} 
+		\mathbb{D}_x[\rho] \cm \\
+	\mathbb{D}_x[\rho] = &
+		\hat L_x \rho \hat L_x^\dagger - 
+		\frac{1}{2} \Bigl\{ \rho, \hat L^\dagger_x \hat L_x \Bigl\} \pc
+\ea
+where we indicate with ${\cal I}$ the set of the external baths in contact with the
+quantum system.
+
+\subsection{Thermal bath}
+
+If we are interested to achieve an equilibrium Gibbs state at some temperature $T$, we
+can consider the following modelization of interaction with a thermal bath within 
+the Lindblad master equation \eqref{eqlindblad}.
+Let us take a  quantum models described by quadratic Hamiltonians \cite{dr2021self}, 
+such as that of the fermionic Kitaev model \eqref{Hkitaev}. This provides a relatively 
+simple modelization of a thermal bath leading to thermalization in the large-
+time limit of the corresponding Lindblad master equation
+for the density matrix of the system.
+
+The Kitaev Hamiltonian with open boundary conditions can be diagonalized 
+in the Nambu field space by a Bogoliubov transformation \cite{dr2021self, PF70, bla86},
+so that we can rewrite it as:
+\ba{diagHKitaev}
+	\hat H_K(\omega)  = \sum_{k=1} ^L \omega_k \hat b_k^\dagger \hat b_k  \cm
+\ea
+where $\omega_k$ are values of the spectrum of the Bogoliubov eigenoperators $\hat b_k$
+(we are neglecting an irrelevant constant term). Note that both $\omega_k$ and 
+$\hat b_k$ depend on the Hamiltonian parameter $\mu\,$. The relation between the
+fermionic operators $\hat c_x$ and the Bogoliubov eigenoperators 
+$\hat b_k$ can be generally written as \cite{dr2021self, PF70, bla86}:
+\ba{basisfrombtoc}
+	\hat c_x = \sum_{k=1}^L A_{xk} \hat b_k + B_{xk} \hat b^\dagger _k \cm
+\ea
+where $A$ and $B$ are appropriate $LxL$ matrices depending on $\mu\,$.
+Following Refs. \cite{dr2021self, CPR-2022-otto_engine}, we write the dissipator
+$\mathbb{D}_T[\rho]$ in the Lindblad master equation \eqref{eqlindblad} in terms of
+the Bogoliubov eigenoperators as:
+\ba{thermaldissipator}
+	\mathbb{D}_T[\rho] = & \gamma \sum_k \bigr[ 1 - f(\omega_k, T) \bigr] 
+		\bigl( 2 \hat b_k \rho \hat b_k^\dagger -
+			\{ \hat b_k^\dagger \hat b_k, \rho \} \bigl) + \\
+		& + \gamma \sum _k f(\omega_k, T) \bigl( 2 \hat b_k^\dagger \rho \hat b_k -
+                        \{ \hat b_k \hat b_k^\dagger, \rho \} \bigl) \cm
+\ea
+where:
+\be{thermaldensityfunction}
+	f(\omega_k , T ) = \bigl( 1 + e^{\omega_k/T} \bigl)^{-1} \pt
+\ee
+When using this homogeneous dissipator term, the Lindblad master equation 
+\eqref{eqlindblad} ensures the asymptotic large-time thermalization \cite{dr2021self}.
+Therefore,
+\ba{thermalstationarystate}
+	\lim_{t \to \infty} \rho(t) & = \rho_t(\omega, T ) \cm \\
+	\rho_t (w, T ) &  = \sum_n e^{-E_n(\omega)/T} \ket{\phi_n, \omega} 
+					\bra{\phi_n, \omega} \cm
+\ea
+where $\rho_t(\omega,T)$ is the density matrix representing the
+thermal state, $E_n (\omega)$ and $\ket{\phi_n, \omega}$ are the eigenvalues
+and eigenstates of $\hat H(\omega)\,$. The asymptotic approach to
+the thermal distribution is controlled by the decay-rate parameter $\gamma$.
+
+\subsection{Liouvillian gap}
+
+Let us consider the following equation:
+\ba{eigencalL}
+	\widetilde{\cal L}[\widetilde \rho_i] = \lambda_i \widetilde \rho_i \cm
+	\qquad \lambda_i \in \numberset{C} \pc
+\ea
+where $\widetilde {\cal L}$ is the (non-hermitian) Lindblad superoperator after the 
+Choi-Jamiolkowski isomorphism 
+\cite{BP-openquantumsystembook, VZ-2004-superoperatorvidal}, and $\widetilde \rho_i$ is the
+density matrix eigen-operator associated with the complex eigenvalue $\lambda_i$.
+In a few words, the transformation we have mentioned sends the density matrix $\rho$ to 
+$\widetilde \rho$ through the mapping:
+\be{vecrho}
+	\rho_{ij} \ket i \bra j  \longrightarrow  \widetilde \rho_{ij} \ket i \ket j \pt
+\ee
+Therefore, the vectorized $\widetilde \rho$ lives in a $4^L$-dimensional Hilbert space.
+In this basis, the action of $\widetilde{\cal L}$ on 
+$\widetilde \rho$ can be written as follows:
+\ba{vecteqlindblad}
+	\widetilde{\mathcal{L}} =& -i \big(\hat{H} \otimes \hat{\mathbb{I}} 
+		- \hat{\mathbb{I}}\otimes \hat{H}^t \big) + 
+		w\sum_{x \in {\cal I}}\hat{L}_{x}\otimes \hat{L}^*_{x}\\
+	&-\frac{w}{2}\sum_{x \in {\cal I}}\big(\hat{L}^{\dagger}_{x}\hat{L}_{x}
+		\otimes\hat{\mathbb{I}}+\hat{\mathbb{I}}
+			\otimes\hat{L}^t_{x}\hat{L}^*_{x}\big) \pt
+\ea
+It can be shown that all eigenvalues of $\widetilde{\cal L}$ satisfy 
+$ {\rm Re}{\lambda_i } \le 0$ \cite{BP-openquantumsystembook}. The zero mode of the above 
+operator represents the steady-state solution, namely, the NESS of the system. 
+If $\hat L_x$ is not hermitian, the density matrix corresponding to the steady-state 
+solution is not proportional to the identity matrix \cite{KS-2020-boundarydephasing}. 
+We focus on the Liouvillian gap $\Delta_{\lambda}$, which is the non-vanishing eigenvalue
+of ${\cal L}$ with the smallest real part:
+\ba{Lioulliangap}
+\Delta_{\lambda} = − \max_{i} {\rm Re}{\lambda_i } \pt
+\ea
+This quantity controls the typical relaxation time of the longest-living 
+eigenmode differing from the NESS.

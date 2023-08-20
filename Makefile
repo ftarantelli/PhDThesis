@@ -1,7 +1,7 @@
 all: main_phdthesis.pdf
 frn: main_phdthesis-frn.pdf
 
-main_phdthesis.pdf: main_phdthesis.tex bib/ concs/ cpt/ imm/ intro/
+main_phdthesis.pdf: main_phdthesis.tex bib/ concs/ cpt/* imm/ intro/
 	pdflatex main_phdthesis.tex; pdflatex main_phdthesis-frn.tex; bibtex main_phdthesis.aux; pdflatex main_phdthesis.tex; pdflatex main_phdthesis.tex
 	make clear
 	clear
@@ -31,7 +31,7 @@ ref:
 	vim bib/refs.bib
 
 sref:
-	grep bib/refs.bib -e "$(word 2, $(MAKECMDGOALS))" -A 4 -B 4
+	grep bib/refs.bib -e "$(word 2, $(MAKECMDGOALS))" -A 4 -B 6 
 
 clear:
 	find -name "main_phdthesis*" | grep -v "s.tex" | grep -v "s.pdf"| xargs rm
