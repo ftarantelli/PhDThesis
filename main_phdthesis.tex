@@ -58,6 +58,7 @@ heightrounded,bindingoffset=5mm}
   \renewcommand{\chaptermark}[1]{%
   \markboth{#1}{#1}}
 
+
   \fancyhead[LO]{ \rightmark}
   \fancyhead[RE]{ \leftmark}
 
@@ -146,9 +147,10 @@ heightrounded,bindingoffset=5mm}
   \Istituzione{Universit\`a di Pisa}
   \Divisione{Physics Department}
   \Scuola{PhD PreThesis}
-  %\Titoletto{Tesi di laurea triennale}
-  \Titolo{Quantum phase transition behavior in\\unitary and dissipation time evolution}
-  \Sottotitolo{Analysis of out-of-equilibrium regimes: round trip and dissipation protocols}
+  %\Titolo{Quantum phase transition behavior in\\unitary and dissipation time evolution}
+  \Titolo{Out-of-equilibrium dynamics in \\round-trip and dissipation protocols}
+  %\Sottotitolo{Analysis of out-of-equilibrium regimes: round trip and dissipation protocols}
+  \Sottotitolo{Behavior of the quantum phase transitions}
   \NCandidato{Author}
   \Candidato{Francesco Tarantelli}
   \NRelatore{Supervisor}{Supervisor}
@@ -159,11 +161,10 @@ heightrounded,bindingoffset=5mm}
 
 %   \includepdf[pages=-,pagecommand={},width=\textwidth]{ .pdf}   
 
-
 \frontmatter  
    
 %   \include{cpt/ } 
-   
+
 \tableofcontents
 
    \include{intro/intro}
@@ -179,6 +180,12 @@ heightrounded,bindingoffset=5mm}
    \include{cpt/3dissp}
 \backmatter
 
+\renewcommand{\chaptermark}[1]{%
+  \markboth{%
+	  %
+  }{}%
+}
+
    \include{concs/concs}
 
 %\mainmatter
@@ -189,10 +196,12 @@ heightrounded,bindingoffset=5mm}
  
   %\include{cpt/9app}
 
-\backmatter
+
+
+%\backmatter
 %   \bibliographystyle{apsrev4-1}
 %   \bibliography{bib/refs.bib}
-   
+%\chapter[]{ }
    \printbibliography[heading=myheading]
    %\addcontentsline{toc}{chapter}{References}
 

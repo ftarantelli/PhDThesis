@@ -15,7 +15,7 @@ master equations in the Lindblad form as \cite{BP-openquantumsystembook, TV-21}:
 \ea
 
 where ${\cal L}$ is the Liouville superoperator, and $\mathbb{D}$ is the corresponding 
-dissipation term, whose strength is regulated by the homogeneous coupling $w$:
+dissipation term, whose strength is regulated by the coupling $w$:
 \ba{dissipator}
 	\mathbb{D}[\rho] = & w \sum_{x \in {\cal I}} 
 		\mathbb{D}_x[\rho] \cm \\
@@ -51,7 +51,7 @@ $\hat b_k$ can be generally written as \cite{dr2021self, PF70, bla86}:
 \ba{basisfrombtoc}
 	\hat c_x = \sum_{k=1}^L A_{xk} \hat b_k + B_{xk} \hat b^\dagger _k \cm
 \ea
-where $A$ and $B$ are appropriate $LxL$ matrices depending on $\mu\,$.
+where $A$ and $B$ are appropriate $L{\rm x}L$ matrices depending on $\mu\,$.
 Following Refs. \cite{dr2021self, CPR-2022-otto_engine}, we write the dissipator
 $\mathbb{D}_T[\rho]$ in the Lindblad master equation \eqref{eqlindblad} in terms of
 the Bogoliubov eigenoperators as:
@@ -66,7 +66,7 @@ where:
 \be{thermaldensityfunction}
 	f(\omega_k , T ) = \bigl( 1 + e^{\omega_k/T} \bigl)^{-1} \pt
 \ee
-When using this homogeneous dissipator term, the Lindblad master equation 
+When using this dissipator term, the Lindblad master equation 
 \eqref{eqlindblad} ensures the asymptotic large-time thermalization \cite{dr2021self}.
 Therefore,
 \ba{thermalstationarystate}
@@ -114,7 +114,7 @@ solution is not proportional to the identity matrix \cite{KS-2020-boundarydephas
 We focus on the Liouvillian gap $\Delta_{\lambda}$, which is the non-vanishing eigenvalue
 of ${\cal L}$ with the smallest real part:
 \ba{Lioulliangap}
-\Delta_{\lambda} = − \max_{i} {\rm Re}{\lambda_i } \pt
+\Delta_{\lambda} = - \max_{i} {\rm Re}{\lambda_i } \pt
 \ea
 This quantity controls the typical relaxation time of the longest-living 
 eigenmode differing from the NESS.
