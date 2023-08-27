@@ -1,23 +1,86 @@
 \chapter{Introduction}
 
+The progress achieved in the control of nano-scales many-body systems has recently renewed the interest in understanding the out-of-equilibrium dynamic in quantum spin models~\cite{PSSV-2011-noneqcoll, GAN-2014-quantumsimulation}. Out-of-equilibrium, these efforts provided, for instance, a characterization of the unusual spreading of correlations and entanglement \cite{kormos2017real,lerose2020quasilocalized,tortora2020relaxation,lagnese2022quenches,scopa2022entanglement,castro2020entanglement,vovrosh2021confinement,rigobello2021entanglement}, as well as of the thermalization \cite{birnkammer2022prethermalization,james2019nonthermal,robinson2019signatures,chanda2020confinement}, in condensed-matter analogs of confined systems.
 
+A deeper comprehension of the time evolution of the critical correlations and entanglement spreading is indeed sought by both the theoretical and experimental communities~\cite{ADM-2015-EntanglementReview}.
+Across phase transitions, the many-body system develops large-scale critical modes also
+in out-of-equilibrium phenomena even when the time scale of the system parameters variation
+is taken very large.
+Out-of-equilibrium dynamic phenomena at
+phase transitions, such as hysteresis and coarsening,
+Kibble-Zurek (KZ) 
+\cite{kibble1976topology,kibble1980some,zurek1985cosmological,zurek1996cosmological}
+defect production, aging, etc., have
+been addressed in a variety of contexts, both experi-
+mentally and theoretically, at classical and quantum
+phase transitions (see, e.g., Refs. 
+\cite{binder1987theory, cui2020experimentally, bray2002theory, weiler2008spontaneous,
+dziarmaga2010dynamics, PSSV-2011-noneqcoll, ulm2013observation} 
+and references therein). Out-of-equilibrium scaling behaviors generally
+emerge when slowly crossing a critical point, i.e. in
+the large scale limit. They depend on the nature of the
+classical or quantum transition, its universality class,
+and the type of critical dynamics in classical systems, see e.g. Refs. 
+\cite{kibble1980some, zurek1996cosmological, dziarmaga2010dynamics, PSSV-2011-noneqcoll}. 
+Therefore, slow (quasi-adiabatic) passages through critical points allow us to
+probe the universal features of the long-range modes
+emerging at thermal and quantum critical phenomena \cite{tarantelli2022out}. 
 
+In particular, the first part of this
+work analyzes the application of a round-trip KZ protocol across a continuous quantum
+phase transition. We take as paradigmatic model a Kitaev chain \cite{Kitaev_2001} in 
+which the chemical potential changes linearity in time, following the function $t/t_s$ 
+with the time $t$ and the time scale $t_s$.\\
 
+Since any experimental device is unintentionally coupled to the environment, a particular emphasis is put on the dynamics of \textit{open quantum systems}~\cite{BP-openquantumsystembook}.
+
+When the interactions of a quantum system with its surroundings are sufficiently weak, the real-time evolution of such apparatuses emerges from the interplay between the unitary and dissipative dynamics of the whole setup~\cite{RV-2021-coherentanddissipativedynamicsreview}. These hypotheses are usually satisfied within \textit{Lindblad} frameworks, which underpin the modelization of most atomic, molecular, and optical devices (AMO)~\cite{BDS-2015-KeldyshOptical}. In such cases, the system is described in terms of a density matrix $\rho$, and the time evolution is controlled by \textit{Linblad Master equations}
+\begin{equation}
+    \frac{d\rho}{dt} = \mathcal{L}[\rho]\,.
+    \label{eq_def_intro_lindblad}
+\end{equation}
+The system generally thermalizes to a Non-Equilibrium Steady-State (NESS) solution after a transitory time frame. However, determining whether the NESS is unique is a more subtle issue~\cite{N-2019-uniquenesslindblad, SW-2010-openuniquesolution}. A quantity of particular interest is the \textit{Liouvillian gap}, hereafter denoted as $\Delta_\lambda$. This energy scale sets the typical relaxation time required to make the NESS stand out, entailing a complete loss of information on the initial quantum state. Quantum memory devices, for example, would benefit from long relaxation times, therefore small $\Delta_\lambda$~\cite{CCP-2011-quantummemories}.
+
+Several works have addressed the nature of the Liouvillian gap in one-dimensional open quantum systems, considering different lattice geometries and dissipation sources also in integrable models~\cite{Z-2015-relaxtimes}. Distinguished behaviors emerge when the dissipators are either isolated or in a relatively large number compared to the system size $L$.
+On the one hand, with bulk dissipation acting on the whole network, the system is gapped in several paradigmatic spin chains, such as XX, XXZ, and Ising models~\cite{YWHWD-2021-artificialnetweork, Z-2015-relaxtimes, KS-2019-nonhermitiankitaevladder}. On the other hand, when the number of dissipative sources is constant, the Liouvillian gap generally vanishes with a distinctive power-law behavior in the thermodynamic limit, typically as $\sim L^{-3}$~\cite{KS-2020-boundarydephasing, TV-2021-dissipativeboundaries, Z-2011-XXXchaingap}.
+The physical mechanisms tying together these two regimes are still unclear and are the main focus of the second part of this work \cite{franchi2023Liouvillian}.
+
+In particular, we consider a lattice model tailored to unveil the crossover regime between the  dissipation schemes presented. We investigate a $(1+1)$-dimensional Kitaev ring with local particle-decay dissipators arranged in a \textit{sunburst} geometry~\cite{FRV-staticsunburst, FRV-timesunburst, MS-2022-sunburstquench}.
+Starting the protocol in the proximity of a Continuous Quantum Transition (CQT), we study the out-of-equilibrium dynamic using Renormalization Group (RG) arguments and Finite-Size Scaling (FSS) frameworks~\cite{C-1996-ScalingandRG, RV-2021-coherentanddissipativedynamicsreview}.
 
 
 
 
 
 \subsubsection{Outline}
+$ $
+
+In the \textbf{Chapter} \ref{chp_out}, we introduce all the equations and the definitions
+useful to present the original results in the last two chapters. Indeed, we give a brief
+intro on the quantum phase transitions and, then, we explain two different mechanisms
+which send the system out-of-equilibrium regime: the Kibble-Zurek mechanism and the
+Lindblad mechanism.\\
+
+In the \textbf{Chapter} \ref{chp_round}, we address the effect of a round-trip Kibble-Zurek
+protocol near a continuous quantum phase transitions, using the Finite Size Scaling 
+framework. We will find results which diverge from the classic hysteresis cycle scenario.\\
+
+In the \textbf{Chapter} \ref{chp_diss}, we analyze the effects of a local and a uniform
+dissipation process on a second-order transition. We will focus on the interplay between
+these two type of dissipation mechanism, trying to extract common properties and different
+behaviors.
 
 
-for the chapter 2 we use the Quantum Ising Model as paradigmatic model, while in the third
-one, we adopt the lattice Kitaev model. The choice is justified by the fact that for an 
-unitary time-evolution is sufficient to know the wave function $\ket \psi$, instead in 
-the case of a dissipation process, it is necessary to consider the density matrix $\rho$.
 
-The Kitaev model is quadratic in its site operator, therefore the complexity of the 
-diagonalization scales linearity with the system size. In the other hand, for the 
-Quantum Ising model in the presence of longitudinal magnetization, the diagonalization
-problem is exponentially complex. For these computational arguments, we could motivate
-our toy model choices.
+%\begin{comment}
+%We use the Quantum Ising Model as paradigmatic model, while in the third
+%one, we adopt the lattice Kitaev model. The choice is justified by the fact that for an 
+%unitary time-evolution is sufficient to know the wave function $\ket \psi$, instead in 
+%the case of a dissipation process, it is necessary to consider the density matrix $\rho$.
+
+%The Kitaev model is quadratic in its site operator, therefore the complexity of the 
+%diagonalization scales linearity with the system size. In the other hand, for the 
+%Quantum Ising model in the presence of longitudinal magnetization, the diagonalization
+%problem is exponentially complex. For these computational arguments, we could motivate
+%our toy model choices.
+%\end{comment}

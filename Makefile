@@ -34,7 +34,7 @@ sref:
 	grep bib/refs.bib -e "$(word 2, $(MAKECMDGOALS))" -A 4 -B 6 
 
 label:
-	find . -type f -name "*.tex" | xargs grep -e "ba{" -e "be{" -e "label{"
+	find . -type f -name "*.tex" | xargs grep -e "ba{" -e "be{" -e "label{" | grep -e "$(word 2, $(MAKECMDGOALS))"
 
 clear:
 	find -name "main_phdthesis*" | grep -v "s.tex" | grep -v "s.pdf"| xargs rm
