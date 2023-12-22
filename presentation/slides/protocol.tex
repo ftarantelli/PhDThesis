@@ -1,0 +1,55 @@
+\section{PART I}
+
+\begin{frame}
+	\frametitle{\Large{\rm PART I}}
+
+\begin{center}
+	{\LARGE{ \bf Round - Trip}\\}
+	\medskip
+	\medskip
+	\medskip
+	\texttt{ \Large
+  FT, E. Vicari PR B \textbf{105}, 235124 (2022)\\ 
+  FT, S. Scopa PR B \textbf{108}, 104316 (2023) }
+\end{center}
+\end{frame}
+
+\section{KZ Protocol}
+
+\begin{frame}
+	\frametitle{Kibble Zurek(KZ) Protocol}
+	\begin{itemize}
+		\item[(i)] 
+			Start at the equilibrium state (classical) and at the 
+			\\ground state 
+			$\ket{\Psi(t = t_i)} \equiv \ket{\Psi(w_i < 0 )}\,$ (quantum);
+	\bigskip
+	\bigskip
+		
+			\begin{columns}
+				\begin{column}{0.4\textwidth}
+			\item[(ii)] quantum case:
+			\begin{align}
+				\frac{ d \ket{ \Psi(t) } }{dt} = - i \hat H[w(t)] \ket{\Psi(t)} 
+				\,\,; \notag
+			\end{align}
+				\end{column}
+				\begin{column}{0.4\textwidth}
+			\item[(ii)] classical one:	\\ $ $\\
+			\alertb{\tt Metropolis algorithm};
+				\end{column}
+			\end{columns}
+			\begin{align}
+				& \alert{\Downarrow} \notag \\
+				\alert{w(t)} &\alert{= t/t_s} \,\,; \notag
+			\end{align}
+			from $w_i < 0$ to $w_f > 0\,$, where $t_s$ is the time 
+			scale of the slow variations of $w\,$.
+	\bigskip
+	\bigskip
+	
+		\item[(iii)] Then, for $t > t_f$, $w(t)$ decreases with the same
+		  $t_s$ , from $w_f >0$ to the original value 
+		 $wi < 0\,$, closing the cycle.
+	\end{itemize}
+\end{frame}

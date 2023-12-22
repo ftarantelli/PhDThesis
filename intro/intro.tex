@@ -2,17 +2,51 @@
 
 The progress achieved in the control of nano-scales many-body systems has recently renewed the interest in understanding the out-of-equilibrium dynamic in quantum spin models~\cite{PSSV-2011-noneqcoll, GAN-2014-quantumsimulation}. Out-of-equilibrium, these efforts provided, for instance, a characterization of the unusual spreading of correlations and entanglement \cite{kormos2017real,lerose2020quasilocalized,tortora2020relaxation,lagnese2022quenches,scopa2022entanglement,castro2020entanglement,vovrosh2021confinement,rigobello2021entanglement}, as well as of the thermalization \cite{birnkammer2022prethermalization,james2019nonthermal,robinson2019signatures,chanda2020confinement}, in condensed-matter analogs of confined systems.
 
+
 A deeper comprehension of the time evolution of the critical correlations and entanglement spreading is indeed sought by both the theoretical and experimental communities~\cite{ADM-2015-EntanglementReview}.
-Across phase transitions, the many-body system develops large-scale critical modes also
-in out-of-equilibrium phenomena even when the time scale of the system parameters variation
-is taken very large.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the realm of many-body systems, intriguing out-of-equilibrium phenomena come to the forefront as these systems undergo phase transitions. Even when the timescale (ts) for varying system parameters is significantly extended, large-scale critical modes fail to reach equilibrium. This leads to a rich tapestry of dynamic phenomena at phase transitions, including hysteresis, coarsening, Kibble-Zurek (KZ) defect production
+\cite{kibble1976topology,kibble1980some,zurek1985cosmological,zurek1996cosmological}, aging, and more. Such phenomena have been explored extensively in both theoretical and experimental settings, spanning classical and quantum phase transitions (see, for instance, Refs.                                                                                                                                                                             \cite{binder1987theory, cui2020experimentally, bray2002theory, weiler2008spontaneous,
+dziarmaga2010dynamics, PSSV-2011-noneqcoll, ulm2013observation}  and related references).
+
+Out-of-equilibrium scaling behaviors tend to emerge when slowly traversing a critical point, especially when doing so in the large-timescale (ts) limit. These scaling behaviors depend on several factors, including the nature of the transition (classical or quantum), its universality class, and the specific characteristics of critical dynamics in classical systems (as detailed in Refs. \cite{kibble1980some, zurek1996cosmological, dziarmaga2010dynamics, PSSV-2011-noneqcoll}.). Slow, or quasiadiabatic, passages through these critical points enable researchers to unveil universal features related to the emergence of long-range modes during thermal and quantum critical phenomena.
+
+In both classical and quantum contexts, many-body systems are described by Hamiltonians that can be expressed as:
+
+\ba{initialHam}
+    H(t) \equiv H[w(t)] = H_c + w(t) H_p \,\,,
+\ea
+
+Here, $w(t)$ represents a time-dependent Hamiltonian parameter, while $H_c$ and $H_p$ are time-independent components. $H_c$ serves as the critical Hamiltonian at the transition point, which might denote a quantum continuous transition driven by quantum fluctuations or a classical continuous transition fueled by thermal fluctuations. $H_p$, on the other hand, embodies a nontrivial, relevant perturbation. Within quantum many-body models, it's generally assumed that $[H_c, H_p] \neq 0$. The tunable parameter $w$ controls the strength of the coupling with the perturbation $H_p$, and it's considered a relevant parameter guiding the continuous transition. Consequently, $w_c = 0$ marks the transition point. To explore the scaling properties of out-of-equilibrium dynamics during phase transitions, researchers employ time-dependent protocols where parameters like $w(t)$ are slowly varied, linearly in time, across the transition point at $w_c = 0$, employing a large timescale $t_s$.
+
+The inevitable growth of out-of-equilibrium dynamics during phase transitions in the thermodynamic limit arises because large-scale modes cannot equilibrate the long-range critical correlations that emerge at the transition point. This holds true even when the parameter $w$ changes very slowly, and even in the limit of large timescales. Consequently, when starting from equilibrium states at the initial value $w_i$, the system cannot pass through equilibrium states corresponding to the values of $w(t)$ across the transition point. This departure from equilibrium results in distinctive out-of-equilibrium dynamic scaling phenomena, especially when observed in the limit of large timescale ts. This scenario gives rise to the Kibble-Zurek (KZ) problem, which concerns the scaling behavior of the final number of defects after slow passages through continuous transitions from the disordered phase to the ordered phase.
+
+Out-of-equilibrium scaling behaviors in many-body systems undergoing slow transitions across classical and quantum critical points exhibit intriguing similarities. These phenomena can be comprehensively analyzed within unified renormalization-group (RG) frameworks, analogous to those employed to understand equilibrium scaling behaviors, which can be related through quantum-to-classical mappings. However, it's important to note that the out-of-equilibrium scaling behavior in classical systems depends on the chosen dynamics, whether it involves purely relaxational processes or conserved quantities, leading to different dynamic features.
+
+The first part embarks on an investigation into the effects of slow round-trip variations in the Hamiltonian parameter $w(t)$, which entail multiple crossings of quantum and thermal transitions. These round-trip protocols are initiated from equilibrium conditions, traverse the transition point, and return to their initial state, with the timescale ts governing the slow-crossing regime in the large-$t_s$ limit.
+
+The exploration encompasses both classical and quantum continuous transitions, characterized by emerging long-range correlations. Unified RG frameworks are utilized to derive general dynamic scaling behaviors applicable to both classical and quantum transitions, considering large timescale ts for round-trip KZ protocols and large system sizes $L$. This study builds upon existing dynamic RG frameworks used in standard one-way KZ protocols.
+
+Notably, this study focuses on transitions between gapped phases characterized by short-range correlations, avoiding the complexities associated with gapless modes in ordered phases. This approach differs from standard KZ protocols, where systems transition from a disordered phase to ordered phases characterized by long-range correlations, leading to additional dynamic effects at large timescales, such as coarsening phenomena or the emergence of massless Goldstone excitations.
+
+
+As the ensuing discussions reveal, while there are analogies in the scaling behaviors observed in standard one-way KZ protocols at classical and quantum transitions, these similarities only partially extend to round-trip KZ protocols. Significant differences emerge, especially when the extreme value $w_f > 0$ is held fixed and finite at the return point, a situation where classical systems exhibit well-defined scaling phenomena with hysteresis-like scenarios. In contrast, quantum systems encounter challenges in observing scaling behaviors along the return path due to rapidly oscillating relative phases between relevant quantum states, making the return trajectory highly sensitive to protocol parameters, such as $w_f$ and system size. This sensitivity is a consequence of the quantum unitary nature of dynamics, and it bears similarities to the behavior observed in quantum two-level models subject to round-trip protocols, akin to the Landau-Zener-Stückelberg problem.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{comment}
+
 Out-of-equilibrium dynamic phenomena at
 phase transitions, such as hysteresis and coarsening,
 Kibble-Zurek (KZ) 
 \cite{kibble1976topology,kibble1980some,zurek1985cosmological,zurek1996cosmological}
 defect production, aging, etc., have
-been addressed in a variety of contexts, both experi-
-mentally and theoretically, at classical and quantum
+been addressed in a variety of contexts, both
+experimentally and theoretically, at classical and quantum
 phase transitions (see, e.g., Refs. 
 \cite{binder1987theory, cui2020experimentally, bray2002theory, weiler2008spontaneous,
 dziarmaga2010dynamics, PSSV-2011-noneqcoll, ulm2013observation} 
@@ -31,6 +65,12 @@ work analyzes the application of a round-trip KZ protocol across a continuous qu
 phase transition. We take as paradigmatic model a Kitaev chain \cite{Kitaev_2001} in 
 which the chemical potential changes linearity in time, following the function $t/t_s$ 
 with the time $t$ and the time scale $t_s$.\\
+
+\end{comment}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Since any experimental device is unintentionally coupled to the environment, a particular emphasis is put on the dynamics of \textit{open quantum systems}~\cite{BP-openquantumsystembook}.
 
@@ -69,18 +109,3 @@ In the \textbf{Chapter} \ref{chp_diss}, we analyze the effects of a local and a 
 dissipation process on a second-order transition. We will focus on the interplay between
 these two type of dissipation mechanism, trying to extract common properties and different
 behaviors.
-
-
-
-%\begin{comment}
-%We use the Quantum Ising Model as paradigmatic model, while in the third
-%one, we adopt the lattice Kitaev model. The choice is justified by the fact that for an 
-%unitary time-evolution is sufficient to know the wave function $\ket \psi$, instead in 
-%the case of a dissipation process, it is necessary to consider the density matrix $\rho$.
-
-%The Kitaev model is quadratic in its site operator, therefore the complexity of the 
-%diagonalization scales linearity with the system size. In the other hand, for the 
-%Quantum Ising model in the presence of longitudinal magnetization, the diagonalization
-%problem is exponentially complex. For these computational arguments, we could motivate
-%our toy model choices.
-%\end{comment}

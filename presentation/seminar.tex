@@ -1,0 +1,190 @@
+\documentclass[11pt, aspectratio = 169]{beamer}
+% aspectratio = 169, aspectratio=43
+
+  \usepackage{graphicx}
+  \usepackage[english]{babel}
+%  \usepackage{parskip}
+  \usepackage{amsmath}
+  \usepackage{listings}
+  \usepackage{amsfonts}
+  \usepackage{mathtools}
+  \usepackage{amssymb}
+  \usepackage{booktabs}
+  \usepackage{braket}
+  \usepackage{amsthm}
+  \usepackage{siunitx}
+  \usepackage{bm}
+  \usepackage[suftesi]{frontespizio}
+  \usepackage{color}
+  \usepackage{newfloat}
+  \usepackage{wrapfig}
+  \usepackage{tikz}
+  \usepackage{pgfplots}
+  \usetikzlibrary{patterns}
+  \usepackage{comment}
+  \usepackage{mathrsfs}
+  \usepackage{epstopdf}
+%  \usepackage{hyperref}
+  \usepackage[normalem]{ulem}
+
+  \usepackage{media9}
+  \usepackage{multimedia}
+  %\usepackage[T1]{fontenc}
+  %\usepackage{mathptmx}
+
+\newcommand<>{\alertb}[1]{\begingroup%
+\setbeamercolor{alerted text}{fg=blue!80!white}\alert{#1}\endgroup}
+
+\NewDocumentCommand{\reff}{s m}{%
+  \IfBooleanTF{#1}% Check for starred variant
+    {\beamer@origref{#2}}% \reff*
+    {\hyperlink{#2}{\beamer@origref{#2}}}% \reff
+}
+
+  \newcommand{\pt}{\,\, .}
+  \newcommand{\cm}{\,\, ,}
+  \newcommand{\pc}{\,\, ;}
+  \newcommand{\be}[1]{\begin{equation}
+	  \label{#1}}
+  %\newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\ee}{\end{equation}}
+
+  \def\ba#1#2\ea{\begin{align}\label{#1}#2\end{align}}
+
+  %\def\bfr#1#2\efr{\begin{frame}\frametitle{#1}#2\end{frame}}
+  \newcommand{\bfr}[1]{\begin{frame}
+          \frametitle{#1}}
+  %\newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\efr}{\end{frame}}
+
+  \title[PreThesis]{\textbf{Out-of-equilibrium dynamics in
+round-trip and dissipation protocols} }
+  \author[F.Tarantelli]{Francesco Tarantelli  \\ 
+  \texttt{francesco.tarantelli@phd.unipi.it \\ \small
+  Tarantelli, Vicari PR B \textbf{105}, 235124 (2022)\\
+  Tarantelli, Vicari PR B \textbf{108}, 035128 (2023)\\ 
+  Franchi, Tarantelli PR B \textbf{108}, 094114 (2023)\\
+  Tarantelli, Scopa PR B \textbf{108}, 104316 (2023) }}
+  \date[ ]{$17^{\rm th}$ October}
+  \institute[unipi]{University of Pisa and INFN}
+  \logo{\textcolor{white!50!red}{\small \texttt{PrePhD$_{\rm 2023}$}}}
+  %\logo{\includegraphics[width=15mm]{slides/figs/logo-white.pdf}} % logo.eps   -black   -white
+  
+  \usetheme{Berkeley}%[width=2.2cm]
+  
+  %\useoutertheme[left, height=0pt, width=4cm]{sidebar}
+  %\setbeamerfont{title in sidebar}{size}
+  %\setbeamerfont{sidebar}{size=\scriptsize}
+  %\setbeamerfont{section in sidebar}{size=\small}
+  %\setbeamerfont{sidebar}{size=\large}%\scriptsize}
+%  \useoutertheme[left]{sidebar}
+
+  \setbeamercovered{dynamic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\usecolortheme{seahorse}
+%%
+
+\setbeamercolor*{logo}{fg=white,bg=black!50!cyan}
+
+\setbeamercolor*{structure}{fg=black!70!blue}
+\setbeamercolor*{title}{fg=black!80!white,bg=black!20!cyan}
+%\setbeamercolor*{block title}{bg=blue!90!black,fg=blue}
+%\setbeamercolor*{block title example}{bg=cyan!90!black,fg=white}
+%\setbeamercolor*{block title example}{fg=black,bg=orange}
+\setbeamercolor*{alerted text}{fg=red!30!black}
+
+%\setbeamercolor*{palette primary}{bg=black,fg=white}
+%\setbeamercolor*{palette secondary}{bg=blue!75!black,fg=blue}
+%\setbeamercolor*{palette tertiary}{bg=green!50!black!,fg=blue} %title in head/foot   %title in sidebar
+
+\setbeamercolor*{frametitle}{bg=black!10!cyan,fg=white}
+\setbeamercolor*{framesubtitle}{fg=white!80!cyan}
+
+\setbeamercolor*{sidebar}{bg=black!10!cyan}
+
+\setbeamercolor*{title in sidebar}{fg=black!100!white}
+\setbeamercolor*{author in sidebar}{fg=white}
+\setbeamercolor*{section in sidebar shaded}{fg=black!100!cyan}
+\setbeamercolor*{section in sidebar}{bg=black!100!cyan,fg=black!20!cyan}
+\setbeamercolor*{subsection in sidebar shaded}{fg=white!100!cyan}
+\setbeamercolor*{subsection in sidebar}{bg=white!80!cyan,fg=black!90!cyan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  \setbeamertemplate{sections/subsections in toc}[ball]%[circle]%
+  \setbeamertemplate{items}[circle]
+
+  \theoremstyle{definition}
+
+  \theoremstyle{plain}
+
+  \newcommand{\numberset}{\mathbb}
+  \newcommand{\C}{\numberset{C}}
+  \newcommand{\R}{\numberset{R}}
+  \newcommand{\N}{\numberset{N}}
+  \newcommand{\Z}{\numberset{Z}}
+  \newcommand{\D}{\numberset{D}}
+
+%  \renewcommand{\vec}{\bm}
+
+
+  \DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+  \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+  \setbeamertemplate{caption}[numbered]
+
+  %*******************
+  % IMPORTANT:
+  %*******************
+  \usefonttheme[onlymath]{serif} 
+  %*******************
+
+\beamertemplatenavigationsymbolsempty
+%\setbeamertemplate{footline}[frame number]
+
+\addtobeamertemplate{navigation symbols}
+{\tiny %
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\setbeamercolor{navigation symbols}{fg=black}
+
+\begin{document}
+
+   \begin{frame}
+      \frametitle{PrePhD Discussion}
+      \maketitle
+      
+      \begin{tikzpicture}[remember picture,overlay]
+           \node [shift={(-13cm, -7.6cm)}] at (current page.north east)
+           {\includegraphics[width=2cm]{slides/figs/logo.pdf}}; 
+      \end{tikzpicture} 
+      
+      \begin{tikzpicture}[remember picture,overlay] 
+           \node [shift={(-1.5cm, -7.6cm)}] at (current page.north east) 
+           {\includegraphics[width=3cm]{slides/figs/logoinfnp.pdf}}; 
+      \end{tikzpicture}
+      
+   \end{frame}
+
+
+%   \begin{frame}
+%      \frametitle{Presentation plan}
+%      \tableofcontents
+%   \end{frame}
+
+   \include{slides/intro}
+
+   \include{slides/transition}
+   \include{slides/model}
+   \include{slides/protocol}
+   \include{slides/observables}
+   \include{slides/dynamic_scaling}
+   \include{slides/phase_anomaly}
+   \include{slides/open}
+   \include{slides/conclusions}
+
+\end{document}
