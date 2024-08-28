@@ -31,75 +31,78 @@ Instead, in a finite system, the energy gap among these states remain different 
 
 FOQTs are associated with many important out-of-equilibrium effects s, including nucleations and metastability \cite{binder1987theory,bray2002theory}, coarsening \cite{chandran2012kibble}, and anomalous dependence on the boundary conditions \cite{pelissetto2020scaling,panagopoulos2018dynamic,campostrini2015quantum,pelissetto2018finite,rossini2018ground}.
 
-\subsection{Models}
-\label{Models}
 
-\subsubsection{Quantum Ising}
-\label{QIsing}
+\begin{comment}
 
-As a first toy model for the study of quantum phase transitions, we consider the quantum 1D Ising Model whose Hamiltonian is given by:
+	\subsection{Models}
+	\label{Models}
 
-\be{HIsing}
-	H(g, h) = - \sum_{x=1}^{L-1} \sigma^{(1)}_x \sigma^{(1)}_{x+1}
-	- h \sum_{x=1}^L \sigma^{(1)}_x - g \sum_{x=1}^L \sigma^{(3)}_x \pc
-\ee
+	\subsubsection{Quantum Ising}
+	\label{QIsing}
 
-where $L$ is the system size and $\sigma_x^{(k)}$ are the Pauli matrices on the 
-$x^{\rm th}$ site.\\
+	As a first toy model for the study of quantum phase transitions, we consider the quantum 1D Ising Model whose Hamiltonian is given by:
 
-This system develops a quantum critical behavior at $g = g_c = 1$
-and $h=0$, belonging to the 2D Classical Ising universality class \cite{S99}. Instead, 
-when $h$ is different from zero, the lowest states energy gap is not vanish.
+	\be{HIsing}
+		H(g, h) = - \sum_{x=1}^{L-1} \sigma^{(1)}_x \sigma^{(1)}_{x+1}
+		- h \sum_{x=1}^L \sigma^{(1)}_x - g \sum_{x=1}^L \sigma^{(3)}_x \pc
+	\ee
 
-Along the RG flux, the relevant parameters associated with the RG perturbations at the 
-fixed point are $r = g-g_c$ and $h$. Their RG dimensions are respectively $y_r=1/\nu=1$
-and $y_h = 15/8$, so that the length scale $\xi$ of the critical modes behaves as
-$\xi \sim \abs{g-g_c}^{-1/y_r}$ for $h=0$, and $\xi \sim \abs{h}^{-1/y_h}$ for $g=g_c$.
-The dynamic exponent $z$ associated with the vanish critical gap $\Delta \sim \xi^{-z}$
-at the transition point, is given by $z=1$. The order parameter field, which distinguishes 
-the two phases and is associated with the longitudinal operators $\sigma_x^{(1)}$, has a
-RG dimension equal to $y_l = d+z-y_h=1/8$, while that associated with the transverse
-operator $\sigma_x^{(3)}$ is equal to $y_t = d+z-y_r = 1$.\\
+	where $L$ is the system size and $\sigma_x^{(k)}$ are the Pauli matrices on the 
+	$x^{\rm th}$ site.\\
 
-In the ferromagnetic phase $g<1$, the model undergoes a FOQT at $h=0$. Across this point,
-the system remains non-critical and displays exponential decay of the correlation 
-functions.
+	This system develops a quantum critical behavior at $g = g_c = 1$
+	and $h=0$, belonging to the 2D Classical Ising universality class \cite{S99}. Instead, 
+	when $h$ is different from zero, the lowest states energy gap is not vanish.
 
-For $h=0$, the model presents a level-crossing of the two lowest-energy state in the
-infinite volume limit, where the energy gap closes exponentially for $L\to \infty$, e.g.
-for open boundary condition \cite{cabrera1987role}:
-\be{isingfoqtgap}
-	\Delta(g,L) = 2 g^L(1-g^2) \Bigr[ 1+ {\cal O}(g^{2L}) \Bigr] \pt
-\ee
-In the limit of small longitudinal magnetic field, i.e. $\abs{h \ll 1}$, the system
-presents a Zeeman-like gap in energy between the 2 lowest states which introduces another
-symmetry-breaking of the degeneracy. We can express an approximation of this gap using
-standard perturbation theory in $h$ \cite{campostrini2014finite}:
-\be{isingperthgap}
-	{\cal E}(g,h\to 0,L) \simeq 2 h \sum_{j=1}^{L}
-	\abs{\braket{\sigma_j^{(3)}}} \simeq 2hLM_0(g) \cm
-\ee
-with $M_0 = (1-g^2)^{1/8}$ the approximated longitudinal magnetization in the constrains
-$h = 0$ and $L\to \infty$.
+	Along the RG flux, the relevant parameters associated with the RG perturbations at the 
+	fixed point are $r = g-g_c$ and $h$. Their RG dimensions are respectively $y_r=1/\nu=1$
+	and $y_h = 15/8$, so that the length scale $\xi$ of the critical modes behaves as
+	$\xi \sim \abs{g-g_c}^{-1/y_r}$ for $h=0$, and $\xi \sim \abs{h}^{-1/y_h}$ for $g=g_c$.
+	The dynamic exponent $z$ associated with the vanish critical gap $\Delta \sim \xi^{-z}$
+	at the transition point, is given by $z=1$. The order parameter field, which distinguishes 
+	the two phases and is associated with the longitudinal operators $\sigma_x^{(1)}$, has a
+	RG dimension equal to $y_l = d+z-y_h=1/8$, while that associated with the transverse
+	operator $\sigma_x^{(3)}$ is equal to $y_t = d+z-y_r = 1$.\\
 
+	In the ferromagnetic phase $g<1$, the model undergoes a FOQT at $h=0$. Across this point,
+	the system remains non-critical and displays exponential decay of the correlation 
+	functions.
 
-
-\subsubsection{Kitaev chain}
-\label{kitaev}
-
-Now, we introduce the following lattice model, called Kitaev model \cite{Kitaev_2001},
-whose Hamiltonian describes the fermions interaction with the lattice and is given by:
-\ba{Hkitaev}
-    \hat{H}&=-\sum_{x=1}^{L-1} (\hat{c}^{\dagger}_{x}\hat{c}_{x+1} 
-    + \hat{c}^\dagger_{x}\hat{c}^\dagger_{x+1}+{\rm h.c}.)
-    - \mu\sum_{x=1}^{L} \hat{n}_x\,,
-    %\label{Hkitaev}
-\ea
-where $\hat{n}_x\equiv\hat{c}^\dagger_x\hat{c}_x$ is the number operator on the site $x$, and the operators $\hat{c}_x, \hat{c}^\dagger_x$ satisfy the canonical anticommutation relations, thus $\{\hat{c}_x, \hat{c}_y\}=\{\hat{c}^\dagger_x, \hat{c}^\dagger_y\}=0$ and $\{\hat{c}_x, \hat{c}^\dagger_y\}=\delta_{xy}$. Applying the Jordan-Wigner transformation~\cite{S99}, the Kitaev ring can be exactly mapped into a quantum Ising chain with a transverse field~\cite{P-1970-Isingmodel}. We point out that the transformation does not preserve also the same boundary conditions, so attention should be paid when recasting Eq.~\eqref{Hkitaev} in its bosonic counterpart~\cite{RV-2021-coherentanddissipativedynamicsreview}. Nonetheless, many bulk properties of the Ising model, such as the critical exponents at the CQT point, are preserved by the mapping; in fact, these phase transition belongs
-to the same universality class of the 1D quantum Ising model.\\
+	For $h=0$, the model presents a level-crossing of the two lowest-energy state in the
+	infinite volume limit, where the energy gap closes exponentially for $L\to \infty$, e.g.
+	for open boundary condition \cite{cabrera1987role}:
+	\be{isingfoqtgap}
+		\Delta(g,L) = 2 g^L(1-g^2) \Bigr[ 1+ {\cal O}(g^{2L}) \Bigr] \pt
+	\ee
+	In the limit of small longitudinal magnetic field, i.e. $\abs{h \ll 1}$, the system
+	presents a Zeeman-like gap in energy between the 2 lowest states which introduces another
+	symmetry-breaking of the degeneracy. We can express an approximation of this gap using
+	standard perturbation theory in $h$ \cite{campostrini2014finite}:
+	\be{isingperthgap}
+		{\cal E}(g,h\to 0,L) \simeq 2 h \sum_{j=1}^{L}
+		\abs{\braket{\sigma_j^{(3)}}} \simeq 2hLM_0(g) \cm
+	\ee
+	with $M_0 = (1-g^2)^{1/8}$ the approximated longitudinal magnetization in the constrains
+	$h = 0$ and $L\to \infty$.
 
 
-The quantum Ising model with a transverse field is one of the most common theoretical laboratories where fundamental issues on quantum phase transition can be addressed, given our deep knowledge of the quantum correlations~\cite{S99}. The model is characterized by a $\mathbb{Z}_2$ global symmetry under spin reflection along the longitudinal axis. In Eq.~\eqref{Hkitaev}, this symmetry is implemented by the transformation that maps $\hat{c}^{(\dagger)}_x\to -\hat{c}^{(\dagger)}_x$. At zero temperature, the ground state experiences a CQT at $\mu_c=-2$ and the $\mathbb{Z}_2$ symmetry is then spontaneously broken. The critical point separates a paramagnetic phase ($\abs{\mu}<\abs{\mu_c}$), where correlation functions are exponentially dumped, from an ordered phase ($\abs{\mu}<\abs{\mu_c}$), where correlation functions are instead long-range ordered. Close to the critical point, the correlation length diverges as $\xi\sim\abs{\mu-\mu_c}^{-\nu}$, where $\nu=1/y_g=1$ for Ising transitions. The gap $\Delta$, which describes the energy difference between the first excited state and the ground state, vanishes instead as $\Delta\sim\xi^{-z}$ with $z=1$. 
 
+	\subsubsection{Kitaev chain}
+	\label{kitaev}
+
+	Now, we introduce the following lattice model, called Kitaev model \cite{Kitaev-2001},
+	whose Hamiltonian describes the fermions interaction with the lattice and is given by:
+	\ba{Hkitaev}
+		\hat{H}&=-\sum_{x=1}^{L-1} (\hat{c}^{\dagger}_{x}\hat{c}_{x+1} 
+		+ \hat{c}^\dagger_{x}\hat{c}^\dagger_{x+1}+{\rm h.c}.)
+		- \mu\sum_{x=1}^{L} \hat{n}_x\,,
+		%\label{Hkitaev}
+	\ea
+	where $\hat{n}_x\equiv\hat{c}^\dagger_x\hat{c}_x$ is the number operator on the site $x$, and the operators $\hat{c}_x, \hat{c}^\dagger_x$ satisfy the canonical anticommutation relations, thus $\{\hat{c}_x, \hat{c}_y\}=\{\hat{c}^\dagger_x, \hat{c}^\dagger_y\}=0$ and $\{\hat{c}_x, \hat{c}^\dagger_y\}=\delta_{xy}$. Applying the Jordan-Wigner transformation~\cite{S99}, the Kitaev ring can be exactly mapped into a quantum Ising chain with a transverse field~\cite{PF70}. We point out that the transformation does not preserve also the same boundary conditions, so attention should be paid when recasting Eq.~\eqref{Hkitaev} in its bosonic counterpart~\cite{RV-2021-coherentanddissipativedynamicsreview}. Nonetheless, many bulk properties of the Ising model, such as the critical exponents at the CQT point, are preserved by the mapping; in fact, these phase transition belongs
+	to the same universality class of the 1D quantum Ising model.\\
+
+
+	The quantum Ising model with a transverse field is one of the most common theoretical laboratories where fundamental issues on quantum phase transition can be addressed, given our deep knowledge of the quantum correlations~\cite{S99}. The model is characterized by a $\mathbb{Z}_2$ global symmetry under spin reflection along the longitudinal axis. In Eq.~\eqref{Hkitaev}, this symmetry is implemented by the transformation that maps $\hat{c}^{(\dagger)}_x\to -\hat{c}^{(\dagger)}_x$. At zero temperature, the ground state experiences a CQT at $\mu_c=-2$ and the $\mathbb{Z}_2$ symmetry is then spontaneously broken. The critical point separates a paramagnetic phase ($\abs{\mu}<\abs{\mu_c}$), where correlation functions are exponentially dumped, from an ordered phase ($\abs{\mu}<\abs{\mu_c}$), where correlation functions are instead long-range ordered. Close to the critical point, the correlation length diverges as $\xi\sim\abs{\mu-\mu_c}^{-\nu}$, where $\nu=1/y_g=1$ for Ising transitions. The gap $\Delta$, which describes the energy difference between the first excited state and the ground state, vanishes instead as $\Delta\sim\xi^{-z}$ with $z=1$. 
+\end{comment}
 
 

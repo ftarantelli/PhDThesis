@@ -55,8 +55,6 @@ heightrounded, bindingoffset=5mm}
 \def\graphicscale{\twocolumn@sw{0.3}{0.4}}
 \def\graphicthreescale{\twocolumn@sw{0.3}{0.4}}
 \newcommand{\rev}[1]{\textcolor{red}{#1}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
 \newcommand{\bea}{\begin{align}}
 \newcommand{\eea}{\end{align}}
 \newcommand{\de}{\partial}
@@ -65,10 +63,10 @@ heightrounded, bindingoffset=5mm}
   \newcommand{\pt}{\,\, .}
   \newcommand{\cm}{\,\, ,}
   \newcommand{\pc}{\,\, ;}
-  %\newcommand{\be}[1]{\begin{equation}
-	%  \label{#1}}
-  %\newcommand{\lb}[1]{\label{#1}}
-  %\newcommand{\ee}{\end{equation}}
+  \newcommand{\be}[1]{\begin{equation}
+	  \label{#1}}
+  \newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\ee}{\end{equation}}
 
   \def\ba#1#2\ea{\begin{align}\label{#1}#2\end{align}}
 
@@ -186,7 +184,7 @@ heightrounded, bindingoffset=5mm}
 
 \tableofcontents
 
-   \include{intro/intro}
+   \input{intro/intro}
    
 \mainmatter
 
@@ -194,10 +192,10 @@ heightrounded, bindingoffset=5mm}
   \markboth{\chaptername
   \ \thechapter.\ #1}{}}
 
-   \include{cpt/1outeq}
-   \include{cpt/2rtrip}
-   \include{cpt/3dissp}
-\backmatter
+   \input{cpt/1outeq}
+   \input{cpt/2rtrip}
+   \input{cpt/3dissp}
+%\backmatter
 
 \renewcommand{\chaptermark}[1]{%
   \markboth{%
@@ -205,14 +203,19 @@ heightrounded, bindingoffset=5mm}
   }{}%
 }
 
-   \include{concs/concs}
+   \input{concs/concs}
 
 %\mainmatter
 
-  \renewcommand{\chaptermark}[1]{%
-  \markboth{Appendix
-  \ \thechapter.\ #1}{}}
- 
+\renewcommand{\chaptermark}[1]{%
+\markboth{\chaptername
+\ \thechapter.\ #1}{}}
+
+   \input{concs/appendix}
+
+\backmatter
+
+  
   %\include{cpt/9app}
 
 

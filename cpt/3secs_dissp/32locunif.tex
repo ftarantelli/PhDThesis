@@ -161,7 +161,7 @@ In this section, we study the time evolution of the Kitaev ring in the proximity
 \subsubsection{The quench protocol and the monitored observables}
 \label{sec_observables}
 
-We now present the quench protocol considered to study the time evolution of the open quantum system under scrutiny at CQTs. We prepare the system in the ground state $\ket{\Omega}$ of Eq.~\eqref{Hkitaev}. The starting chemical potential $\mu_i$ is always close to the critical value $\mu_c$, meaning that $\abs{\mu_i-\mu_c}\to0$ for $L\to\infty$. At a reference time $t=0$, the ring is driven out-of-equilibrium by suddenly coupling the system with the surrounding environment and eventually quenching the chemical potential to a different value $\mu_i\to\mu_f$. In such a case, the final $\mu_f$ should always be sufficiently close to the critical point. 
+We now present the quench protocol considered to study the time evolution of the open quantum system under scrutiny at CQTs. We prepare the system in the ground state $\ket{\Omega}$ of Eq.~\eqref{kitaev2}. The starting chemical potential $\mu_i$ is always close to the critical value $\mu_c$, meaning that $\abs{\mu_i-\mu_c}\to0$ for $L\to\infty$. At a reference time $t=0$, the ring is driven out-of-equilibrium by suddenly coupling the system with the surrounding environment and eventually quenching the chemical potential to a different value $\mu_i\to\mu_f$. In such a case, the final $\mu_f$ should always be sufficiently close to the critical point. 
 
 We monitor the time evolution of the Kitaev ring by considering two distinguished two-point correlation functions $C(x, y, t)$ and $P(x, y, t)$, defined as
 \begin{align}
@@ -235,7 +235,8 @@ We verify our hypotheses in Fig.~\ref{fig_fss_2n_fixed}, showing the scaling cur
 
 
 
-
+\begin{comment}
+    
 \section{Summary}
 
 When we keep $b$ fixed, the gap $\Delta_\lambda$ is always finite and depends linearly on the dissipation strength $w$. Nonetheless, two different regimes emerge for systems of finite size. In the small $w$ region, the gap is given by $\Delta_\lambda=w/(2b)$, whereas, at large $w$ and sufficiently large $b$, it behaves as $\Delta_\lambda=w C_\mu/b^3$. The last equation always controls the gap in the large-size limit and is our starting point to deduce the scaling of such a quantity when $b\propto L$. It is worth mentioning that we also put forward a scaling regime for $L\Delta_\lambda$ as a function of $wL$, which ties together the two different regimes outlined in a smooth manner. On the other hand, when we keep the number of dissipators $n$ fixed, the gap vanishes as $\sim L^{-3}$ at large $L$. Addressing the structure of the gap at small $w$, we find a scaling regime for $L^2\Delta_\lambda$ in terms of $wL$, which is closely related to the presence of a non-uniform convergence of $L^3\Delta_\lambda$ in the limit $w\to0^+$.\\
@@ -243,5 +244,6 @@ When we keep $b$ fixed, the gap $\Delta_\lambda$ is always finite and depends li
 We develop a dynamic FSS regime at CQTs to describe the time evolution of the Kitaev model under investigation. At fixed $b$, our results extend the FSS theory of Ref.~\cite{NRV-2019-competingdissipativeandcoherent} to the cases with $b>1$. As a working hypothesis, we suppose that the scaling variable associated with the relevant coupling $w$ is $\gamma_b=wL^{z}/b$. Our numerical results for the two-point correlation functions fully support this ansatz. When the number of dissipators $n$ is fixed, the FSS theory outlined at fixed $b$ generalizes straightforwardly after replacing $\gamma_b$ with $W=wL^{z-1}$. 
 
 %In the last section, we analyze the interplay between the Liouvillian gap $\Delta_\lambda$ and the gap related to the Kitaev ring $\Delta$ in the FSS limit. In particular, we take into account the short- and long-time regimes, focusing on how they join together in the FSS limit. When $b$ is fixed, we observe that the link between the two regimes is smooth, whereas, at fixed $n$, the two regions can be easily distinguished given the presence of different power-law scalings for the gaps $\Delta$ and $\Delta_\lambda$. 
+\end{comment}
 
 

@@ -3,43 +3,117 @@
 We have studied the out-of-equilibrium behavior of
 many-body systems when their time-dependent Hamiltonian parameters 
 slowly cross phase transition points. In particular,  we present an exploratory study of 
-out-of-equilibrium behaviors arising from round-trip protocols across quantum
-phase transitions.
+out-of-equilibrium behaviors arising from round-trip protocols across 
+first and second order quantum phase transitions and classical transitions.
 
-As paradigmatic model we choose the Kitaev model which is mapped in the transverse quantum
-Ising model through a JW transformation. Indeed, all the results are valid also in the
-case of the longitudinal Ising model~\cite{tarantelli2022out} where the longitudinal 
-magnetic field drives the round-trip KZ protocol. Note that, in the case of one-dimensional
-quantum Ising model, the slow variation of the longitudinal field across the CQT point 
-brings the system from a gapped condition to another gapped condition, i.e. move the system
-from disorder to disorder through a CQT. Therefore, this is not the standard situation of
-the KZ problem related to the defect production going from the disorder 
-to the order phases.
+The
+analogy of the scaling behaviors for one-way KZ protocols
+at classical and quantum transitions is only partially
+extended to round-trip KZ protocols. Substantial differences
+emerge, in particular when the extreme value
+of the outward driving parameter variation is kept fixed and
+finite in the large-t s limit. On the one hand, classical
+systems show a well-defined dynamic scaling limit, 
+developing scaling hysteresis-like scenarios, essentially because
+the purely relaxational stochastic dynamics leads 
+eventually to thermalization at fixed model parameters. On the
+other hand, in quantum systems the observation of 
+scaling behavior along the return way turns out to be more
+problematic, due to the persistence of rapidly oscillating
+relative phases between the relevant quantum states.
+They make the return way extremely sensitive to the 
+parameters of the protocol, such as the extreme driving parameter value
+and the size of the system. This is essentially related
+to the quantum nature of the dynamics. Indeed there are
+some notable similarities with the behavior of quantum
+two-level models subject to round-trip protocols, 
+analogous the well-known Landau-Zener-Stückelberg problem.
 
-The emerging dynamic scaling scenario put forward
-for round-trip KZ protocols across critical points is expected to hold for generic 
-classical and quantum transitions separating phases with short-range correlations, in
-any spatial dimension. Further investigations are called
-for round-trip protocols between disordered and ordered
-phases, when the ordered phase has gapless excitations.
-Round-trip KZ protocols in these systems may show further interesting features.
 
-Indeed, we believe that also the chaotic-like return way calls for further investigation.
-Even in the simple two-level quantum model some features of the behavior along the
-return way turn out not to be smooth~\cite{tarantelli2022out, tarantelli2023out}.
-Indeed, they develop ample oscillations with larger and larger frequencies
-when increasing the interval of the round-trip variation of the parameters.\\
+In the FOQT scenario, we formulate the FSS regime
+as the limit $L \to \infty$, where the
+time-dependent expectation values of local observables
+are proportional to quasi-universal FSS functions of the
+variables $\tau = t/ u$ and $\nu = u\delta^2$. Here, the meaning
+of quasi-universality stands for the residual dependence of
+the FSS functions on the details of the driving protocol
+at the inversion time. Numerical results for the many-body
+system confirm the validity of our scaling hypothesis.
+We further probe the validity of the FSS
+regime using time-dependent perturbation theory, relating it
+to the emergence of an effective two-level description which
+involves the lowest two states near the FOQT. With this effective
+description, we reduce the driving protocol to a series of Landau-Zener
+transitions and we determine an analytical expression of the
+FSS functions. Lastly, we extend the setup to the case of
+periodic driving across the quantum FOQT, and we comment on
+the validity of the FSS after several crossings.
 
 
-In the second part, we have considered a Kitaev ring coupled with the environment via $n$ particle-decay dissipators arranged in a sunburst geometry.
 
-We analyze the interplay between the Liouvillian gap $\Delta_\lambda$ and the gap related to the Kitaev ring $\Delta$ in the FSS limit. In particular, we take into account the short- and long-time regimes, focusing on how they join together in the FSS limit. When $b$ is fixed, we observe that the link between the two regimes is smooth, whereas, at fixed $n$, the two regions can be easily distinguished given the presence of different power-law scalings for the gaps $\Delta$ and $\Delta_\lambda$.\\
+%\rev{ADD THE HOLE}
 
-As future outlooks, we mention that the results of the round-trip KZ protocol and of the Liouvillian gap analysis can be extended in several directions. First of all, our studies can be generalized by considering thermal baths in the Lindblad formalism~\cite{tarantelli2023thermal}. Alternatively, it would be interesting to understand how the different large-size limits considered in this paper affect the Liouville gap and the FSS regime of open quantum models in higher dimensions. Despite the numerous challenges given by such a quest, we must say that this setting certainly offers attractive questions and new paradigms to be addressed. To name a few, we mention that the NESS, in more than one spatial dimension, may undergo a continuous phase transition, similar to a finite-temperature quantum system at equilibrium. For this reason, the evolutions of open quantum models in the short- and long-time regimes can be associated with different RG fixed points, entailing a more intriguing scenario in the FSS limit.
+In the second part, we consider
+systems where particles are constrained within a limited
+spatial region by hard walls, and systems where they are
+trapped by a space-dependent potential, such as an 
+effective harmonic potential. These issues are particularly
+relevant for cold-atom experiments, where atoms are 
+confined within a limited spatial region by external 
+potentials. Within this class of confined particle systems,
+we investigate the dynamic features arising from 
+localized particle-loss dissipative mechanisms, which may be
+controllable, or inevitably present, in the experimental
+setup. The out-of-equilibrium evolution arising from the protocol considered
+shows various dynamic regimes, which can be effectively
+distinguished by relating them to dynamic FSS
+limits corresponding to different time scales, which can
+be associated with the gap of the Liouvillian gap of the
+Lindblad equation, and the gap of its Hamiltonian driving.
 
-We conclude by mentioning that the results for the round-trip KZ protocol are also extended
-for first order transitions \cite{tarantelli2023out} in which we can approximate the 
-many-body system as a 2-level model within the scaling regime.
+To understand the role of this Liouvillian gap,
+we analyze the interplay between the Liouvillian gap $\Delta_\lambda$ and the gap related to the Kitaev ring $\Delta$ in the FSS limit. In particular, we take into account the short- and long-time regimes, focusing on how they join together in the FSS limit.
+When we
+keep $b$ fixed, the gap $\Delta_\lambda$ is always finite and depends
+linearly on the dissipation strength $w$. Nonetheless, two different regimes emerge for systems of finite size. In the small $w$ region, the gap is given by $\Delta_\lambda=w/(2b)$, whereas, at large $w$ and sufficiently large $b$, it behaves as $\Delta_\lambda=w C_\mu/b^3$. The last equation always controls the gap in the large-size limit and is our starting point to deduce the scaling of such a quantity when $b\propto L$. It is worth mentioning that we also put forward a scaling regime for $L\Delta_\lambda$ as a function of $wL$, which ties together the two different regimes outlined in a smooth manner. On the other hand, when we keep the number of dissipators $n$ fixed, the gap vanishes as $\sim L^{-3}$ at large $L$. Addressing the structure of the gap at small $w$, we find a scaling regime for $L^2\Delta_\lambda$ in terms of $wL$, which is closely related to the presence of a non-uniform convergence of $L^3\Delta_\lambda$ in the limit $w\to0^+$.
+
+We, also, develop a dynamic FSS regime at CQTs to describe the time evolution of the Kitaev model under investigation. At fixed $b$, our results extend the homogenous dissipative FSS theory to the cases with $b>1$. As a working hypothesis, we suppose that the scaling variable associated with the relevant coupling $w$ is $\gamma_b=wL^{z}/b$. Our numerical results for the two-point correlation functions and the entanglement entropy fully support this ansatz. In the second stage, we compare the real-time evolution of several rings corresponding to different $b$ to get some additional insights into the dissipation mechanisms of these systems.  As far as our numerical capabilities allow us to conclude, the entanglement entropy and the $P$-correlations admit a universal scaling function for all $b$, but the $C$-correlations do not. This issue requires further investigations to be better understood. When the number of dissipators $n$ is fixed, the FSS theory outlined at fixed $b$ generalizes straightforwardly after replacing $\gamma_b$ with $W=wL^{z-1}$. In the last section, we analyze the interplay between the Liouvillian gap $\Delta_\lambda$ and the gap related to the Kitaev ring $\Delta$ in the FSS limit. In particular, we take into account the short- and long-time regimes, focusing on how they join together in the FSS limit. When $b$ is fixed, we observe that the link between the two regimes is smooth, whereas, at fixed $n$, the two regions can be easily distinguished given the presence of different power-law scalings for the gaps $\Delta$ and $\Delta_\lambda$.  
+
+
+Finally, we have reported a study of the effects of thermal
+baths to the out-of-equilibrium dynamics of many-body
+systems within their quantum critical regime close to a
+zero-temperature CQT.
+Within FSS frameworks, we argue that, when the thermal baths are
+associated with a sufficiently small temperature, their effects can be
+taken into account by appropriate extensions of the zero-temperature
+out-of-equilibrium scaling laws describing soft QQs of isolated
+systems within the critical regime.  For the unitary QQ protocol,
+where the thermal bath only determines the initial Gibbs state and the
+evolution is unitary, a nontrivial OFFS limit is simply obtained by
+rescaling the temperature as $T\sim L^{-z}$, similarly to equilibrium
+FSS.  Along the dissipative QQ protocol, where the thermal bath is not
+removed after quenching, the dynamics is more complicated, and the
+decay rate $\gamma$ plays a relevant role.  Indeed, in addition to the
+rescaling of the temperature $T$ associated with thermal bath, one
+also needs to rescale $\gamma$ as $\gamma\sim L^{-z}$ to obtain a
+nontrivial FSS. Otherwise, when keeping $\gamma$ fixed, the dynamics
+converges toward the equilibrium FSS at finite temperature, which
+happens suddenly after quenching with respect to the time scale
+$t_c\sim L^z$ of the critical regime.  Therefore the scaling behavior
+when keeping $\gamma$ fixed becomes somehow trivial, reproducing the
+equilibrium FSS for any rescaled time $\Theta = L^{-z} t >0$ in the
+large-$L$ limit.
+
+
+
+%\rev{ADD THE THERMAL}
+
+As future outlooks, we mention that the results of the round-trip KZ protocol and of the Liouvillian gap analysis can be extended in several directions. First of all, our studies can be generalized by considering thermal baths in the Lindblad formalism~\cite{tarantelli2023thermal} with a round-trip protocol which drives the time evolution. Alternatively, it would be interesting to understand how the different large-size limits considered in this thesis affect the Liouville gap and the FSS regime of open quantum models in higher dimensions. Despite the numerous challenges given by such a quest, we must say that this setting certainly offers attractive questions and new paradigms to be addressed. To name a few, we mention that the NESS, in more than one spatial dimension, may undergo a continuous phase transition, similar to a finite-temperature quantum system at equilibrium. For this reason, the evolutions of open quantum models in the short- and long-time regimes can be associated with different RG fixed points, entailing a more intriguing scenario in the FSS limit.
+
+%We conclude by mentioning that the results for the round-trip KZ protocol are also extended
+%for first order transitions \cite{tarantelli2023out} in which we can approximate the 
+%many-body system as a 2-level model within the scaling regime.
 
 %One can also analyze the role of the temperature which becomes less definite when
 %we consider out-of-equilibrium behaviors, because the temperature of the system is an
@@ -48,5 +122,3 @@ many-body system as a 2-level model within the scaling regime.
 %a thermal bath is that it eventually drives the system toward thermalization at
 %its temperature $T$ , in the large-time limit of the evolution of the system in contact
 %with the thermal bath~\cite{tarantelli2023thermal}.
-
-

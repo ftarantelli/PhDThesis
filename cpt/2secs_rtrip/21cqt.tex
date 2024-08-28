@@ -3,8 +3,6 @@
 
 
 
-
-
 \subsection{Quantum many-body systems}
 \label{quamod}
 
@@ -25,7 +23,7 @@ $\sigma^{(k)}_{L+1} = \sigma^{(k)}_1$ and $\sigma^{(k)}_{L+1} =
 
 We recall that the quantum Ising model (\ref{qisingmodel}) develops a
 quantum critical behavior at $g=g_c=J$ and $h=0$, belonging to the 2D
-Ising universality class, see e.g. Ref.~\cite{Sachdev-book}. The model
+Ising universality class, see e.g. Ref.~\cite{S99}. The model
 is always gapped for $h\neq 0$.  The relevant parameters $r\equiv
 g-g_c$ and $h$ are respectively associated with even and odd RG
 perturbations at the Ising fixed point.  Their RG dimensions are
@@ -52,7 +50,7 @@ $h(t)$, that is,  comparing with Eq.~(\ref{hlamt}), we identify
 The quantum Ising Hamiltonian $H_{qI}(g,0)$ for vanishing longitudinal
 field $h$ can be mapped into a quadratic model of spinless fermions
 through a Jordan-Wigner transformation~\cite{LSM-61, Katsura-62},
-obtaining the so-called quantum Kitaev wire:~\cite{Kitaev-01}
+obtaining the so-called quantum Kitaev wire:~\cite{Kitaev-2001}
 \begin{equation}
   H_{K}(\mu) = - \sum_{x} \big( c_x^\dagger c_{x+1} + c_x^\dagger
   c_{x+1}^\dagger + {\rm h.c.}  \big) - \mu \sum_{x} n_x \,,
@@ -78,7 +76,7 @@ some features of finite-size systems may significantly differ.  As a
 matter of fact, the nonlocal Jordan-Wigner transformation of the Ising
 chain with PBC or ABC does not simply map into the fermionic
 model~\eqref{kitaev2} with PBC or ABC.  Indeed further considerations
-apply~\cite{Katsura-62, Pfeuty-70}, leading to a less straightforward
+apply~\cite{Katsura-62, PF70}, leading to a less straightforward
 correspondence, which also depends on the parity of the
 particle-number eigenvalue. In particular, we note that the Kitaev
 quantum wire with ABC turns out to be gapped in both phases separated
@@ -90,7 +88,7 @@ that the Hilbert space of the former is restricted with respect to
 that of the latter, so that it is not possible to restore the
 competition between the two vacua belonging to the
 symmetric/antisymmetric sectors of the Ising model~\cite{Katsura-62,
-  Kitaev-01, CPV-14, RV-21}.  Therefore, a continuous quantum
+  Kitaev-2001, CV2014, rossini2021coherent}.  Therefore, a continuous quantum
 transition between gapped phases is also realized within the Kitaev
 wire with ABC, by choosing
 \begin{eqnarray}
@@ -129,7 +127,7 @@ model. Therefore, it is characterized by the critical exponents
 $\nu=1$ and $\eta=1/4$, and correspondingly the RG dimension
 associated with the temperature relevant parameter is given by
 $y_t=1/\nu=1$, and that associated with the odd external field $h$ is
-$y_h = 2-\eta/2=15/8$, see e.g. Ref.~\cite{PV-02}.
+$y_h = 2-\eta/2=15/8$, see e.g. Ref.~\cite{PV2002}.
 
 Since we are going to discuss dynamic behaviors, we must also define
 the type of dynamics driving the time evolution of the system.  We
@@ -224,10 +222,9 @@ cases that we consider, cf. Eqs.~(\ref{isichoice}) and
 brings the system from a gapped condition at $w_i<0$ to another gapped
 condition for $w_f>0$. This somehow differs from the standard
 situation of the KZ problem related to the defect production going
-from disorder to order phases.~\cite{Kibble-76, Kibble-80, Zurek-85,
-  Zurek-96, ZDZ-05, Polkovnikov-05, Dziarmaga-05, PG-08, Dziarmaga-10,
-  Dutta-etal-book, CEGS-12, PSSV-11, Damski-05, USF-07, USF-10,
-  NDP-13, DZ-14}.
+from disorder to order phases.~\cite{kibble1976topology, kibble1980some, zurek1985cosmological,
+  zurek1996cosmological, zurek2005dynamics, polkovnikov2005universal, dziarmaga2005dynamics, PG-08, dziarmaga2010dynamics,
+  Dutta-etal-book, chandran2012kibble}.
 
 
 
@@ -267,7 +264,7 @@ $w<0$ and $w>0$, with short-ranged correlations.  This is again
 different from standard classical protocols associated with the KZ
 problem, in which one passes from a disordered to an ordered phase
 characterized by long-range correlations, where further important dynamic
-effects may set in, such as coarsening phenomena~\cite{CEGS-12},
+effects may set in, such as coarsening phenomena~\cite{chandran2012kibble},
 in particular when the global symmetry is preserved by the KZ protocol
 and its initial state, such as coarsening phenomena or massless
 Goldstone excitations.
@@ -370,7 +367,7 @@ $\Delta$ at the continuous quantum transition gets suppressed as
 $\Delta \sim L^{-z}$. The interplay between the size $L$ and the time
 scale $t_s$ gives rise to nontrivial out-of-equilibrium scaling
 behaviors, which can be studied within finite-size scaling (FSS)
-frameworks~\cite{RV-21,RV-20}.
+frameworks~\cite{rossini2021coherent,rossini2020dynamic}.
 
 Another general observable is related to the surplus energy of the
 system with respect to its instantaneous ground state at the given
@@ -414,7 +411,7 @@ More precisely, we consider the subtracted quantity
   N_s(t) = N(t) - N_c\,,\label{subdef}
 \end{eqnarray}
 where $N_c$ is the ground-state transverse magnetization at the
-critical point, i.e.~\cite{Pfeuty-70}
+critical point, i.e.~\cite{PF70}
 \begin{eqnarray}  
   N_c = \lim_{L\to\infty}
   \langle \Psi_0, w=0 | \sigma_x^{(3)} | \Psi_0, w=0\rangle =
@@ -431,7 +428,7 @@ particular the subtracted definition
 \end{equation}
 which is independent of $x$ due to translation invariance, and, for
 convenience, we have subtracted its known critical ground-state value
-in the infinite volume limit, which is given by~\cite{Pfeuty-70}
+in the infinite volume limit, which is given by~\cite{PF70}
 $\rho_c = (\pi-2)/(2\pi)=0.18169011...$. One may also consider the
 fermionic correlation functions, such as
 \begin{eqnarray}
@@ -484,17 +481,17 @@ PBC), we trivially have $m_{\bm x}(t) = M(t)$ and $G(t,{\bm x},{\bm
 \label{qfssoneway}
 
 Dynamic FSS frameworks at quantum transitions has been reviewed in
-Ref.~\cite{RV-21}.  In this section we outline the dynamic scaling
+Ref.~\cite{rossini2021coherent}.  In this section we outline the dynamic scaling
 behavior that is expected to emerge at the one-way KZ protocol of the
 models introduced in the previous sections, driven by the time
 dependent $w(t)=t/t_s$, starting from the ground state at
 $w_i=w(t_i)<0$. For a RG derivation of the main features of the
-dynamic scaling at KZ protocols see Ref.~\cite{RV-21} (in particular
+dynamic scaling at KZ protocols see Ref.~\cite{rossini2021coherent} (in particular
 its chapter 9).
 
 The dynamic scaling along one-way KZ protocols, such as those outlined
 in Sec.~\ref{oneway}, entails the introduction of a number of
-appropriate scaling variables~\cite{RV-21}, such as
+appropriate scaling variables~\cite{rossini2021coherent}, such as
 \begin{eqnarray}
   &K = w(t) L^{y_w}\,, \qquad &\Upsilon = t_s/L^{\zeta}\,,  
   \label{KZscavar}\\
@@ -517,7 +514,7 @@ $K$, $\Upsilon$, $\Theta$ and $\Theta_i$ fixed.
 The dynamic FSS of a generic observable $O_s$, that is the expectation
 value of a local operator $O(x)$ with RG dimension $y_o$, and the
 corresponding two-point correlation function $G_O(x-y)$, behave
-as~\cite{RV-21}
+as~\cite{rossini2021coherent}
 \begin{eqnarray}
   && O_s(t,t_s,w_i,L) \approx L^{-y_o} {\cal
     O}(\Upsilon,\Theta,\Theta_i)\,,
@@ -595,7 +592,7 @@ E_s(t,t_s,w_i,L) \approx L^{y_t} {\cal E}_s(\Upsilon,\Theta,\Theta_i)\,,
 \end{eqnarray}
 where $y_t=d+z-y_r=1$ is the RG exponent associated with the even
 energy operator. Note that the leading analytic background
-contributions~\cite{CPV-14,RV-21}, generally arising at the critical
+contributions~\cite{CV2014,rossini2021coherent}, generally arising at the critical
 point, get cancelled by the difference of the two terms in the
 definition of $E_s$, cf. Eq.~(\ref{etdiff}).
 
@@ -680,13 +677,13 @@ They are expected to be generally controlled by the leading irrelevant
 perturbations at the 2D Ising fixed point, which get suppressed as
 $\xi^{-\omega}$ (where $\xi$ is diverging correlation length, or the
 KZ length scale $\lambda$) with the universal exponent
-$\omega=2$~\cite{CHPV-02,CCCPV-00,CH-00,CPRV-98,CPV-14}, and also from
+$\omega=2$~\cite{CHPV-02,CCCPV-00,CV2014}, and also from
 analytical contribution which dominates the corrections arising from
-the leading irrelevant perturbation~\cite{PV-02,RV-21}. However,
+the leading irrelevant perturbation~\cite{PV2002,rossini2021coherent}. However,
 typically the leading corrections in out-of-equilibrium dynamic
 phenomena arising from KZ protocols are suppressed as $\lambda^{-1}$,
 cf. Eq.~(\ref{xit}), or equivalently as $1/L$ in the dynamic
-FSS~\cite{RV-21}.
+FSS~\cite{rossini2021coherent}.
 
 
 Analogous dynamic scaling behaviors are expected for the protocol
@@ -877,7 +874,7 @@ under ${\mathbb Z}_2$ reflection implies that
   \end{eqnarray}
 Since the two trajectories ($a$) and ($b$) gives rise to a close area,
 to achieve a quantitative indication of how far the system is out of
-equilibrium in the large-$t_s$ limit, we may define~\cite{PV-16}
+equilibrium in the large-$t_s$ limit, we may define~\cite{pelissetto2016off}
 \begin{equation}
   I_A(t_s,w_\star,L) = - t_s^{-\kappa} \oint dt\, M(t,t_s,w_\star,L)
 \label{aharea}
@@ -1018,7 +1015,7 @@ transforming to the momentum space. Again the resulting data (not
 shown) for the adiabaticity function, energy surplus, particle
 density, and the two-point functions, cf. Eq.~(\ref{eq:corr}), nicely
 support the dynamic FSS outlined in Sec.~\ref{qfssoneway}, see also
-Ref.~\cite{RV-21}.
+Ref.~\cite{rossini2021coherent}.
 
 
 
@@ -1367,7 +1364,7 @@ $L=2000$.
 Actually, such an instability appears quite similar to that emerging
 in analogous round-trip protocols within two-level systems.  They are
 discussed in App.~\ref{LZlike}. Similarly to the 
-Landau-Zener problem~\cite{LZeff}, we consider a time-dependent two-level
+Landau-Zener problem~\cite{zener1932non}, we consider a time-dependent two-level
 Hamiltonian
 \begin{equation}
   H_{2\ell}(t) = - \beta(t) \sigma^{(3)}
@@ -1386,7 +1383,7 @@ $\tau_\star=t_\star/\sqrt{t_s}$ play the same role of the scaling
 variables $\Theta$ and $\Theta_\star$ describing the round-trip KZ
 protocols in quantum many-body systems. The corresponding
 Schr\"odinger functions can be analytically solved in terms 
-of parabolic cylinder functions $D_\nu(x)$~\cite{VG-96}, see
+of parabolic cylinder functions $D_\nu(x)$~\cite{vitanov1996landau}, see
 App.~\ref{LZlike}.
 
 The resulting behavior of the expectation values of $\sigma^{(3)}$ and

@@ -16,7 +16,7 @@
   the set up sketched in Fig.~\ref{fig:sketch}.  We model the
   dissipative particle-decay mechanism by Lindblad master equations
   governing the time evolution of the density
-  matrix~\cite{Lindblad-76,GKS-76,BP-book,RH-book,DR-21}.  To
+  matrix~\cite{Lindblad-76,GKS-76,BP-openquantumsystembook,RH-book,dr2021self}.  To
   investigate the effects of the localized particle-loss dissipation, we
   study the quantum dynamics arising from protocols starting from the
   ground state of the fermionic gas, then evolving under the effect of
@@ -32,7 +32,7 @@
   
   Some issues concerning the behavior of fermionic gases in the presence
   of localized dissipative interactions have been already discussed in
-  Refs.~\cite{FCKD-19,LHFHCE-19,KMS-19,WSDK-20,FMKCD-20,AC-21}, mainly
+  Refs.~\cite{FCKD-19,LHFHCE-19,KMS-19,WSDK-20,FMKCD-20}, mainly
   for homogeneous systems neglecting boundary effects. Here we extend
   these studies by analyzing the interplay between time, size of the
   system, and number $N_0$ of initial particles. We analyze the various
@@ -51,7 +51,7 @@
   many-body correlations become eventually sensitive to the trapping
   potential (local density approximations generally fail to describe
   quantum correlations, in particular when they are
-  critical~\cite{CTV-13} and/or out-of-equilibrium~\cite{RV-21-rev}).
+  critical~\cite{CTV-13} and/or out-of-equilibrium~\cite{rossini2021coherent}).
   
   
   \subsection{Free lattice fermions  with localized dissipative defects}
@@ -109,7 +109,7 @@
   rapidly for $|x|\gg L_t$. The main features of the behavior of fermionic
   gases trapped by a inhomogeneous external power-law potentials have
   been much investigated, see e.g.
-  Refs.~\cite{ACV-14,Nigro-17,CV-10,CV-10-2,CV-10-3,CV-10-4,Pollet-12,V-12,CLM-15}.
+  Refs.~\cite{ACV-14,Nigro-17,CV-10,CV-10-2,Pollet-12}.
   
   In systems within both hard-wall and inhomogeneous traps, the particle
   number operator
@@ -131,7 +131,7 @@
   We model the dissipative mechanisms within the Lindblad
   framework~\cite{Lindblad-76,GKS-76}, where the evolution of the matrix
   density $\rho(t)$ of the system is described by he
-  equation~\cite{BP-book,RH-book}
+  equation~\cite{BP-openquantumsystembook,RH-book}
   \begin{eqnarray}
   &&  {\partial\rho\over \partial t} = {\cal L}[\rho]=
     - i \, [ \hat H,\rho]
@@ -140,12 +140,12 @@
   \end{eqnarray}
   We recall that the conditions leading to the Lindblad framework are
   typically satisfied in quantum optical
-  implementations~\cite{SBD-16,DR-21}.  The form of the operator
+  implementations~\cite{BDS-2015-KeldyshOptical,dr2021self}.  The form of the operator
   ${\mathbb D}[\rho]$ depends on the nature of the dissipation arising
   from the interaction with the bath.  We consider a localized
   particle-decay dissipation acting at the site $z$, modeled by the
-  Lindblad operator~\cite{HC-13, KMSFR-17, Nigro-19, NRV-19, WSDK-20,
-    FMKCD-20, DR-21,RV-21-rev}
+  Lindblad operator~\cite{HC-13, KMSFR-17, N-2019-uniquenesslindblad, NRV-2019-competingdissipativeandcoherent, WSDK-20,
+    FMKCD-20, dr2021self,rossini2021coherent}
   \begin{eqnarray}
   \mathbb{D}[\rho] = w\,\biggr[
       \hat c_{z}\,\rho\,\hat c_{z}^\dagger - {1\over 2}\left( \rho\,
@@ -155,18 +155,18 @@
   \end{eqnarray}
   where $w$ is a parameter controlling the strength of the particle-loss
   dissipation.
-  \rev{Note that reflection symmetry with respect to
+  Note that reflection symmetry with respect to
     the center of the confined particle system is only preserved when
     the particle-loss dissipation is localized at the center. As we
     shall see, this will lead to peculiar behaviors with respect to the
-    case of particle-loss dissipation localized at generic sites.}
+    case of particle-loss dissipation localized at generic sites.
   
   
   
   The approach to the asymptotic stationary states are generally
   controlled by the Liouvillian gap $\Delta_{\cal L}$ associated with
   the generator ${\cal L}$ entering the Lindblad equation
-  (\ref{EQLindblad})~\cite{BP-book,RH-book,Znidaric-15,MBBC-18,SK-20}.
+  (\ref{EQLindblad})~\cite{BP-openquantumsystembook,RH-book,Z-2015-relaxtimes,MBBC-18,KS-2020-boundarydephasing}.
   The asymptotic stationary state is provided by the eigenstate of
   ${\cal L}$ with vanishing eigenvalue, $\Lambda_0=0$, while all other
   eigenstates have eigenvalues $\Lambda_i$ with negative real part,
@@ -304,7 +304,7 @@
   \label{chemicalpot}
   \end{equation}
   The value $\mu=\mu_{\rm vs}=-2$ corresponds to the vacuum-superfluid
-  transition point~\cite{Sachdev-book,ACV-14}, separating the phase
+  transition point~\cite{S99,ACV-14}, separating the phase
   where the lowest Hamiltonian eigenstate has $N=0$ particles from the
   one for $\mu>-2$ where the ground-state has $N\sim L$ fermions.
   
@@ -445,7 +445,7 @@
       numerical precision, which is very accurate).}
     \label{nxdiffn0time}
   \end{figure}
-  
+
   
   \begin{figure}[!htb]
 \centering
@@ -455,9 +455,9 @@
       conditions, in the presence of a central-site dissipation with
       $w=1$, and for various $N_0$. In all cases the particle density
       vanishes for $x=0$, and it is almost flat elsewhere, apart from
-      small spatial oscillations, \rev{which appear similar to the
+      small spatial oscillations, which appear similar to the
         Friedel oscillations characterizing the behavior of closed
-        particle systems}.  }
+        particle systems}.
     \label{nxdiffn0}
   \end{figure}
   
@@ -489,7 +489,7 @@
   
   The approach to the stationary state is controlled by the Liouvillian
   gap $\Delta_{\cal L}$ of the generator ${\cal L}$ of the Lindblad
-  equation~\cite{BP-book,RH-book,Znidaric-15,MBBC-18,SK-20},
+  equation~\cite{BP-openquantumsystembook,RH-book,Z-2015-relaxtimes,MBBC-18,KS-2020-boundarydephasing},
   \begin{equation}
   \Delta_{\cal L} = - {\rm Max}_{i>0} \, {\rm Re}\,(\Lambda_i)\,,
   \label{deltadeb}
@@ -500,7 +500,7 @@
   fermionic wires with localized dissipative mechanisms, such as that
   described by Eq.~(\ref{Lindop}), shows generally the asymptotic
   finite-size
-  behavior~\cite{PP-08,Prosen-08,Znidaric-15,SK-20,TV-21}
+  behavior~\cite{PP-08,P-2008-thirdquantization,Z-2015-relaxtimes,KS-2020-boundarydephasing,TV-2021-dissipativeboundaries}
   \begin{equation}
   \Delta_{\cal L}(w,L)\approx D_{\cal L}(w) \,L^{-3}\,.  
   \label{deltaL}
@@ -517,7 +517,7 @@
     \includegraphics[width=0.65\columnwidth]{imm/DeltawNoL3.eps}
     \caption{The Liouvillian gap $\Delta_{\cal L}$ for particle-decay
       dissipation localized at the center of the chain, for various
-      system size $L=2M+1$. \rev{The curves appear to converge with
+      system size $L=2M+1$. The curves appear to converge with
       increasing $M$; this is clearly shown at least for $w\gtrsim 0.2$,
       as also shown by the large-$L$ convergence at a fixed value
       $w=0.2$ [suggesting that the corrections to the asymptotic scaling
@@ -525,7 +525,7 @@
       case of dissipation at the boundaries, we believe that the
       convergence extends to any $w>0$, but, unlike dissipation at the
       boundaries, it is nonuniform when decreasing $w$ toward zero, see
-      text.} }
+      text.} 
     \label{liogaps}
   \end{figure}
   
@@ -580,16 +580,16 @@
   \Delta_{\cal L}(w)\approx D_{\cal L}(w)\sim w^{-1}$. This explains the
   results shown in Fig.~\ref{ndiffn0}, where the approach to the
   asymptotic value of the particle number for $w=10$ turns out to be
-  slower than that for $w=1$.  \rev{The suppression in the limit of
+  slower than that for $w=1$.  The suppression in the limit of
     strong dissipation, for large $w$, may be interpreted as a
-    quantum-Zeno-like phenomenon~\cite{MS-77,FP-08}, where a strong
+    quantum-Zeno-like phenomenon~\cite{MS-1977-quantumzeno,FP-08}, where a strong
     dissipation somehow slows down the dynamics, see
     e.g. Refs.~\cite{TNDTT-17,DMSD-20} for the appearence of similar
-    quantum Zeno regimes.}
+    quantum Zeno regimes.
   
   As shown by Figs.~\ref{liogaps} and \ref{liogapsb}, the Liouvillian
   gap at fixed $L$ has a maximum at an intermediate value of
-  $w$. \rev{The corresponding values $w_{\rm max}$ and $L^3 \Delta_{\cal
+  $w$. The corresponding values $w_{\rm max}$ and $L^3 \Delta_{\cal
       L}(w_{\rm max})$ appears to rapidly converge to the large-$L$
     limit in the case of dissipations localized at the boundaries, but
     they show an apparent size dependence in the case of dissipation
@@ -602,7 +602,7 @@
     conjecture that, like the case of dissipation at the boundaries, the
     convergence in the large-size limit extends to any $w>0$, but it is
     nonuniform when decreasing $w$ toward zero, unlike dissipation at
-    the boundaries.}  This is demonstrated by the plots reported in
+    the boundaries.  This is demonstrated by the plots reported in
   Figs.~\ref{gapcenterdetails}, which show that the location of the
   maximum value of the Liouvillian gap for central dissipation moves
   toward $w=0$, with $w_{\rm max}\sim L^{-1}$, and its maximum value
@@ -718,9 +718,9 @@
   ground state. When keeping the particle number $N_0$ fixed, $\Delta_H$
   behaves asymptotically as $\Delta_H \sim L^{-2}$, corresponding to the
   dynamic exponent $z=2$ of the vacuum-superfluid
-  transition~\cite{Sachdev-book}.
+  transition~\cite{S99}.
   
-  \rev{We want to check whether the
+  We want to check whether the
     out-of-equilibrium dynamics develops an intermediate regimes somehow
     controlled by the Hamiltonian driving of the Lindblad equation,
     whose intrinsic time scale is related to its gap, i.e. $t \sim
@@ -729,7 +729,7 @@
     limit (of course, for sufficiently large $L$, and in particular in
     the large-$L$ limit). As we shall see, a closer look at the time
     evolution provides a clear evidence of such intermediate regime, which 
-     also requires a rescaling of the dissipation strength.}
+     also requires a rescaling of the dissipation strength.
   
   
   In Fig.~\ref{rntn010ir} we show some results for the time dependence
@@ -772,15 +772,15 @@
   superfluid phase, i.e. when the chemical potential $\mu$ is larger
   than that at the vacuum-superfluid transition, $\mu>-2$. Within the
   superfluid phase, the gap $\Delta_S$ of isolated free Fermi gases
-  behaves as~\cite{Sachdev-book} $\Delta_S \sim L^{-1}$.
+  behaves as~\cite{S99} $\Delta_S \sim L^{-1}$.
   
-  \rev{Again we want to check whether the out-of-equilibrium dynamics in
+  Again we want to check whether the out-of-equilibrium dynamics in
     this condition develops an intermediate regime controlled by the
     part of the Lindblad equation driving the unitary dynamics
     introduces a time scale $t\sim \Delta_S^{-1}\sim L$ (again, much
     smaller than the time scale $t\sim L^3$ characterizing the approach
     to the stationary large-time limit). Like the case at fixed $N_0$,
-    we show that such an intermediate regime exists.}
+    we show that such an intermediate regime exists.
   
   The existence of a corresponding intermediate regime of the dynamics
   is demonstrated by the results shown in Fig.~\ref{rntn0lvstol},
@@ -828,10 +828,10 @@
   arising from inhomogeneous external potentials, such as those in
   Eq.~(\ref{potential}), in the presence of a particle-decay dissipation
   at the center of the trap, as described by the Lindblad equations
-  (\ref{EQLindblad}) and (\ref{Lindop}). \rev{As already mentioned in
+  (\ref{EQLindblad}) and (\ref{Lindop}). As already mentioned in
     the introductive section, effective harmonic trapping mechanisms are
     quite common in cold-atom experiments~\cite{BDZ-08}. Therefore their
-    analysis is also relevant from a phenomonological point of view.}
+    analysis is also relevant from a phenomonological point of view.
   
   We study the time evolution in the limit of large trap size $L_t$, in
   the case we keep the initial particle number $N_0$ fixed, and when we
@@ -959,7 +959,7 @@
   L_t^{-z\theta}$ where $z=2$ is the dynamic exponent associated with
   the vacuum-to-superfluid transition, and $\theta=1/2$ is the universal
   trap exponent characterizing critical behaviors in the presence of
-  trapping potentials~\cite{CV-09,CV-10,ACV-14,RV-21-rev} [for generic
+  trapping potentials~\cite{CV-09,CV-10,ACV-14,rossini2021coherent} [for generic
     power laws of the potential (\ref{potential}), $\theta=p/(p+2)$].
   
   \begin{figure}[!htb]

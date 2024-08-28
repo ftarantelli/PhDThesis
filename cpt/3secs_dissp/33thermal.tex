@@ -8,7 +8,7 @@
 
 We consider fermionic Kitaev wires of $L$ sites with open boundary
 conditions, whose quantum unitary dynamics is driven by the
-Hamiltonian~\cite{Kitaev-01}
+Hamiltonian~\cite{Kitaev-2001}
 \begin{equation}
   \hat H_{\rm K} = - J \sum_{x=1}^{L-1} \big( \hat c_x^\dagger \hat
   c_{x+1}^{\phantom\dagger} +
@@ -24,7 +24,7 @@ set $J=1$.
 
 The Hamiltonian~\eqref{kitaev2} can be mapped into a quantum Ising
 chain, by means of the Jordan-Wigner transformation, see, e.g.,
-Ref.~\cite{Sachdev-book}.  The corresponding spin model is the
+Ref.~\cite{S99}.  The corresponding spin model is the
 quantum Ising chain with open boundary conditions, i.e.
 \begin{equation}
   \hat H_{\rm Is} = -\sum_{x=1}^{L-1} \hat \sigma^{(1)}_x \hat
@@ -47,10 +47,10 @@ phase for $|\mu|<|\mu_c|$ (corresponding to $|g|<1$). Thus, we define
 \end{equation}
 so that one can easily see the correspondence between the Kitaev
 Hamiltonian (\ref{kitaev2}) and the generic one reported in
-Eq.~(\ref{qudef}), i.e. $\hat{H}_c$ corresponds to the Hamiltonian
+Eq.~(\ref{hlamt}), i.e. $\hat{H}_c$ corresponds to the Hamiltonian
 (\ref{kitaev2}) for $\mu=\mu_c$, and $\hat{H}_p=-\sum_{x=1}^L \hat
 n_x$.  The continuous transition at $w=w_c$ belongs to the
-two-dimensional Ising universality class~\cite{Sachdev-book,RV-21},
+two-dimensional Ising universality class~\cite{S99,rossini2021coherent},
 characterized by the length-scale critical exponent $\nu=1$, related
 to the RG dimension $y_w = 1/\nu=1$ of the Hamiltonian parameter
 $w$. This implies that, approaching the critical point, the length
@@ -60,17 +60,17 @@ quantum dynamics can be obtained from the power law
 $\Delta\sim\xi^{-z}$ of the vanishing gap with increasing $\xi$.
 Moreover, the RG dimension of the fermionic operators $\hat c_j$ and
 $\hat c^\dagger_j$ at the CQT is $y_c = 1/2$, and that of the particle
-density operator $\hat n_x$ is $y_n = 1$~\cite{Sachdev-book,RV-21}.
+density operator $\hat n_x$ is $y_n = 1$~\cite{S99,rossini2021coherent}.
 
 
 \subsection{Modelization of the thermal bath}
 \label{thebath}
 
 In our study we consider a modelization of interaction with a thermal
-bath within the Lindblad master equation (\ref{Lindblad}), whose
+bath within the Lindblad master equation (\ref{eqlindblad}), whose
 asymptotic large-time behavior leads to a Gibbs density matrix at a
 given finite temperature $T$. In particular, we consider the proposal
-developed in Ref.~\cite{DR-21} which applies to quantum models
+developed in Ref.~\cite{dr2021self} which applies to quantum models
 described by quadratic Hamiltonians, such as that of the fermionic
 Kitaev wires. This provides a relatively simple modelization of a
 thermal bath leading to thermalization in the large-time limit of the
@@ -79,7 +79,7 @@ system.
 
 The Kitaev Hamiltonian (\ref{kitaev2}) with open boundary conditions
 can be diagonalized in the Nambu field space by a Bogoliubov
-transformation, see e.g. Refs.~\cite{Pfeuty-70,BR-book,DR-21}, so that
+transformation, see e.g. Refs.~\cite{PF70,bla86,dr2021self}, so that
 we can rewrite it as
 \begin{equation}
 \hat{H}_{\rm K}=\sum_{k=1}^L\,\omega_k \,\hat b^\dagger_k\, \hat b_k,
@@ -90,15 +90,15 @@ eigenoperators $\hat b_k$ (we are neglecting an irrelevant constant
 term). Note that both $\omega_k$ and $\hat b_k$ depend on the
 Hamiltonian parameter $\mu$.  The relation between the fermionic
 operators $\hat{c}_x$ and the Bogoliubov eigenoperators $\hat{b}_k$
-can be generally written as~\cite{Pfeuty-70,BR-book,DR-21}
+can be generally written as~\cite{PF70,bla86,dr2021self}
 \begin{equation}
   \label{transBogol}
   \hat c_x = \sum_{k=1}^L A_{xk} \,\hat{b}_k + B_{xk}
   \,\hat{b}_k^\dagger,
 \end{equation}
 where $A$ and $B$ are appropriate $L\times L$ matrices depending on
-$\mu$.  Following Refs.~\cite{DR-21,PCR-22}, we write the dissipator
-$\mathbb{D}_T[\rho]$ in the Lindblad master equation (\ref{Lindblad})
+$\mu$.  Following Refs.~\cite{dr2021self,CPR-2022-otto_engine}, we write the dissipator
+$\mathbb{D}_T[\rho]$ in the Lindblad master equation (\ref{eqlindblad})
 in terms of the Bogoliubov eigenoperators as
 \begin{eqnarray}
   \mathbb{D}_T[\rho] &=&
@@ -116,8 +116,8 @@ where
   \label{fomt}
 \end{equation}
 When using this homogeneous dissipator term, the Lindblad master
-equation (\ref{Lindblad}) ensures the asymptotic large-time
-thermalization~\cite{DR-21}. Therefore,
+equation (\ref{eqlindblad}) ensures the asymptotic large-time
+thermalization~\cite{dr2021self}. Therefore,
 \begin{eqnarray}
   &&\lim_{t\to\infty} \rho(t)  = \rho_t(w,T), \label{asyrho}\\
 &&\rho_t(w,T) = \sum_n e^{-E_n(w)/T}|\Phi_n, w\rangle \langle \Phi_n, w|,
@@ -127,7 +127,7 @@ where $\rho_t(w,T)$ is the density matrix representing the thermal
 state, $E_n(w)$ and $|\Phi_n, w\rangle$ are the eigenvalues and
 eigenstates of $\hat{H}(w)$.  The asymptotic approach to the thermal
 distribution is controlled by the decay-rate parameter
-$\gamma$~\cite{DR-21}. Indeed the Liouvillian gap $\Delta_{\cal L}$
+$\gamma$~\cite{dr2021self}. Indeed the Liouvillian gap $\Delta_{\cal L}$
 that controls the exponential approach to the asymptotic stationary
 state of the Lindblad equation is proportional to the decay rate
 $\gamma$, i.e.
@@ -139,16 +139,17 @@ $\gamma$, i.e.
 The above modelization of thermal baths provides a useful theoretical
 laboratory to investigate issues related to the out-of-equilibrium
 dynamics in the presence of thermal baths. Its derivation has
-been thoroughly discussed in Ref.~\cite{DR-21}. We also mention that it
-has been employed in Refs.~\cite{PCR-22,BD-23}.  Some details of the
-computations using the Lindblad master equation (\ref{Lindblad}) with
+been thoroughly discussed in Ref.~\cite{dr2021self}. We also mention that it
+has been employed in Refs.~\cite{CPR-2022-otto_engine,BD-23}.  Some details of the
+computations using the Lindblad master equation (\ref{eqlindblad}) with
 the dissipator (\ref{Dtrho}) are reported in the appendix.
 
 
 \subsection{Quantum-quench protocols}
 \label{proto}
 
-As already anticipated in Sec.~\ref{intro}, we consider two protocols,
+%As already anticipated in Sec.~\ref{intro}, 
+We consider two protocols,
 differing for the absence or presence of the contact with the thermal
 bath during the quantum evolution after quenching, giving respectively
 rise to unitary or dissipative dynamics after quenching. We call them
@@ -159,19 +160,19 @@ rise to unitary or dissipative dynamics after quenching. We call them
 \item {\em Unitary} QQ protocol: In this simplest QQ protocol the role
   of the thermal bath is limited to that of preparing the initial
   Gibbs state $\rho_t(w_i,T)$ at $t=0$, reported in
-  Eq.~(\ref{rhoi}). This can be obtained by keeping the thermal bath
+  Eq.~(\ref{eqschrodinger}) with $\rho_0$. This can be obtained by keeping the thermal bath
   in contact with the system for a sufficiently long time $t_{\rm th}$, i.e
   $t_{\rm th}\gg \gamma^{-1}$. Then at $t=0$ the Hamiltonian parameter is
   instantaneously quenched from $w_i<0$ to $w\ge 0$ and the thermal
   bath is removed, so that the subsequent time evolution is that of a
   closed fermionic wire, i.e.  it is unitary and only driven by the
-  Hamiltonian of the system, cf. Eq.~(\ref{firstprot}).
+  Hamiltonian of the system.%, cf. Eq.~(\ref{firstprot}).
 
 \item {\em Dissipative} QQ protocol: The quantum evolution starts from
   the same initial Gibbs state $\rho_t(w_i,T)$, but the thermal bath
   is maintained in contact with the system after the QQ from $w_i<0$
   to $w\ge 0$, at $t=0$.  Therefore, the quantum evolution for $t>0$
-  is driven by the Lindblad master equation (\ref{Lindblad}) with the
+  is driven by the Lindblad master equation (\ref{eqlindblad}) with the
   dissipator term (\ref{Dtrho}). Note that this dynamic protocol
   entails a further time scale $\tau = \gamma^{-1}$, characterizing
   the asymptotic exponential approach to the large-time stationary
@@ -194,13 +195,13 @@ n_s(t,L) = {1\over L} {\rm Tr} \left[ \rho(t) \sum_{x=1}^L \hat{n}_x \right]
 \end{eqnarray}
  where $n_c(L)$ is the ground-state energy density of the Kitaev wire
  of size $L$ at the critical point $w_c=0$ (in the infinite-size limit
- $n_c= 1/2 - 1/\pi$~\cite{Pfeuty-70}). Note that the particle density
+ $n_c= 1/2 - 1/\pi$~\cite{PF70}). Note that the particle density
  operator $\hat{n}_x$ and the transverse spin component
  $\hat\sigma_x^{(3)}$ of the quantum Ising chain (\ref{isham}) are
  trivially related, indeed $\hat{\sigma}_x^{(3)} = 2 \hat{n}_x$.  In
  the definition of $n_s$, the subtraction of $n_c(L)$ simplifies the
  scaling behavior of $n_s(t,L)$ within the critical regime, cancelling
- the leading analytical behavior~\cite{CPV-14,RV-21}. To monitor the
+ the leading analytical behavior~\cite{CV2014,rossini2021coherent}. To monitor the
  spatial correlations, we also consider
 \begin{eqnarray}
 P(x,y,t) & \!\! = \!\! & {\rm Tr}[\rho(t)\,(\hat c_x^\dagger 
@@ -224,7 +225,7 @@ OFSS behaviors where the effects of the thermal baths are taken into
 account by appropriate extensions of the out-of-equilibrium
 zero-temperature scaling laws describing soft QQs in
 closed systems within their critical regime, already put foward by
-earlier works~\cite{PRV-18,RV-21}.
+earlier works~\cite{pelissetto2017dynamic,rossini2021coherent}.
 
 \begin{figure}[!htb]
 \centering
@@ -233,7 +234,7 @@ earlier works~\cite{PRV-18,RV-21}.
     $n_s(t)$, cf. Eq.~(\ref{ddef}), for the dissipative QQ protocol
     entailing a dissipative dynamics after the QQ at $t=0$ of the
     Hamiltonian parameter $w$, describing the persistent interaction
-    with the thermal bath, cf.  Eqs.~(\ref{Lindblad}) and
+    with the thermal bath, cf.  Eqs.~(\ref{eqlindblad}) and
     (\ref{Dtrho}).  These curves refer to a system of size $L=60$,
     temperature $T=2$ of the thermal bath, quenching from $w_i=-0.01$
     to $w=0$, and various values of the decay rate $\gamma$ (the case
@@ -282,7 +283,7 @@ quantum critical regime.
 
 We now provide a brief summary of the out-of-equilibrium scaling
 theory for close systems, describing QQ protocols within the critical
-regime~\cite{PRV-18,RV-21}. The initial state is the ground state
+regime~\cite{pelissetto2017dynamic,rossini2021coherent}. The initial state is the ground state
 associated with an initial value $w_i<0$, and, after the instantaneous
 quench at $t=0$ from $w_i$ to $w$, the quantum evolution is driven by
 the Schr\"odinger equation.
@@ -292,7 +293,7 @@ valid at equilibrium, allowing for a time dependence essentially
 controlled by the time scaling variable $\Theta \sim t\,\Delta$, which
 is obtained by assuming that the relevant time scale of the critical
 modes is proportional to the inverse energy difference $\Delta$ of the
-lowest states. We refer to Ref.~\cite{RV-21} for a through
+lowest states. We refer to Ref.~\cite{rossini2021coherent} for a through
 presentation of the scaling arguments leading to the asymptotic OFSS
 behaviors.
 
@@ -302,7 +303,7 @@ a local operator $\hat{O}({\bm x})$ and its fixed-time correlations
 $G_O=\langle \hat{O}({\bm x}) \hat{O}({\bm y})\rangle$. The general
 working hypothesis underlying out-of-equilibrium FSS frameworks is
 that the expectation value of $\hat{O}({\bm x})$ and its correlation
-functions obey asymptotic homogeneous scaling laws~\cite{RV-21}, such
+functions obey asymptotic homogeneous scaling laws~\cite{rossini2021coherent}, such
 as
 \begin{eqnarray}
 O(t, {\bm x}, L, w_i, w) \approx  b^{-y_o} {\cal O}(t/b^z,
@@ -326,7 +327,7 @@ homogenous scaling law. Then, we expect the OFSS of the expectation
 value $O$ of a generic local operator $\hat{O}_{\bm x}$, of its
 spatial average $\hat{O}_a =L^{-d}\sum_{\bm x}\hat{O}_{\bm x}$, and
 its two-point correlation function $G_O$, develop the asymptotic OFSS
-behavior~\cite{PRV-18,RV-21}
+behavior~\cite{pelissetto2017dynamic,rossini2021coherent}
 \begin{eqnarray}
   && O(t, {\bm x}, L, w_i, w) \, \approx \, L^{-y_o} \,
   {\cal O}(\Theta, {\bm X}, \Phi_i, \Phi),
@@ -352,7 +353,7 @@ the quantum evolution.  Note that in the scaling law
 (\ref{scalvarque}) the dynamic features are essentially encoded in the
 time dependence of the scaling variable $\Theta\sim t\,\Delta$.  The
 other features, in particular when $w_i=w$, are analogous to those
-arising from equilibrium FSS at CQTs~\cite{CPV-14,RV-21}, where the
+arising from equilibrium FSS at CQTs~\cite{CV2014,rossini2021coherent}, where the
 argument $\Phi=L^{y_w} w$ of the scaling functions is controlled by
 the RG dimension $y_w$ of the relevant parameters $w$ at the RG fixed
 point associated with the CQT.
@@ -363,7 +364,7 @@ observables defined in Sec.~\ref{obs}, after a quench from $w_i$ to
 $w$ at $t=0$, keeping into account that the RG dimension of the
 subtracted particle density is $y_n = 1$, and that of the fermionic
 operator $\hat c_x$ is $y_c=1/2$.  Note that the dominant analytical
-contributions to the particle density~\cite{CPV-14,RV-21} coming from
+contributions to the particle density~\cite{CV2014,rossini2021coherent} coming from
 the analytical background are canceled in the difference $n_s$ defined
 in Eq.~(\ref{ddef}), whose leading asymptotic behavior arises from the
 quantum critical modes, therefore it is analogous to that of $O_a$ in
@@ -376,7 +377,7 @@ nonuniversal multiplicative rescaling and normalizations of its
 arguments.  Within isolated fermionc Kitaev wires and quantum Ising
 chains, the OFSS arising from soft QQs has been verified by numerical
 computations for various boundary conditions, and also along their
-quantum first-order transition line~\cite{PRV-18,RV-21}.
+quantum first-order transition line~\cite{pelissetto2017dynamic,rossini2021coherent}.
 
 
 
@@ -387,19 +388,19 @@ corrections.  There are various sources of scaling corrections when
 approaching the OFSS. Of course, they include those that are already
 present at equilibrium. In particular, the irrelevant RG perturbations
 are sources of scaling corrections for the asymptotic behavior of the
-free-energy density~\cite{PV-02,RV-21}.  In the case of
+free-energy density~\cite{PV2002,rossini2021coherent}.  In the case of
 one-dimensional quantum systems undergoing CQTs belonging to the
 two-dimensional Ising universality class, the leading scaling
 corrections from irrelevant RG perturbations are suppressed as
-$L^{-\omega}$ with $\omega=2$~\cite{CHPV-02,CPV-14}. However, other
-contributions may become more relevant~\cite{PV-02,CPV-14,RV-21}, such
+$L^{-\omega}$ with $\omega=2$~\cite{CHPV-02,CV2014}. However, other
+contributions may become more relevant~\cite{PV2002,CV2014,rossini2021coherent}, such
 as those arising from the presence of analytical backgrounds, from the
 presence of boundaries (which generally gives rise to $O(1/L)$
 corrections), and, in the case of correlation functions, from RG
 mixings of the source fields [this for example happens in the case of
   the correlation functions of the fermionic field $\hat{c}_x$, for
   which corrections are $O(1/L)$].  These scaling corrections have
-been confirmed by numerical results~\cite{CPV-14,RV-21}. Therefore, we
+been confirmed by numerical results~\cite{CV2014,rossini2021coherent}. Therefore, we
 expect that the asymptotic OFSS of fermionic Kitaev wires and quantum
 Ising chains with open boundary conditions is generally approached
 with $O(1/L)$ corrections.
@@ -419,7 +420,7 @@ that the temperature of the initial Gibbs state must be appropriately
 suppressed in the large-$L$ OFSS limit, to obtain a nontrivial
 out-of-equilibrium critical limit.  This is analogous to what happens
 within the equilibrium FSS, where one introduces the scaling
-variable~\cite{SGCS-97,Sachdev-book,RV-21}
+variable~\cite{SGCS-97,S99,rossini2021coherent}
 \begin{equation}
   \Xi \equiv L^z T,
  \label{Xidef}
@@ -478,7 +479,7 @@ analogous OFSS).
 We now discuss the dynamics arising from the dissipative protocol
 outlined in Sec.~\ref{proto}, when the quantum evolution after
 quenching is described by the Lindblad master equation
-(\ref{Lindblad}) with the thermal-like dissipator (\ref{Dtrho}), to
+(\ref{eqlindblad}) with the thermal-like dissipator (\ref{Dtrho}), to
 modelize the interaction with a thermal bath characterized by a
 temperature $T$ (which does not change after quenching)
 and decay rate $\gamma$.
@@ -541,7 +542,7 @@ without any further relevant evolution of the system for any
 $\Theta>0$.  Therefore, if the temperature is rescaled by keeping
 $\Xi=L^z T$ fixed, we must recover the equilibrium FSS behavior in the
 presence of a thermal bath at temperature $T$, such as that associated
-with the subtracted particle density~\cite{CPV-14,RV-21}
+with the subtracted particle density~\cite{CV2014,rossini2021coherent}
 \begin{equation}
   n_{s,{\rm eq}}(w,L,T) \approx L^{-y_n} {\cal N}(\Phi,\Xi),
   \label{nseqsca}
@@ -561,7 +562,7 @@ limit as a function of the time scaling variable $\Theta$, to create
 the conditions for a balanced competition between the critical
 Hamiltonian driving and the interactions with the thermal bath. As
 already put forward in the case of other homogeneous dissipative terms
-in the Lindblad equation~\cite{NRV-19-cd,RV-20-kz,TV-21,RV-21,FT-23},
+in the Lindblad equation~\cite{NRV-2019-competingdissipativeandcoherent,rossini2020dynamic,TV-2021-dissipativeboundaries,rossini2021coherent,franchi2023Liouvillian},
 for example associated with particle-decay or particle-pumping
 dissipative mechanisms, a nontrivial OFSS limit is obtained by
 rescaling the decay rate of the dissipative term, so that the scaling

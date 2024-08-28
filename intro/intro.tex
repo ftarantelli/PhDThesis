@@ -15,7 +15,7 @@ Out-of-equilibrium scaling behaviors tend to emerge when slowly traversing a cri
 
 In both classical and quantum contexts, many-body systems are described by Hamiltonians that can be expressed as:
 
-\ba{initialHam}
+\ba{hlamt}
     H(t) \equiv H[w(t)] = H_c + w(t) H_p \,\,,
 \ea
 
@@ -62,7 +62,7 @@ emerging at thermal and quantum critical phenomena \cite{tarantelli2022out}.
 
 In particular, the first part of this
 work analyzes the application of a round-trip KZ protocol across a continuous quantum
-phase transition. We take as paradigmatic model a Kitaev chain \cite{Kitaev_2001} in 
+phase transition. We take as paradigmatic model a Kitaev chain \cite{Kitaev-2001} in 
 which the chemical potential changes linearity in time, following the function $t/t_s$ 
 with the time $t$ and the time scale $t_s$.\\
 
@@ -82,14 +82,30 @@ When the interactions of a quantum system with its surroundings are sufficiently
 The system generally thermalizes to a Non-Equilibrium Steady-State (NESS) solution after a transitory time frame. However, determining whether the NESS is unique is a more subtle issue~\cite{N-2019-uniquenesslindblad, SW-2010-openuniquesolution}. A quantity of particular interest is the \textit{Liouvillian gap}, hereafter denoted as $\Delta_\lambda$. This energy scale sets the typical relaxation time required to make the NESS stand out, entailing a complete loss of information on the initial quantum state. Quantum memory devices, for example, would benefit from long relaxation times, therefore small $\Delta_\lambda$~\cite{CCP-2011-quantummemories}.
 
 Several works have addressed the nature of the Liouvillian gap in one-dimensional open quantum systems, considering different lattice geometries and dissipation sources also in integrable models~\cite{Z-2015-relaxtimes}. Distinguished behaviors emerge when the dissipators are either isolated or in a relatively large number compared to the system size $L$.
-On the one hand, with bulk dissipation acting on the whole network, the system is gapped in several paradigmatic spin chains, such as XX, XXZ, and Ising models~\cite{YWHWD-2021-artificialnetweork, Z-2015-relaxtimes, KS-2019-nonhermitiankitaevladder}. On the other hand, when the number of dissipative sources is constant, the Liouvillian gap generally vanishes with a distinctive power-law behavior in the thermodynamic limit, typically as $\sim L^{-3}$~\cite{KS-2020-boundarydephasing, TV-2021-dissipativeboundaries, Z-2011-XXXchaingap}.
-The physical mechanisms tying together these two regimes are still unclear and are the main focus of the second part of this work \cite{franchi2023Liouvillian}.
+On the one hand, with bulk dissipation acting on the whole network, the system is gapped in several paradigmatic spin chains, such as XX, XXZ, and Ising models~\cite{YWHWD-2021-artificialnetweork, Z-2015-relaxtimes, KS-2019-nonhermitiankitaevladder}. On the other hand, when the number of dissipative sources is constant, the Liouvillian gap generally vanishes with a distinctive power-law behavior in the thermodynamic limit, typically as $\sim L^{-3}$~\cite{KS-2020-boundarydephasing, TV-2021-dissipativeboundaries, Z-2011-XXXchaingap}. In particulare, we focus on homogeneous systems within hard walls and inhomogeneous systems where the particles are trapped
+by space-dependent external potentials, such as harmonic traps. We model the dissipative particle-
+decay mechanism by Lindblad master equations governing the time evolution of the density matrix.
+The resulting quantum dynamics is analyzed in protocols starting from the ground state of the
+Hamiltonian for $N_0$ particles, then evolving under the effect of one dissipative particle-loss defect,
+for example at the center of the system. We study the interplay between time, size l and the number
+$N_0$ of initial particles, considering two different situations: (i) fixed number $N_0$ of initial particles;
+(ii) fixed ratio $N_0 /l$, corresponding to the thermodynamic limit of the initial equilibrium state.
+The physical mechanisms tying together these two regimes are still unclear and are, also, one of the main focus in this thesis.% \cite{franchi2023Liouvillian}.
 
-In particular, we consider a lattice model tailored to unveil the crossover regime between the  dissipation schemes presented. We investigate a $(1+1)$-dimensional Kitaev ring with local particle-decay dissipators arranged in a \textit{sunburst} geometry~\cite{FRV-staticsunburst, FRV-timesunburst, MS-2022-sunburstquench}.
+%\rev{INSERT HERE THE PART OF THE HOLE GEOMETRY}
+
+Moreover, we investigate a $(1+1)$-dimensional Kitaev ring with local particle-decay dissipators arranged in a \textit{sunburst} geometry~\cite{FRV-staticsunburst, FRV-timesunburst, MS-2022-sunburstquench}.
 Starting the protocol in the proximity of a Continuous Quantum Transition (CQT), we study the out-of-equilibrium dynamic using Renormalization Group (RG) arguments and Finite-Size Scaling (FSS) frameworks~\cite{C-1996-ScalingandRG, RV-2021-coherentanddissipativedynamicsreview}.
 
-
-
+Finally, we address the out-of-equilibrium dynamics arising from quantum-quench (QQ) protocols 
+(instantaneous changes of the Hamiltonian parameters) in many-body systems within their quantum
+critical regime and in contact with (homogeneously coupled) thermal baths. We consider two classes
+of QQ protocols. In one of them the thermal bath is used to prepare the initial finite-temperature
+Gibbs state; then, after quenching, the thermal bath is removed and the dynamics of the system is
+unitary. We also address a more complex QQ protocol where the thermal bath is not removed after
+quenching, thus the quantum evolution is also driven by the interaction with the bath, which may
+be described by appropriate master equations for the density matrix of the system, where a further
+relevant time scale, or inverse decay rate, characterizes the system-bath coupling.
 
 
 \subsubsection{Outline}
@@ -102,10 +118,12 @@ which send the system out-of-equilibrium regime: the Kibble-Zurek mechanism and 
 Lindblad mechanism.\\
 
 In the \textbf{Chapter} \ref{chp_round}, we address the effect of a round-trip Kibble-Zurek
-protocol near a continuous quantum phase transitions, using the Finite Size Scaling 
+protocol near a continuous and a first order quantum phase transition, using the Finite Size Scaling 
 framework. We will find results which diverge from the classic hysteresis cycle scenario.\\
 
 In the \textbf{Chapter} \ref{chp_diss}, we analyze the effects of a local and a uniform
 dissipation process on a second-order transition. We will focus on the interplay between
 these two type of dissipation mechanism, trying to extract common properties and different
-behaviors.
+behaviors. Moreover, we focus also on the effects in the case in which we consider the
+interaction of our quantum many-body system with a thermal bath characterized by an
+uniform temperature $T$.

@@ -1,5 +1,5 @@
-\newpage
-\newpage 
+\renewcommand{\be}{\begin{equation}}
+\renewcommand{\ee}{\end{equation}}
 
 \section{Round-Trip across First-Order Transition}
 \label{rtripfoqt}
@@ -7,9 +7,9 @@
 \subsection{Driving Protocol}
 
 As a prototypical quantum many-body system displaying a FOT, we shall consider the one-dimensional Ising model in a tilted magnetic field, whose Hamiltonian reads
-\rev{\be\label{eq:model}
+\be\label{eq:model}
 \hat{H}(h_\perp,h_\parallel)=-J\sum_{j=1}^{L-1} \hat\sigma^{(3)}_j\hat\sigma^{(3)}_{j+1} -\sum_{j=1}^L (h_\perp\hat\sigma^{(1)}_j + h_\parallel \hat\sigma^{(3)}_j).
-\ee}
+\ee
 Here, $L$ is the system size, $\hat\sigma _j^{(k=1,2,3)}$ denotes standard Pauli operators acting on site $j$, $h_\perp$ (resp.~$h_\parallel$) is the transverse (resp.~longitudinal) component of the magnetic field and $J=1$ is the overall energy scale which is set to unit from thereafter.
 
  We set open boundary conditions (OBC) for the spin chain~\eqref{eq:model}. Notice that other choices of {\it neutral} boundary conditions (i.e., not favoring any particular phase) --such as periodic boundary conditions-- will not alter our discussion below. The case of non-neutral types of boundary is discussed in Refs.~\cite{fontana2019scaling,pelissetto2020scaling,panagopoulos2018dynamic,campostrini2015quantum,pelissetto2018finite,rossini2018ground}. \\
@@ -64,7 +64,7 @@ We discuss the case of single- and round-trip passage through the transition, an
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%
 
-In our setting, the out-of-equilibrium dynamics is generated at fixed $h_\perp<1$ by varying $h_\parallel$ in the Ising Hamiltonian \eqref{eq:model} as a linear ramp in time~\footnote{\rev{The case of a non-linear driving $h_\parallel(t)=(t/t_s)^r$ with odd exponent $r$ can be obtained straightforwardly, see e.g.~Ref.~\cite{dziarmaga2010dynamics}.}}
+In our setting, the out-of-equilibrium dynamics is generated at fixed $h_\perp<1$ by varying $h_\parallel$ in the Ising Hamiltonian \eqref{eq:model} as a linear ramp in time~\footnote{The case of a non-linear driving $h_\parallel(t)=(t/t_s)^r$ with odd exponent $r$ can be obtained straightforwardly, see e.g.~Ref.~\cite{dziarmaga2010dynamics}.}
 \be\label{eq:ramp}
 h_\parallel(t)=t/t_s,
 \ee
@@ -78,8 +78,9 @@ crossing the quantum FOT when $t=0$. A single-passage protocol stops at a final 
 
 
 \subsection{Finite Size Scaling at FOQT}
+\label{sec:OFSS-theory}
 
-Below, we specify to the case of slow drivings, $t_s\to\infty$. For a single passage and at the critical point ($h_\perp=1$), this class of protocols would correspond to the standard Kibble-Zurek setup, whose OFSS has been extensively discussed in literature, see e.g. Refs.~\cite{dziarmaga2005dynamics,polkovnikov2005universal,zurek2005dynamics,collura2010critical,liu2020kibble,cui2020experimentally,mukherjee2020universal,zeng2023universal,dutta2016anti,sadhukhan2020sonic,ulm2013observation,weiler2008spontaneous,pyka2013symmetry,navon2016emergence} and \cite{dziarmaga2010dynamics,rossini2021coherent} for reviews. \rev{We also mention recent works e.g.~\cite{delcampo2020full,bando2020probing,gomez2022role} on the complete probability distribution of topological defects}. 
+Below, we specify to the case of slow drivings, $t_s\to\infty$. For a single passage and at the critical point ($h_\perp=1$), this class of protocols would correspond to the standard Kibble-Zurek setup, whose OFSS has been extensively discussed in literature, see e.g. Refs.~\cite{dziarmaga2005dynamics,polkovnikov2005universal,zurek2005dynamics,collura2010critical,liu2020kibble,cui2020experimentally,mukherjee2020universal,zeng2023universal,dutta2016anti,sadhukhan2020sonic,ulm2013observation,weiler2008spontaneous,pyka2013symmetry,navon2016emergence} and \cite{dziarmaga2010dynamics,rossini2021coherent} for reviews. We also mention recent works e.g.~\cite{delcampo2020full,bando2020probing,gomez2022role} on the complete probability distribution of topological defects. 
 \\
 
 Analogously, across the quantum FOT $(h_\perp<1,h_\parallel=0)$, one can formulate an OFSS ansatz as the limit  $L\to\infty$, $u\equiv  {t_s L^{-1} M_0^{-1}}\to \infty$ with fixed scaling variables:
@@ -105,7 +106,7 @@ with OFSS function ${\cal F}_M$. \\
 In Eq.~\eqref{eq:OFSS-scaling-var}, $\tau$ is a rescaled time and $t_{\rm KZ}=\sqrt{u}$ plays the role of a Kibble-Zurek time, as commented in the following section. Similar relations arise at classical FOT, see e.g. Refs.~\cite{pelissetto2016off,scopa2018dynamical}. In this sense, we expect to assist to a breakdown of adiabacity when $|\tau|\lesssim 1$. To quantitatively probe this effect during the driving, it is useful to introduce the {\it adiabaticity function}
 \begin{equation}
 	\label{eq:adiab}
-	A(h_\perp,t,t_s,L) = \Big| \braket{\Psi_0\bigr[h_\parallel(t)\bigr]}{\Psi(t)} \Big| \,\,,
+	A(h_\perp,t,t_s,L) = \Big| \braket{\Psi_0\bigr[h_\parallel(t)\bigr]|\Psi(t)} \Big| \,\,,
 \end{equation}
 defined as the modulus of the overlap coefficient between the time-evolved wavefunction $\ket{\Psi(t)}$ and the instantaneous ground state $\ket{\Psi_0[h_\parallel(t)]}$ of the time-dependent Hamiltonian $\hat{H}(h_\perp,t/t_s)$. Initially, $A(t_i)=1$ by construction, and it deviates from unit when the adiabatic approximation of the state $\ket{\Psi(t)}$ breaks down near the quantum FOT point. In the OFSS limit,
 \be\label{eq:OFSS-A}
@@ -121,7 +122,7 @@ It is then easy to see that the energy gap
 \ee
  in the OFSS limit.\\
 
-In Figs.~\ref{LongMagn} and \ref{AtripAt2u05g02}, we show the results for the OFSS of the longitudinal magnetization (Eq.~\eqref{eq:OFSS-M}) and of the adiabaticity function (Eq.~\eqref{eq:OFSS-A}). The numerical data is obtained by performing exact diagonalization of the spin chain \eqref{eq:model} and Runge-Kutta methods for time evolution. Notice that despite our data are obtained for spin chains of modest system sizes, the convergence to the thermodynamic limit is controlled by the interplay of $h_\perp$ and $L$, and thus it can be reached already for modest system sizes when $h_\perp\ll 1$. For $h_\perp$ closer to one, larger values of $L$ are required to observe OFSS, see Ref.~\cite{campostrini2014finite,campostrini2015finite}.\rev{The convergence to the OFSS regime is shown in Fig.~\ref{fig:convergence} for different values of $L$ and $h_\perp$.}\\
+In Figs.~\ref{LongMagn} and \ref{AtripAt2u05g02}, we show the results for the OFSS of the longitudinal magnetization (Eq.~\eqref{eq:OFSS-M}) and of the adiabaticity function (Eq.~\eqref{eq:OFSS-A}). The numerical data is obtained by performing exact diagonalization of the spin chain \eqref{eq:model} and Runge-Kutta methods for time evolution. Notice that despite our data are obtained for spin chains of modest system sizes, the convergence to the thermodynamic limit is controlled by the interplay of $h_\perp$ and $L$, and thus it can be reached already for modest system sizes when $h_\perp\ll 1$. For $h_\perp$ closer to one, larger values of $L$ are required to observe OFSS, see Ref.~\cite{campostrini2014finite,campostrini2015finite}.The convergence to the OFSS regime is shown in Fig.~\ref{fig:convergence} for different values of $L$ and $h_\perp$.\\
 
 
 
@@ -132,14 +133,14 @@ Interestingly, the OFSS during the round-trip protocol shows a dependence on the
 \begin{figure}[t]
 \centering
 \includegraphics[width=7cm]{imm/tripMt2u05g02-new.pdf}
-\caption{OFSS of the longitudinal magnetization in Eq.~\eqref{eq:OFSS-M}~---~$M(t)/M_0$ shown as a function of the rescaled time $\tau$ during a round-trip protocol with $|\tau _i|=\tau_f= 2$ (FOTs at $\tau=0,4$). We show different values of $\upsilon$ and $h_\perp$ (different curves) and we vary the system sizes up to $L = 8$. \rev{In the plot legend, `2 lev' refers to the scaling functions ${\cal F}_M(\tau,\upsilon)$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.}.}
+\caption{OFSS of the longitudinal magnetization in Eq.~\eqref{eq:OFSS-M}~---~$M(t)/M_0$ shown as a function of the rescaled time $\tau$ during a round-trip protocol with $|\tau _i|=\tau_f= 2$ (FOTs at $\tau=0,4$). We show different values of $\upsilon$ and $h_\perp$ (different curves) and we vary the system sizes up to $L = 8$. In the plot legend, `2 lev' refers to the scaling functions ${\cal F}_M(\tau,\upsilon)$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.}.
 \label{LongMagn}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{figure}[t]
 \centering
 		\includegraphics[width=7cm]{imm/tripAt2u05g02-new.pdf}
-		\caption{OFSS  of the adiabaticity function in Eq.~\eqref{eq:OFSS-A}~---~$A(t)$ shown as a function of the rescaled time $\tau$ during a round-trip protocol with $|\tau_i|=\tau_f =2$ (FOTs at $\tau=0,4$). We show different values of $\upsilon $ and $h_\perp$ (different curves) and we vary the system size up to $L = 8$.  \rev{In the plot legend, `2 lev' refers to the scaling functions ${\cal F}_A(\tau,\upsilon)$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.}}
+		\caption{OFSS  of the adiabaticity function in Eq.~\eqref{eq:OFSS-A}~---~$A(t)$ shown as a function of the rescaled time $\tau$ during a round-trip protocol with $|\tau_i|=\tau_f =2$ (FOTs at $\tau=0,4$). We show different values of $\upsilon $ and $h_\perp$ (different curves) and we vary the system size up to $L = 8$.  In the plot legend, `2 lev' refers to the scaling functions ${\cal F}_A(\tau,\upsilon)$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.}
 		\label{AtripAt2u05g02}
 	\end{figure}	
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -148,7 +149,7 @@ Interestingly, the OFSS during the round-trip protocol shows a dependence on the
 \centering
 \includegraphics[width=7cm]{imm/fssconvM.pdf}
 \includegraphics[width=7cm]{imm/fssconvA.pdf}
-\caption{\rev{Convergence to the OFSS regime~--~Top: Longitudinal magnetization $M(t)/M_0$; Bottom: adiabaticity function $A(t)$, both shown for different $L$ and $h_\perp$ as function of the rescaled time $\tau$ during a round-trip protocol with $|\tau_i|=\tau_f=2$ and $\upsilon=1$. The symbols show the scaling functions ${\cal F}_M$, ${\cal F}_A$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.} }
+\caption{Convergence to the OFSS regime~--~Top: Longitudinal magnetization $M(t)/M_0$; Bottom: adiabaticity function $A(t)$, both shown for different $L$ and $h_\perp$ as function of the rescaled time $\tau$ during a round-trip protocol with $|\tau_i|=\tau_f=2$ and $\upsilon=1$. The symbols show the scaling functions ${\cal F}_M$, ${\cal F}_A$ obtained using the effective two-level description discussed in Sec.~\ref{sec:2-lev}.} 
 \label{fig:convergence}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,6 +176,7 @@ In the following sections, we derive an effective description of the many-body s
 
 
 \subsection{Effettive Description}
+\label{sec:effective-description}
 
 Let us consider the following formal expansion of the many-body wavefunction
 \be\label{eq:expansion}
@@ -278,7 +280,7 @@ By projecting the Ising Hamiltonian \eqref{eq:model} onto the two-dimensional Hi
 \be\label{eq:eff-Ham}
 \hat{H}_\text{eff}(t)=\frac{1}{2}\left(\Delta(h_\perp,L) \ \hat\sigma^{(1)}-{\cal E}(h_\perp,t,t_s,L)\ \hat\sigma^{(3)}\right),
 \ee
-with ${\cal E}$ given by Eq.~\eqref{eq:zeeman} with longitudinal field \eqref{eq:ramp}. \rev{Here, we choose the basis $\{\ket{\psi_0}, \ket{\psi_1}\}$ such that ${\cal E}\hat\sigma^{(3)}$ is the perturbation induced by $h_\parallel$, and the off-diagonal terms encode the gap \eqref{eq:gap} between the two quasi-degenerate levels at finite sizes \cite{campostrini2014finite}.} \rev{Higher order perturbative effects in $h_\perp$ generating large bubbles of true vacuum onto the metastable state can be studied using a multi-level effective model, see Ref.~\cite{sinha2021nonadiabatic} for details.  Notice that Eq.~\eqref{eq:eff-Ham} is equivalent to truncate the expansion of the many-body wavefunction in the instantaneous eigenbasis \eqref{eq:expansion} with the two lowest overlap coefficients
+with ${\cal E}$ given by Eq.~\eqref{eq:zeeman} with longitudinal field \eqref{eq:ramp}. Here, we choose the basis $\{\ket{\psi_0}, \ket{\psi_1}\}$ such that ${\cal E}\hat\sigma^{(3)}$ is the perturbation induced by $h_\parallel$, and the off-diagonal terms encode the gap \eqref{eq:gap} between the two quasi-degenerate levels at finite sizes \cite{campostrini2014finite}. Higher order perturbative effects in $h_\perp$ generating large bubbles of true vacuum onto the metastable state can be studied using a multi-level effective model, see Ref.~\cite{sinha2021nonadiabatic} for details.  Notice that Eq.~\eqref{eq:eff-Ham} is equivalent to truncate the expansion of the many-body wavefunction in the instantaneous eigenbasis \eqref{eq:expansion} with the two lowest overlap coefficients
 \begin{align}
 \ket{\Psi(t)}&=C_0(t) \ket{\Psi_0[h_\parallel(t)]}+ C_1(t) \ket{\Psi _1[h_\parallel(t)]} +{\cal O}(t_{\rm KZ}^{-2})
 \nonumber\\[4pt]
@@ -288,7 +290,7 @@ since $\ket{\psi_{0,1}}\simeq \ket{\Psi_{0,1}[h_\parallel(t_0)]}$ for $|t_0|\gg 
 \be
 \begin{pmatrix} C_0(t) \\[4pt] C_1(t) \end{pmatrix}= \begin{pmatrix} \cos(\alpha/2) & -\sin(\alpha/2) \\[4pt] \sin(\alpha/2) & \cos(\alpha/2) \end{pmatrix}\begin{pmatrix} c_0(t) \\[4pt] c_1(t) \end{pmatrix}
 \ee
-with angle $\alpha=\arctan(\frac{\sqrt{\upsilon}}{2\tau})$ (cf Eq.~\eqref{eq:kappa-ofss} and Appendix~\ref{app:eq-FSS-func}).}\\
+with angle $\alpha=\arctan(\frac{\sqrt{\upsilon}}{2\tau})$ (cf Eq.~\eqref{eq:kappa-ofss} and Appendix~\ref{app:eq-FSS-func}).\\
 
 Under this approximation, Eq.~\eqref{eq:MB-coef-evo} reduces to a finite-time Landau-Zener-St\"uckelberg (LZS) problem in the interval $t\in[t_i,t_f]$ \cite{landau1932theorie, zener1932non}
 \be
@@ -308,21 +310,21 @@ from which the OFSS functions in Eqs.~\eqref{eq:OFSS-M},\eqref{eq:OFSS-A} during
 \nonumber\\
 &=\frac{\upsilon}{4}e^{-\frac{\pi\upsilon}{16}}|\mathscr{D}_{-1+\frac{i\upsilon}{8}}(\sqrt{2}e^{i\frac{3\pi}{4}}\tau)|^2-1
 \end{align}
-\rev{\begin{align}
+\begin{align}
 \label{eq:OFSS-func-A-single}
 &{\cal F}_A(\tau,\upsilon)=|C_0(\tau,\upsilon)|
 \nonumber\\
 &=e^{-\frac{\pi\upsilon}{32}}\Bigg|\sqrt{\frac{1}{2}+ \frac{|\tau|}{\sqrt{4\tau^2+\upsilon}}} \mathscr{D}_{\frac{i u}{8}}(\sqrt{2}e^{i\frac{3\pi}{4}}\tau) 
 \nonumber\\
 &\quad -\frac{\sqrt{\upsilon} e^{-\frac{i\pi}{4}}}{2\sqrt{2}} \sqrt{\frac{1}{2}- \frac{|\tau|}{\sqrt{4\tau^2+\upsilon}}} \mathscr{D}_{-1+\frac{i u}{8}}(\sqrt{2}e^{i\frac{3\pi}{4}}\tau)\Bigg|
-\end{align}}
+\end{align}
 and similarly for other quantities. Here, $\mathscr{D}_\nu(z)$ denotes the Parabolic Cylinder function. \\
 
 For the round-trip protocol, we can solve the associated LZS problem in the time window $t\in[t_f,2t_f+|t_i|]$ obtaining:
 \be\label{eq:LZS-round-trip}
 \begin{pmatrix} c_0(\tau)\\[4pt] c_1(\tau)\end{pmatrix}= \tilde{U}(\tau,\tau_f) U(\tau_f,\tau_i) \begin{pmatrix} 1 \\[4pt] 0\end{pmatrix},
 \ee
-where $\tilde{U}(\tau,\tau_f)$ is the evolution matrix with inverted time ramp \eqref{eq:ramp}, see Appendix~\ref{app:OFSS-func} for the analytical expression of its elements. From \eqref{eq:LZS-round-trip}, the OFSS functions during the round-trip protocol are straightforwardly obtained as ${\cal F}_M=2|c_1(\tau,\upsilon)|^2-1$ and \rev{${\cal F}_A=|C_0(\tau,\upsilon)|$} respectively, although their analytical expression is cumbersome and therefore deferred to Appendix~\ref{app:OFSS-func}. The important outcome of their calculation is that they display a non-trivial dependence on $\tau_i$, in contrast with \eqref{eq:OFSS-func-M-single}-\eqref{eq:OFSS-func-A-single} obtained for a single passage (cf.~Figs.~\ref{fig:dependence-ti-M}-\ref{fig:dependence-ti-A}).\\
+where $\tilde{U}(\tau,\tau_f)$ is the evolution matrix with inverted time ramp \eqref{eq:ramp}, see Appendix~\ref{app:OFSS-func} for the analytical expression of its elements. From \eqref{eq:LZS-round-trip}, the OFSS functions during the round-trip protocol are straightforwardly obtained as ${\cal F}_M=2|c_1(\tau,\upsilon)|^2-1$ and ${\cal F}_A=|C_0(\tau,\upsilon)|$ respectively, although their analytical expression is cumbersome and therefore deferred to Appendix~\ref{app:OFSS-func}. The important outcome of their calculation is that they display a non-trivial dependence on $\tau_i$, in contrast with \eqref{eq:OFSS-func-M-single}-\eqref{eq:OFSS-func-A-single} obtained for a single passage (cf.~Figs.~\ref{fig:dependence-ti-M}-\ref{fig:dependence-ti-A}).\\
 
 In Figs.~\ref{LongMagn}-\ref{AtripAt2u05g02}, the OFSS functions obtained from the solution of the LZS problem are plotted as dashed lines against the rescaled numerical data for the Ising model \eqref{eq:model}, 
 showing an overall excellent agreement. Small deviations from the OFSS functions computed in the two-level approximation go monotonically to zero on increasing $t_{\rm KZ}=\sqrt{u}$, see Figs.~\ref{fig:convergence-M} -\ref{fig:convergence-A}.\\
@@ -392,14 +394,14 @@ Based on the arguments of Sec.~\ref{sec:break}, the validity of the two-level ap
 \centering
 \includegraphics[width=6.5cm]{imm/strobM.pdf}\\
 \includegraphics[width=6.5cm]{imm/strobA.pdf}
-\caption{Stroboscopic evolution of $M/M_0$ (top) and of $A$ (bottom) as function of  $n$ (corresponding to times $t=t_0(4n-1)$) at fixed $L=6$, $\tau_0=2$, and for \rev{three different values of $\upsilon$, $h_\perp$ (different symbols)}. For each set of parameters, the filled symbols show the stroboscopic evolution in the two-level approximation.}\label{fig:strobo}
+\caption{Stroboscopic evolution of $M/M_0$ (top) and of $A$ (bottom) as function of  $n$ (corresponding to times $t=t_0(4n-1)$) at fixed $L=6$, $\tau_0=2$, and for three different values of $\upsilon$, $h_\perp$ (different symbols)}. For each set of parameters, the filled symbols show the stroboscopic evolution in the two-level approximation.\label{fig:strobo}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]\centering
 \includegraphics[width=7cm]{imm/recurrence.pdf}
-\caption{\rev{Matrix elements of $(U_F(\tau_0,\upsilon))^n$ as function of $\tau_0$, obtained from the analytical results of Appendix~\ref{app:OFSS-func}. In the panels, we set $\upsilon=1$ and $n=1$ (top), $n=2$ (bottom). }}\label{fig:rec}
+\caption{Matrix elements of $(U_F(\tau_0,\upsilon))^n$ as function of $\tau_0$, obtained from the analytical results of Appendix~\ref{app:OFSS-func}. In the panels, we set $\upsilon=1$ and $n=1$ (top), $n=2$ (bottom). }\label{fig:rec}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%
 Finally, it is interesting to consider the evolution after $n$ periods, i.e., to look at the time-evolved wavefunction at stroboscopic times $t_n=t_0(4n-1)$. In the two-level approximation, this is given by
@@ -412,7 +414,7 @@ In Fig.~\ref{fig:strobo}, we show the results for $M(t_n)$ and  $A(t_n)$, for a 
 
 Notice also that the numerical analysis of Fig.~\ref{fig:strobo} clearly shows a two-period recurrence for both the longitudinal magnetization and the adiabaticity function. Such a peculiar behavior of the OFSS regime can be analytically investigated in the two-level approximation. Using the matrix elements of Appendix~\ref{app:OFSS-func}, it is easy to show that the equation
 \be
-(U_F(\tau_0,\upsilon))^n = \pm \numberset{1}
+(U_F(\tau_0,\upsilon))^n = \pm {\rm Id} \,\,,
 \ee
 has solution for $n=2$, $\upsilon=1$ when $\tau_0= 2$, in agreement with what observed in Figs.~\ref{fig:Floquet-M+A} and \ref{fig:strobo}. In general, there exists a series of exceptional values of $\tau_0=\tau_\star(n,\upsilon)$ for which the system shows recurrence after $n$ periods, see Fig.~\ref{fig:rec}. For instance, $\tau_\star(1,1)\simeq 1.4$ for one round-trip protocol. Surprisingly, this means that the phases $\Phi(\tau_0,\upsilon)$ conferring to the system a non-trivial dependence on $\tau_0$ (see Appendix~\ref{app:OFSS-func}) can combine for some special values $\tau_0=\tau_\star(n,\upsilon)$ to restore the initial state of the system after $n$ periods. In this perspective, the aforementioned quasi-universality of OFSS regime can be exploited to engineer shortcuts to adiabaticity.
 

@@ -15,9 +15,9 @@ master equations in the Lindblad form as \cite{BP-openquantumsystembook, TV-2021
 \ea
 
 where ${\cal L}$ is the Liouville superoperator, and $\mathbb{D}$ is the corresponding 
-dissipation term, whose strength is regulated by the coupling $w$:
+dissipation term, whose strength is regulated by the coupling $\gamma$:
 \ba{dissipator}
-	\mathbb{D}[\rho] = & w \sum_{x \in {\cal I}} 
+	\mathbb{D}[\rho] = & \gamma \sum_{x \in {\cal I}} 
 		\mathbb{D}_x[\rho] \cm \\
 	\mathbb{D}_x[\rho] = &
 		\hat L_x \rho \hat L_x^\dagger - 
@@ -106,8 +106,8 @@ $\widetilde \rho$ can be written as follows:
 \ba{vecteqlindblad}
 	\widetilde{\mathcal{L}} =& -i \big(\hat{H} \otimes \hat{\mathbb{I}} 
 		- \hat{\mathbb{I}}\otimes \hat{H}^t \big) + 
-		w\sum_{x \in {\cal I}}\hat{L}_{x}\otimes \hat{L}^*_{x}\\
-	&-\frac{w}{2}\sum_{x \in {\cal I}}\big(\hat{L}^{\dagger}_{x}\hat{L}_{x}
+		\gamma\sum_{x \in {\cal I}}\hat{L}_{x}\otimes \hat{L}^*_{x}\\
+	&-\frac{\gamma}{2}\sum_{x \in {\cal I}}\big(\hat{L}^{\dagger}_{x}\hat{L}_{x}
 		\otimes\hat{\mathbb{I}}+\hat{\mathbb{I}}
 			\otimes\hat{L}^t_{x}\hat{L}^*_{x}\big) \pt
 \ea
