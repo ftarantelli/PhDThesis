@@ -1,6 +1,45 @@
 \chapter{Dissipation}
 \label{chp_diss}
 
-\input{cpt/3secs_dissp/31locunif.tex}
 
-%\input{cpt/3secs_dissp/32thermal.tex}
+\section{Introduction}
+
+The analysis of open quantum many-body systems plays an important role in fundamental problems of quantum physics, such as quantum information, quantum computing, decoherence and condensed matter physics. The recent progress in the experimental techniques and the realizations of physical devices for quantum computing gives a further motivation to understand the general behavior of these open quantum systems. They involve a wide class of different specific issues as the study of the non-equilibrium steady state (NESS), the effects of a thermal baths, quantum optics, strongly coupled baths, ...ecc. In particular, in this discussion we focus on the effects of a dissipative process arising from the weakly interaction with Markovian baths. These dissipative mechanisms may lead to emergence of a new collective phenomena which can change completely the physical behavior of the system. In the condition of complete positivity and trace preserving of a dynamical time-evolution map, we can describe the matrix density of the open system using the Lindblad master equation. This equation describes a non-unitary time evolution which provides the dissipative behavior of the observables defined on the system. \\ 
+We analyze the dynamic evolution close to a quantum phase transition. In fact, the quantum phase transitions, separating different phases of the system, present universal quantum critical behaviors, which are independent of the local details of the system. They describe the properties of the low-energy spectrum of the system and they show a non-analytical behavior of the ground state, when the size $L^d$ of the system goes to $+\infty\,$ (thermodynamic limit). However, the finite-size effects provide a finite size scaling (FSS) framework in which, approaching the transition point, the observables satisfy peculiar FSS laws. These law characterize the quantum transition giving us a possible way to compare the analytical theory with the results obtained by computational method. We can extend this theory also to dynamical process aring from coherent drivings, as the quench of the Hamiltonian parameters. In these situations, we can provide a dynamic FSS which controls all the out-of-equilibrium regime close to the transitions point. The following step is to understand how a dissipative process drives the system localized near the transition point and how it changes the dynamic FSS. The answer is given for systems in the presence of a homogeneous local dissipation at continuous quantum transition (CQT) \cite{NRV-2019-competingdissipativeandcoherent} and first-order quantum transition (FOQT) \cite{di2020dissipative} in which emerges a new dynamic scaling behavior. However, such a dynamic scaling limit requires a particular tuning of the dissipative interactions so that we have a competition between the critical and the dissipative regime. 
+
+Instead, in the case of dissipative boundaries 
+\cite{TV-2021-dissipativeboundaries}, two different dynamic regimes emerge: an early-
+time regime for times $t \sim L$, where the competition between coherent and incoherent drivings
+develops a dynamic finite-size scaling; and a large-
+time regime for $t \sim L^3$ whose dynamic scaling describes the late quantum evolution leading to the
+$t \to \infty$ stationary states driven by the Liouvillian gap \eqref{Lioulliangap}.
+
+In the following, we extend this analysis of the dissipative defects effects to a localized particle loss, in one-
+dimensional non-interacting lattice fermionic gases confined within a region of size $\ell$. We consider
+homogeneous systems within hard walls and inhomogeneous systems where the particles are trapped
+by space-dependent external potentials, such as harmonic traps.
+
+Then, finishing to study the peculiar properties of local and homogeneous dissipation, we focus on the importance
+of the Liouvillian gap to clarify the interplay between these two different type of dissipation. The aim is
+to understand if there is a general theory that describe all the discovered properties.
+
+In conclusion, we start to extend all these concepts in case of thermal bath dissipative systems. Here, we 
+consider only the case of quench protocols, but it can be a first step for future research works. 
+
+
+
+
+%\rev{HOMOGENEOUS DISSIPATION}
+%\rev{DISSIPATIVE BOUNDARIES}
+%\rev{HOLE}
+%\rev{THE IMPORTANCE OF THE LIOUVILLIAN GAP TO CLARIFY THE INTERPLAY BETWEEN 
+%UNIFORM AND LOCAL DISSIPATION CONFIGURATION. }
+%\rev{STARTING TO EXTEND ALL THESE CONCEPTS IN THE CASE OF THERMAL BATH 
+%DISSIPATIVE SYSTEMS. HERE, STUDIED ONLY THE CASE OF QUENCH PROTOCOL
+%BEHAVIOR}
+
+\input{cpt/3secs_dissp/31hole.tex}
+
+\input{cpt/3secs_dissp/32locunif.tex}
+
+\input{cpt/3secs_dissp/33thermal.tex}

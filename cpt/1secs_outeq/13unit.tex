@@ -15,7 +15,12 @@ whose parameters assume their critical values.
 In this quench protocol, at $t = t_0$ the system starts in the ground state
 of the Hamiltonian associated with an initial value $\bar \mu_i$ . Then, at time $t>0$, we
 suddenly change the coupling from $\bar \mu$ to $\bar \mu _i$ and we follow the 
-corresponding evolution of the system.
+corresponding evolution of the system, described by the Schro\"odinger equation
+in the form of the Von-Neumann equation:
+\ba{eqschrodinger}
+\partial_t \rho(t) = -i \Bigr[ \hat H(\bar \mu), \rho(t) \Bigr] \qquad \rho(t=0) = \rho_0 \,\,,
+\ea
+where $\rho(t)$ is the system density matrix at time $t\,$.
 
 To express a possible scaling law, we define a further scaling variable associated
 with the time:

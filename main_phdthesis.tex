@@ -30,6 +30,7 @@
   \usepackage{chngcntr}
   \counterwithin*{footnote}{page}
   \usepackage{mathrsfs}
+  \usepackage{mathrsfs}
   \usepackage{epstopdf}
   \usepackage[breaklinks]{hyperref}
   %\usepackage[ocgcolorlinks, linkcolor={green!30!black},citecolor={red!40!black},urlcolor={blue}, breaklinks=true]{hyperref}
@@ -49,12 +50,22 @@ heightrounded, bindingoffset=5mm}
   \fancyhead{}
   \fancyfoot{}
 
+  \newcommand{\ste}[1]{{\color{blue}{\bf S}:~#1}}
+\makeatletter
+\def\graphicscale{\twocolumn@sw{0.3}{0.4}}
+\def\graphicthreescale{\twocolumn@sw{0.3}{0.4}}
+\newcommand{\rev}[1]{\textcolor{red}{#1}}
+\newcommand{\bea}{\begin{align}}
+\newcommand{\eea}{\end{align}}
+\newcommand{\de}{\partial}
+
+\newcommand{\cit}{[{\color{green}$\bullet$}]}
   \newcommand{\pt}{\,\, .}
   \newcommand{\cm}{\,\, ,}
   \newcommand{\pc}{\,\, ;}
   \newcommand{\be}[1]{\begin{equation}
 	  \label{#1}}
-  %\newcommand{\lb}[1]{\label{#1}}
+  \newcommand{\lb}[1]{\label{#1}}
   \newcommand{\ee}{\end{equation}}
 
   \def\ba#1#2\ea{\begin{align}\label{#1}#2\end{align}}
@@ -152,7 +163,7 @@ heightrounded, bindingoffset=5mm}
   \Logo{imm/logo.pdf}
   \Istituzione{Universit\`a di Pisa}
   \Divisione{Physics Department}
-  \Scuola{PhD PreThesis}
+  \Scuola{PhD Thesis}
   %\Titolo{Quantum phase transition behavior in\\unitary and dissipation time evolution}
   \Titolo{Out-of-equilibrium dynamics in \\round-trip and dissipation protocols}
   %\Sottotitolo{Analysis of out-of-equilibrium regimes: round trip and dissipation protocols}
@@ -173,7 +184,7 @@ heightrounded, bindingoffset=5mm}
 
 \tableofcontents
 
-   \include{intro/intro}
+   \input{intro/intro}
    
 \mainmatter
 
@@ -181,10 +192,10 @@ heightrounded, bindingoffset=5mm}
   \markboth{\chaptername
   \ \thechapter.\ #1}{}}
 
-   \include{cpt/1outeq}
-   \include{cpt/2rtrip}
-   \include{cpt/3dissp}
-\backmatter
+   \input{cpt/1outeq}
+   \input{cpt/2rtrip}
+   \input{cpt/3dissp}
+%\backmatter
 
 \renewcommand{\chaptermark}[1]{%
   \markboth{%
@@ -192,14 +203,19 @@ heightrounded, bindingoffset=5mm}
   }{}%
 }
 
-   \include{concs/concs}
+   \input{concs/concs}
 
 %\mainmatter
 
-  \renewcommand{\chaptermark}[1]{%
-  \markboth{Appendix
-  \ \thechapter.\ #1}{}}
- 
+\renewcommand{\chaptermark}[1]{%
+\markboth{\chaptername
+\ \thechapter.\ #1}{}}
+
+   \input{concs/appendix}
+
+\backmatter
+
+  
   %\include{cpt/9app}
 
 
