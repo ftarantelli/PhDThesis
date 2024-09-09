@@ -31,6 +31,50 @@ Instead, in a finite system, the energy gap among these states remain different 
 
 FOQTs are associated with many important out-of-equilibrium effects s, including nucleations and metastability \cite{binder1987theory,bray2002theory}, coarsening \cite{chandran2012kibble}, and anomalous dependence on the boundary conditions \cite{pelissetto2020scaling,panagopoulos2018dynamic,campostrini2015quantum,pelissetto2018finite,rossini2018ground}.
 
+\subsection{Renormalization Group (RG) Theory}
+
+The Renormalization Group (RG) is a powerful analytical framework with broad applications across various fields of physics. This brief review focuses on its application to critical phenomena.
+
+The strength of the RG approach lies in its ability to reveal a new symmetry at the critical point $ P = P_c $, which is not apparent in the original Hamiltonian. This symmetry arises due to the divergence of the correlation length $ \xi $ at $ P = P_c $. As $ \xi $ approaches infinity, the system exhibits invariance under scaling transformations where the coordinates are rescaled as 
+
+\ba{scale_transformation}
+x \rightarrow x' = \frac{x}{b}
+\ea
+
+with $ b $ being the rescaling factor. This implies that the fundamental structure of correlations remains unchanged when viewed at different length scales, which is a characteristic of scale invariance. For instance, the two-point correlation function 
+
+\ba{scale_correlation}
+C(x) \sim x^{2-D}
+\ea
+
+for $ x \ll \xi $ is rescaled by a prefactor under such transformations.
+
+
+It's important to note that lattice models, while having a characteristic length scale equal to the lattice spacing $ a $, exhibit this scaling invariance only at length scales much larger than $ a $ and precisely at the critical point.
+
+
+The role of RG is similar to other familiar symmetries, such as rotational invariance. Just as rotational symmetry classifies observables into scalars, vectors, tensors, etc., scale invariance classifies observables by their scaling dimensions.
+
+Approaching the critical point (or fixed point), the system's behavior is governed by universal scaling laws that depend on the relevant parameters. These laws imply that the parameters must be rescaled by a common factor $ b $, and any irrelevant parameter with a negative critical exponent can be neglected. Consequently, at the critical point, where the correlation length is the relevant length scale, physical observables must remain invariant under such rescaling. For example, the two-point correlation function $ F(x, \bar{r}, h) $, which captures the critical behavior's nonanalyticity and universal features, obeys the general scaling law:
+
+\ba{scaling_correlation}
+F(x, \bar{r}, h) \sim b^{y_r + y_h - y_c} F\left(\frac{x}{b}, \frac{\bar{r}}{b^{y_r}}, \frac{h}{b^{y_h}}\right)
+\ea
+
+where $ y_c $ is the scaling exponent associated with the operators in $ F(x, \bar{r}, h) $, $ y_r = \frac{1}{\nu} $ is the renormalization group dimension (or critical exponent) of the relevant parameter $ \bar{r} $, and $ y_h $ is the renormalization group dimension of the parameter $ h $. This scaling law suggests that near the critical point, the system effectively averages over large volumes, making microscopic details less significant.
+
+$ $\\
+
+In quantum systems, the interplay between energy scales $ \Delta $ and thermal energy $ T $ determines the scaling behavior. When $ \Delta \ll T $, quantum effects dominate, and as $ \bar{r} \rightarrow 0 $, the energy gap diminishes, leading to a phase transition through spontaneous symmetry breaking. Conversely, when $ \Delta \gg T $, a classical description suffices for order parameter fluctuations.
+
+In the quantum critical region, where both thermal and quantum fluctuations are significant, critical behavior can be approached either by $ r \rightarrow r_c $ at $ T = 0 $ or $ T \rightarrow 0 $ at $ r = r_c $. The scaling laws governing physical observables in these scenarios are often related, and for small temperatures $ T $ near the critical point, the form of the scaling law reflects these dependencies:
+\begin{equation}
+	\label{scalinglawT}
+	F(x;\,\bar r,\,h,\,T) \sim b^{-y_c} \, F\biggl( \frac{x}{b} , \,\bar r \,b^{1/\nu}, \, h\,b^{y_h} , \,T\,b^z \biggl) \,\, ,
+\end{equation}
+where we introduce the scaling parameter $\,T\,b^z \,$ to consider the explicit dependence of the quantum system from the low temperature $T$ when $\bar r=0\,$~\cite{S99}.
+
+
 
 \begin{comment}
 
