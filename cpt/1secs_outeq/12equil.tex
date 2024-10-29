@@ -47,7 +47,7 @@ with $ b $ being the rescaling factor. This implies that the fundamental structu
 C(x) \sim x^{2-D}
 \ea
 
-for $ x \ll \xi $ is rescaled by a prefactor under such transformations.
+for $ x \ll \xi $ is rescaled by a pre-factor under such transformations.
 
 
 It's important to note that lattice models, while having a characteristic length scale equal to the lattice spacing $ a $, exhibit this scaling invariance only at length scales much larger than $ a $ and precisely at the critical point.
@@ -55,10 +55,10 @@ It's important to note that lattice models, while having a characteristic length
 
 The role of RG is similar to other familiar symmetries, such as rotational invariance. Just as rotational symmetry classifies observables into scalars, vectors, tensors, etc., scale invariance classifies observables by their scaling dimensions.
 
-Approaching the critical point (or fixed point), the system's behavior is governed by universal scaling laws that depend on the relevant parameters. These laws imply that the parameters must be rescaled by a common factor $ b $, and any irrelevant parameter with a negative critical exponent can be neglected. Consequently, at the critical point, where the correlation length is the relevant length scale, physical observables must remain invariant under such rescaling. For example, the two-point correlation function $ F(x, \bar{r}, h) $, which captures the critical behavior's nonanalyticity and universal features, obeys the general scaling law:
+Approaching the critical point (or fixed point), the system's behavior is governed by universal scaling laws that depend on the relevant parameters. These laws imply that the parameters must be rescaled by a common factor $ b $, and any irrelevant parameter with a negative critical exponent can be neglected. Consequently, at the critical point, where the correlation length is the relevant length scale, physical observables must remain invariant under such rescaling. For example, the two-point correlation function $ F(x, \bar{r}, h) $, which captures the critical behavior's non-analyticity and universal features, obeys the general scaling law:
 
 \ba{scaling_correlation}
-F(x, \bar{r}, h) \sim b^{y_r + y_h - y_c} F\left(\frac{x}{b}, \frac{\bar{r}}{b^{y_r}}, \frac{h}{b^{y_h}}\right)
+F(x, \bar{r}, h) \sim b^{y_r + y_h - y_c} \mathscr{F}\left(\frac{x}{b}, \frac{\bar{r}}{b^{y_r}}, \frac{h}{b^{y_h}}\right)
 \ea
 
 where $ y_c $ is the scaling exponent associated with the operators in $ F(x, \bar{r}, h) $, $ y_r = \frac{1}{\nu} $ is the renormalization group dimension (or critical exponent) of the relevant parameter $ \bar{r} $, and $ y_h $ is the renormalization group dimension of the parameter $ h $. This scaling law suggests that near the critical point, the system effectively averages over large volumes, making microscopic details less significant.
@@ -70,10 +70,69 @@ In quantum systems, the interplay between energy scales $ \Delta $ and thermal e
 In the quantum critical region, where both thermal and quantum fluctuations are significant, critical behavior can be approached either by $ r \rightarrow r_c $ at $ T = 0 $ or $ T \rightarrow 0 $ at $ r = r_c $. The scaling laws governing physical observables in these scenarios are often related, and for small temperatures $ T $ near the critical point, the form of the scaling law reflects these dependencies:
 \begin{equation}
 	\label{scalinglawT}
-	F(x;\,\bar r,\,h,\,T) \sim b^{-y_c} \, F\biggl( \frac{x}{b} , \,\bar r \,b^{1/\nu}, \, h\,b^{y_h} , \,T\,b^z \biggl) \,\, ,
+	F(x;\,\bar r,\,h,\,T) \sim b^{-y_c} \, \mathscr{F}\biggl( \frac{x}{b} , \,\bar r \,b^{1/\nu}, \, h\,b^{y_h} , \,T\,b^z \biggl) \,\, ,
 \end{equation}
 where we introduce the scaling parameter $\,T\,b^z \,$ to consider the explicit dependence of the quantum system from the low temperature $T$ when $\bar r=0\,$~\cite{S99}.
 
+
+\subsection{Finite Size Scaling (FSS)}
+
+With the quantum-to-classical mapping, we can associate the quantum system on a spatial volume $L^d$ with a classical one on a volume $L^d \cdot L_t$. In this way, at QTs the scaling of the temperature at the critical point in d-dimension is analogous to a FSS in the corresponding (d+1)-dimensional classical system. In fact, the inverse temperature in the quantum system corresponds to the system size in an imaginary time direction.  In this viewpoint, in Eq. (\ref{scalinglawT}) the scaling term $T\,b^z\,$ of the quantum system comes from the FSS of the corresponding classical system with a finite length $L_t \sim T^{-\,\frac{1}{z}}\,$. The finiteness of $L_t$ or another dimensional length  modifies the critical behavior taking two different form. One, it can destroy the transition entirely, so that the only critical point is at $\,L_t \to +\infty\,$. Latter, the modification is such that the transition persists to finite $L_t$, but crosses over to a different universality class. \\
+For example, we consider a prototype system with at least one finite size length $L\,$ and $\xi(\bar r, \, h ;\,L \to +\infty)\,$ the correlation length of the corresponding system when $\,L\to +\infty\,$. If $\,L\gg  \xi(\bar r, \, h ;\,L \to +\infty)\,$, then we are in the thermodynamic limit where, obviously, no significant finite size effects are observed. \\
+Instead, for $\, L \sim \xi(\bar r, \, h ;\,\infty)\,$, the system size cuts off the long-distance correlations and the critical behavior around the critical point is described by a FSS framework. For large sizes, the FSS behavior is universal for all the systems whose CQT belongs to the same universality class. In particular, the FSS provides the asymptotic scaling behavior only if we fix the ratio $\xi/L$ taking the limit $L \to +\infty\,$. Since in the computational results the system size and the range of parameter values are often small, in the FSS framework we can find sizable scaling corrections which may not allow to estimate the critical parameters. Thus, we must control the corrections to the asymptotic behavior to accurate estimate the values of these critical parameters.\\
+
+
+In the quantum-to-classical mapping, we relate a quantum system defined within a spatial volume $L^d$ to a classical system occupying a volume $L^d \cdot L_t$. This correspondence allows us to draw parallels between the scaling behavior of temperature at the critical point in a d-dimensional quantum system and finite size scaling (FSS) in the corresponding (d+1)-dimensional classical system. Specifically, the inverse temperature in the quantum framework corresponds to the system size in the imaginary time direction.
+
+In this perspective, the scaling term $T\,b^z\,$ in Eq. (\ref{scalinglawT}) arises from the FSS of the classical system, which features a finite length $L_t \sim T^{-\,\frac{1}{z}}\,$. The finiteness of $L_t$, or any other characteristic length scale, can modify the critical behavior in two significant ways:
+
+\begin{enumerate}
+	\item It may entirely suppress the phase transition, resulting in a critical point only at $\,L_t \to +\infty\,$
+
+	\item Alternatively, the transition may persist at finite $L_t$ but shift to a different universality class.
+\end{enumerate}
+
+  
+To illustrate, consider a prototype system characterized by at least one finite size length $L$ and its correlation length $\xi(\bar r, \, h ;\,L \to +\infty)\,$  in the limit $L \to +\infty\,$. When $\,L\gg  \xi(\bar r, \, h ;\,L \to +\infty)\,$, we are in the thermodynamic limit, and no significant finite size effects are observed.
+
+Conversely, when $\, L \sim \xi(\bar r, \, h ;\,\infty)\,$, the system size truncates long-range correlations, necessitating a FSS framework to accurately describe the critical behavior near the critical point. For large system sizes, the FSS behavior becomes universal across systems belonging to the same universality class. Importantly, the FSS provides asymptotic scaling behavior only when the ratio $\xi/L$ is fixed while taking the limit $L \to +\infty\,$. Given that computational studies often involve limited system sizes and parameter ranges, substantial scaling corrections can emerge in the FSS framework, complicating the estimation of critical parameters.
+
+Since the leading term of the correlation length is $\xi \sim L\,$, we can assume $b=L$. Consequently, the asymptotic FSS behavior of the correlation length is expressed as:
+\begin{equation}
+\label{xifsscqt1}
+\xi(\bar r, \, h ;\,L) \sim
+L \cdot X_L\bigl( 
+\abs*{\bar r}\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, ,
+\end{equation}
+where $y_h$ is the critical exponent of the Hamiltonian parameter $h\,$. This relationship stresses the critical interplay between system size and correlation length in the context of quantum phase transitions.\\
+Moreover, from $\Delta \sim L^{-z}\,$, the low-energy gap $\Delta$ is expected to show the asymptotic FSS behavior:
+\begin{equation}
+\label{deltafsscqt}
+\Delta _L(\bar r, \, h) \equiv \Delta _L(\bar r, \, h;\,L) \sim
+L^{-z} \, D_L\bigl( 
+\abs*{\bar r}\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, .
+\end{equation}
+$ $\\
+For the correlation function of the order-parameter field $\phi(\bm x, t)\,$:
+\begin{equation}
+\label{corr-ord}
+F(\bm x, \bm y) = \braket{\phi(\bm x,t)\,\phi(\bm y,t)}
+\,\, ,
+\end{equation}
+the leading scaling behavior in the condition $h=0$, for $L\to +\infty\,$, with $\abs*{\bm x- \bm y}/L$ fixed,  is equal to:
+\begin{equation}
+\label{scal-corr}
+F(\bm x, \bm y, \bar r;L) \approx u_l^{d+z-2+\eta} \, \mathscr{F}(u_l\bm x ,u_l\bm y, \bar r\,u_l^{-1/\nu})
+\,\, ,
+\end{equation}
+where $\eta$ is known as the anomalous dimension of the field $\phi\,$ and $u_l$ has an expansion for $L\to +\infty\,$: $u_l = 1/L + b/L^2 + \dots = 1/L_e + O(L_e^{-3})$ with $L_e = L-b\,$. In particular, the non-universal constant $b$ is equal to $0$ for periodic or aperiodic BC with short-range interactions because the translation-invariant couplings are only functions of the couplings of the original lattice and are independent of $L$ along the RG flux. If, now, $\phi$ is a linear combination of the operators ${\cal O}_{h,i}$ $\phi = \sum _i a_i\,{\cal O}_{h,i}\,$, 
+then the Eq. (\ref{scal-corr}) provides the contribution of the leading operator ${\cal O}_h$ because its RG dimension is given by: $\,\,\, d + z - y_h = \frac{1}{2}\left(d+z-2+\eta\right)\,$.\\
+In the open BC case, we must consider in Eq. (\ref{scal-corr}) the subleading terms arising from the irrelevant scaling fields $v_i\,u_l^{-y_i}\,$ and from the leading boundary operators $\widetilde{v}_i\,u_l^{-\widetilde{y}_i}\,$. Hence, the equation (\ref{scal-corr}) becomes:
+\begin{equation}%expected for open BC
+\label{scal-corr1}
+F(\bm x, \bm y, \bar r;L) \approx u_l^{d+z-2+\eta} \,\mathscr{F}\Bigl(u_l\bm x ,u_l\bm y, \bar r\,u_l^{-1/\nu}, \bigl\{v_i\,u_l^{-y_i}\bigl\},  \bigl\{\widetilde{v}_i\,u_l^{-\widetilde{y}_i}\bigl\}  \Bigl)
+\,\, .
+\end{equation}
 
 
 \begin{comment}
