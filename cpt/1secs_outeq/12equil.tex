@@ -44,7 +44,7 @@ x \rightarrow x' = \frac{x}{b}
 with $ b $ being the rescaling factor. This implies that the fundamental structure of correlations remains unchanged when viewed at different length scales, which is a characteristic of scale invariance. For instance, the two-point correlation function 
 
 \ba{scale_correlation}
-C(x) \sim x^{2-D}
+F(x) \sim x^{2-D}
 \ea
 
 for $ x \ll \xi $ is rescaled by a pre-factor under such transformations.
@@ -55,13 +55,13 @@ It's important to note that lattice models, while having a characteristic length
 
 The role of RG is similar to other familiar symmetries, such as rotational invariance. Just as rotational symmetry classifies observables into scalars, vectors, tensors, etc., scale invariance classifies observables by their scaling dimensions.
 
-Approaching the critical point (or fixed point), the system's behavior is governed by universal scaling laws that depend on the relevant parameters. These laws imply that the parameters must be rescaled by a common factor $ b $, and any irrelevant parameter with a negative critical exponent can be neglected. Consequently, at the critical point, where the correlation length is the relevant length scale, physical observables must remain invariant under such rescaling. For example, the two-point correlation function $ F(x, \bar{r}, h) $, which captures the critical behavior's non-analyticity and universal features, obeys the general scaling law:
+Approaching the critical point (or fixed point), the system's behavior is governed by universal scaling laws that depend on the relevant parameters. These laws imply that the parameters must be rescaled by a common factor $ b $, and any irrelevant parameter with a negative critical exponent can be neglected. Consequently, at the critical point, where the correlation length is the relevant length scale, physical observables must remain invariant under such rescaling. For example, the two-point correlation function $ F(\bm x, \bm y, \bar{r}, h) $, which captures the critical behavior's non-analyticity and universal features, obeys the general scaling law:
 
 \ba{scaling_correlation}
-F(x, \bar{r}, h) \sim b^{y_r + y_h - y_c} \mathscr{F}\left(\frac{x}{b}, \frac{\bar{r}}{b^{y_r}}, \frac{h}{b^{y_h}}\right)
+F(\bm x, \bm y, \bar{r}, h) \sim b^{- y_c} \mathscr{F}\left(\frac{\bm x}{b}, \frac{\bm y}{b}, \bar{r}b^{y_r}, hb^{y_h}\right)
 \ea
 
-where $ y_c $ is the scaling exponent associated with the operators in $ F(x, \bar{r}, h) $, $ y_r = \frac{1}{\nu} $ is the renormalization group dimension (or critical exponent) of the relevant parameter $ \bar{r} $, and $ y_h $ is the renormalization group dimension of the parameter $ h $. This scaling law suggests that near the critical point, the system effectively averages over large volumes, making microscopic details less significant.
+where $ y_c $ is the scaling exponent associated with the operators in $ F(\bm x, \bm y, \bar{r}, h) $, $ y_r = \frac{1}{\nu} $ is the renormalization group dimension (or critical exponent) of the relevant parameter $ \bar{r} $, and $ y_h $ is the renormalization group dimension of the parameter $ h $. This scaling law suggests that near the critical point, the system effectively averages over large volumes, making microscopic details less significant.
 
 $ $\\
 
@@ -70,7 +70,7 @@ In quantum systems, the interplay between energy scales $ \Delta $ and thermal e
 In the quantum critical region, where both thermal and quantum fluctuations are significant, critical behavior can be approached either by $ r \rightarrow r_c $ at $ T = 0 $ or $ T \rightarrow 0 $ at $ r = r_c $. The scaling laws governing physical observables in these scenarios are often related, and for small temperatures $ T $ near the critical point, the form of the scaling law reflects these dependencies:
 \begin{equation}
 	\label{scalinglawT}
-	F(x;\,\bar r,\,h,\,T) \sim b^{-y_c} \, \mathscr{F}\biggl( \frac{x}{b} , \,\bar r \,b^{1/\nu}, \, h\,b^{y_h} , \,T\,b^z \biggl) \,\, ,
+	F(\bm x, \bm y;\,\bar r,\,h,\,T) \sim b^{-y_c} \, \mathscr{F}\biggl( \frac{\bm x}{b} , \frac{\bm y}{b}, \,\bar r \,b^{1/\nu}, \, h\,b^{y_h} , \,T\,b^z \biggl) \,\, ,
 \end{equation}
 where we introduce the scaling parameter $\,T\,b^z \,$ to consider the explicit dependence of the quantum system from the low temperature $T$ when $\bar r=0\,$~\cite{S99}.
 
@@ -102,7 +102,7 @@ Since the leading term of the correlation length is $\xi \sim L\,$, we can assum
 \label{xifsscqt1}
 \xi(\bar r, \, h ;\,L) \sim
 L \cdot X_L\bigl( 
-\abs*{\bar r}\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, ,
+\bar r\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, ,
 \end{equation}
 where $y_h$ is the critical exponent of the Hamiltonian parameter $h\,$. This relationship stresses the critical interplay between system size and correlation length in the context of quantum phase transitions.\\
 Moreover, from $\Delta \sim L^{-z}\,$, the low-energy gap $\Delta$ is expected to show the asymptotic FSS behavior:
@@ -110,7 +110,7 @@ Moreover, from $\Delta \sim L^{-z}\,$, the low-energy gap $\Delta$ is expected t
 \label{deltafsscqt}
 \Delta _L(\bar r, \, h) \equiv \Delta _L(\bar r, \, h;\,L) \sim
 L^{-z} \, D_L\bigl( 
-\abs*{\bar r}\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, .
+\bar r\,L^{1/\nu} ,\,h\,L^{y_h} \,    \bigl) \,\, .
 \end{equation}
 $ $\\
 For the correlation function of the order-parameter field $\phi(\bm x, t)\,$:
@@ -119,7 +119,7 @@ For the correlation function of the order-parameter field $\phi(\bm x, t)\,$:
 F(\bm x, \bm y) = \braket{\phi(\bm x,t)\,\phi(\bm y,t)}
 \,\, ,
 \end{equation}
-the leading scaling behavior in the condition $h=0$, for $L\to +\infty\,$, with $\abs*{\bm x- \bm y}/L$ fixed,  is equal to:
+the leading scaling behavior in the condition $h=0$, for $L\to +\infty\,$, with $\bm x- \bm y/L$ fixed,  is equal to:
 \begin{equation}
 \label{scal-corr}
 F(\bm x, \bm y, \bar r;L) \approx u_l^{d+z-2+\eta} \, \mathscr{F}(u_l\bm x ,u_l\bm y, \bar r\,u_l^{-1/\nu})
