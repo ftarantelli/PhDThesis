@@ -4,7 +4,40 @@
 
 \section{Introduction}
 
-The analysis of open quantum many-body systems plays an important role in fundamental problems of quantum physics, such as quantum information, quantum computing, decoherence and condensed matter physics. The recent progress in the experimental techniques and the realizations of physical devices for quantum computing gives a further motivation to understand the general behavior of these open quantum systems. They involve a wide class of different specific issues as the study of the non-equilibrium steady state (NESS), the effects of a thermal baths, quantum optics, strongly coupled baths, ...ecc. In particular, in this discussion we focus on the effects of a dissipative process arising from the weakly interaction with Markovian baths. These dissipative mechanisms may lead to emergence of a new collective phenomena which can change completely the physical behavior of the system. In the condition of complete positivity and trace preserving of a dynamical time-evolution map, we can describe the matrix density of the open system using the Lindblad master equation. This equation describes a non-unitary time evolution which provides the dissipative behavior of the observables defined on the system. \\ 
+The analysis of open quantum many-body systems plays an important role in fundamental problems of quantum physics, such as quantum information, quantum computing, decoherence and condensed matter physics. The recent progress in the experimental techniques and the realizations of physical devices for quantum computing gives a further motivation to understand the general behavior of these open quantum systems. They involve a wide class of different specific issues as the study of the non-equilibrium steady state (NESS), the effects of a thermal baths, quantum optics, strongly coupled baths, ...ecc. In particular, in this discussion we focus on the effects of a dissipative process arising from the weakly interaction with Markovian baths. These dissipative mechanisms may lead to emergence of a new collective phenomena which can change completely the physical behavior of the system. In the condition of complete positivity and trace preserving of a dynamical time-evolution map, we can describe the matrix density of the open system using the Lindblad master equation. This equation describes a non-unitary time evolution which provides the dissipative behavior of the observables defined on the system. \rev{
+In other words, for a quantum system with a density matrix 
+$\rho$, its time evolution is given by:
+\begin{eqnarray}
+        &&  {\partial\rho\over \partial t} = {\cal L}[\rho]=
+          - i \, [ \hat H,\rho]
+          + {\mathbb D}[\rho]\,\,,
+          \label{eqlindblad}
+\end{eqnarray}
+where the shape of dissipator super-operator ${\mathbb D}$ is 
+achieved by the type of dissipation mechanism.\\
+If, now, we are interested in how the system observables
+changes during the time, we simply resolve the associated
+Lindblad operator equation:
+\begin{eqnarray}
+    \partial_t \hat{C}_{\rm H}(t)   = i\,\Bigr[\hat{H}(w),
+      \hat{C}_{\rm H}(t) \Bigr] + \gamma
+    \widehat{\mathbb{D}}[\hat{C}_{\rm H}(t)],
+    \label{operatoreqlindblad}
+ \end{eqnarray}
+where the operator $\hat{C}$ could be, e.g., the two-point
+correlation operator.\\
+This dissipation evolution leads the system to reach the 
+asymptotic non-equilibrium steady state (NESS).
+The approach to the asymptotic stationary states are generally
+controlled by the Liouvillian gap $\Delta_{\cal L}$ associated with
+the generator ${\cal L}$ entering the Lindblad equation
+(\ref{eqlindblad})~\cite{BP-openquantumsystembook,RH-book,Z-2015-relaxtimes,MBBC-18,KS-2020-boundarydephasing}.
+The asymptotic stationary state is provided by the eigenstate of
+${\cal L}$ with vanishing eigenvalue, $\Lambda_0=0$, while all other
+eigenstates have eigenvalues $\Lambda_i$ with negative real part,
+i.e. ${\rm Re}\,\Lambda_i<0$ for any $i>0$.
+}\\
+
 We analyze the dynamic evolution close to a quantum phase transition. In fact, the quantum phase transitions, separating different phases of the system, present universal quantum critical behaviors, which are independent of the local details of the system. They describe the properties of the low-energy spectrum of the system and they show a non-analytical behavior of the ground state, when the size $L^d$ of the system goes to $+\infty\,$ (thermodynamic limit). However, the finite-size effects provide a finite size scaling (FSS) framework in which, approaching the transition point, the observables satisfy peculiar FSS laws. These law characterize the quantum transition giving us a possible way to compare the analytical theory with the results obtained by computational method. We can extend this theory also to dynamical process aring from coherent drivings, as the quench of the Hamiltonian parameters. In these situations, we can provide a dynamic FSS which controls all the out-of-equilibrium regime close to the transitions point. The following step is to understand how a dissipative process drives the system localized near the transition point and how it changes the dynamic FSS. The answer is given for systems in the presence of a homogeneous local dissipation at continuous quantum transition (CQT) \cite{NRV-2019-competingdissipativeandcoherent} and first-order quantum transition (FOQT) \cite{di2020dissipative} in which emerges a new dynamic scaling behavior. However, such a dynamic scaling limit requires a particular tuning of the dissipative interactions so that we have a competition between the critical and the dissipative regime. 
 
 Instead, in the case of dissipative boundaries 
@@ -27,8 +60,6 @@ In conclusion, we start to extend all these concepts in case of thermal bath dis
 consider only the case of quench protocols, but it can be a first step for future research works. 
 
 
-
-
 %\rev{HOMOGENEOUS DISSIPATION}
 %\rev{DISSIPATIVE BOUNDARIES}
 %\rev{HOLE}
@@ -43,3 +74,5 @@ consider only the case of quench protocols, but it can be a first step for futur
 \input{cpt/3secs_dissp/32locunif.tex}
 
 \input{cpt/3secs_dissp/33thermal.tex}
+
+\input{cpt/3secs_dissp/34summary.tex}

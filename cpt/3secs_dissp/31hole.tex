@@ -29,7 +29,7 @@
   particle number and space-dependent density turns out to develop
   various dynamic scaling regimes, and nontrivial large-time behaviors
   when the dissipative mechanism acts at the center of the system.
-  
+
   Some issues concerning the behavior of fermionic gases in the presence
   of localized dissipative interactions have been already discussed in
   Refs.~\cite{FCKD-19,LHFHCE-19,KMS-19,WSDK-20,FMKCD-20}, mainly
@@ -132,12 +132,7 @@
   framework~\cite{Lindblad-76,GKS-76}, where the evolution of the matrix
   density $\rho(t)$ of the system is described by he
   equation~\cite{BP-openquantumsystembook,RH-book}
-  \begin{eqnarray}
-  &&  {\partial\rho\over \partial t} = {\cal L}[\rho]=
-    - i \, [ \hat H,\rho]
-    + {\mathbb D}[\rho]\,.
-    \label{EQLindblad}
-  \end{eqnarray}
+  \eqref{eqlindblad}.
   We recall that the conditions leading to the Lindblad framework are
   typically satisfied in quantum optical
   implementations~\cite{BDS-2015-KeldyshOptical,dr2021self}.  The form of the operator
@@ -162,17 +157,7 @@
     case of particle-loss dissipation localized at generic sites.
   
   
-  
-  The approach to the asymptotic stationary states are generally
-  controlled by the Liouvillian gap $\Delta_{\cal L}$ associated with
-  the generator ${\cal L}$ entering the Lindblad equation
-  (\ref{EQLindblad})~\cite{BP-openquantumsystembook,RH-book,Z-2015-relaxtimes,MBBC-18,KS-2020-boundarydephasing}.
-  The asymptotic stationary state is provided by the eigenstate of
-  ${\cal L}$ with vanishing eigenvalue, $\Lambda_0=0$, while all other
-  eigenstates have eigenvalues $\Lambda_i$ with negative real part,
-  i.e. ${\rm Re}\,\Lambda_i<0$ for any $i>0$.
-  
-  
+ 
   \subsubsection{Dynamic protocol}
   \label{dynprot}
   
@@ -190,7 +175,7 @@
     $N_0$ one-particle energy levels.
   
   \item[$\bullet$] The time evolution for $t>0$ is driven by the 
-    Lindblad equation (\ref{EQLindblad}) for the density matrix
+    Lindblad equation (\ref{eqlindblad}) for the density matrix
     $\rho(t)$, with particle-decay dissipation localized at a site $z$
     and controlled by the parameter $w$.
   
@@ -214,7 +199,7 @@
   \label{defct}
   \end{eqnarray}
   For homogeneous systems described by the Hamiltonian (\ref{Hfree}),
-  the Lindblad equation (\ref{EQLindblad}) 
+  the Lindblad equation (\ref{eqlindblad}) 
   implies
   \begin{eqnarray}
     {d\mathscr{C}_{x,y}\over dt} &=& i\,( \mathscr{C}_{x,y+1} -
@@ -286,7 +271,7 @@
   In this section we consider homogeneous Fermi chains, cf.
   Eq.~(\ref{Hfree}), and discuss the dynamic evolution under the
   particle-loss dissipation described by the Lindblad equation
-  (\ref{EQLindblad}), in particular Eq.~(\ref{eqscxy}). For this
+  (\ref{eqlindblad}). \rev{We apply the Eq. \eqref{operatoreqlindblad} to the two-points correlation operator which for a non-interacting fermion system contains all its physical information.} For this
   purpose, we numerically solve the differential equation (\ref{eqscxy})
   using the fourth-order Runge-Kutta method (with an accuracy of
   approximately $10^{-8}$ on the evolution of the particle number).
@@ -828,7 +813,7 @@
   arising from inhomogeneous external potentials, such as those in
   Eq.~(\ref{potential}), in the presence of a particle-decay dissipation
   at the center of the trap, as described by the Lindblad equations
-  (\ref{EQLindblad}) and (\ref{Lindop}). As already mentioned in
+  (\ref{eqlindblad}) and (\ref{Lindop}). As already mentioned in
     the introductive section, effective harmonic trapping mechanisms are
     quite common in cold-atom experiments~\cite{BDZ-08}. Therefore their
     analysis is also relevant from a phenomonological point of view.
