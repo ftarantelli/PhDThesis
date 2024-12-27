@@ -7,7 +7,8 @@ We analyze the effects of a round-trip KZ protocol across
 a CQT and FOQT. We observe peculiar behaviors when 
 we return to our initial state after the unitary 
 time-evolution.\\$ $\\
-In the CQT case, we address these issues within many-body model
+We found significant differences between classical and quantum systems under round-trip protocols. Classical systems exhibit well-defined scaling behavior with hysteresis-like features due to thermalization, while quantum systems display oscillatory and chaotic-like dynamics, highly sensitive to protocol parameters.\\$ $\\
+In the quantum case, we address these issues within many-body model
 undergoing quantum transitions, exploiting a
 unified RG framework, where general dynamic scaling
 laws are derived in the large-$t_s$ and large-$L$ limits. In particular,
@@ -23,5 +24,14 @@ to the quantum nature of the dynamics. Indeed there are
 some notable similarities with the behavior of quantum
 two-level models subject to round-trip protocols, 
 analogous the well-known Landau-Zener-Stückelberg problem~\cite{tarantelli2022out}.\\$ $\\
-In the ladder case, we introduce a 
+In the ladder case, we introduce an unitary dynamics of a one-dimensional (1D) Ising model in a magnetic field. The system is driven by a time-dependent longitudinal field \( h_\parallel = t/t_s \), where \( t_s \gg 1 \) is the time scale of the process. This field takes the system through a first-order quantum phase transition (FOQT) in a round-trip manner. We focus on the out-of-equilibrium finite-size scaling (OFSS) regime, defined in the limits \( L \to \infty \) and \( u \equiv t_s L^{-1} M_0^{-1} \to \infty \). In this regime, the time-dependent expectation values of local observables are determined by OFSS functions of the scaled time variable \( \tau = t/u \) and the parameter \( \upsilon = u\Delta^2(h_\perp, L) \), where \( \Delta \) depends on the transverse field \( h_\perp \) and the system size \( L \).
+\\$ $\\
+The OFSS functions are nearly universal, meaning they depend slightly on the details of the driving protocol, especially at the point where the direction of the round trip reverses. Numerical simulations confirm the validity of the OFSS framework.
+\\$ $\\
+We also use time-dependent perturbation theory to explore the OFSS regime, showing that the dynamics near the FOQT can be described by an effective two-level system. This approach simplifies the driving protocol to a sequence of LZ transitions. Using this effective description, we derive analytical expressions for the OFSS functions, which agree with the numerical results.
+\\$ $\\
+We extend our analysis to periodic driving protocols, where the longitudinal field crosses the FOQT multiple times. We find that OFSS remains valid over many crossings, although some differences appear due to the specific details of the driving protocol. While our study focuses on the Ising Hamiltonian, we expect the results to apply to other spin chains undergoing quantum FOQTs, such as quantum Potts chains or spin chains with staggered magnetic fields.
+%A promising direction for future research is to study the round-trip protocol in systems with weak dissipation, modeled using Lindblad dynamics for quantum spin chains. Dissipation could allow the system to relax after each transition, enabling the study of hysteresis cycles within the OFSS framework. This could also help connect quantum and classical hysteresis dynamics, as explored in previous studies of thermal FOQTs under relaxational dynamics. By including dissipation, it may be possible to better understand how unitary and non-unitary dynamics interact and affect the scaling behavior of many-body quantum systems.
+\\$ $\\
+In summary, our results establish a clear framework for understanding OFSS in systems driven across quantum FOQTs. This work provides a foundation for exploring universal properties in both unitary and dissipative settings, contributing to a deeper understanding of out-of-equilibrium dynamics in quantum systems.
 }
