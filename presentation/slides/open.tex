@@ -16,6 +16,8 @@
 \section{Dissipation}
 	\subsection{Lindblad framework}
 
+
+\begin{comment}
 \begin{frame}
 	\frametitle{Lindblad framework}
 \ba{eqlindblad}
@@ -35,6 +37,79 @@ dissipation term with coupling $w$:
 	
 
 \end{frame}
+\end{comment}
+
+
+\begin{frame}
+    \frametitle{Open quantum systems}
+    %\framesubtitle{Quantum Ising model}
+    \begin{figure}[!t]
+    \centering
+    \begin{tikzpicture}
+    \filldraw [black!30!green, rounded corners]
+            (0,0) rectangle (4,2);
+    \filldraw [yellow]
+            (2,1) circle (0.5);
+    \draw [line width=0.8pt, black!70!green, rounded corners]
+            (0,0) rectangle (4,2);
+    \draw [line width=0.8pt, black!50!yellow, rounded corners]
+            (2,1) circle (0.5);
+    \node[text=black] at (3.5,1.5) {\Large{$\bm{\mathscr{B}}$}};
+    \node[text=black] at (2,1) {$S$};
+    \end{tikzpicture}
+    \end{figure}
+    \small
+    Any empirical test involves a non-negligible influences on the quantum object $ S $ being measured.\\
+    $ $\\
+    In the approximation of \alertb{weak couplings}, we model the interaction with a Markovian bath $\mathscr{B}$ by the \alert{Lindblad master equation} for the density matrix $\rho$ of the system $S\,$:
+    \begin{equation}
+    \alert{
+    \frac{\partial \rho}{\partial t} = -i \Bigr[ H,\,\rho \Bigr] + \,\D 
+    }\,\,.
+    \end{equation}
+    \end{frame}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \begin{frame}
+    \frametitle{Open quantum systems}
+    %\framesubtitle{Quantum Ising model}
+    If $b$ indicates the parts of the open system $S\,$ in contact with an independent bath, the dissipator $\D\,$ corresponds to the sum:
+    \[
+    \alertb{
+    \D = \sum _b w_b\,\D_b} \, \,,\qquad  \alertb{\D_b =  L_b \rho L_b^\dagger - \frac{1}{2}\,\left(\rho L_b^\dagger L_b + L_b^\dagger L_b \rho \right) }\,\, ,
+    \]
+    where the Lindblad operator $L_b$ describes the interaction of the system part $b$ with its independent environment $\mathscr{B}_{b}$ and $w_b$ tunes the strength of the associated dissipative mechanism.
+    
+    \begin{figure}[!t]
+    \centering
+    \begin{tikzpicture}
+    \filldraw [black!10!yellow, rounded corners]
+            (1,-0.25) rectangle (6,0.25);
+    \draw [line width=0.8pt, black!50!yellow, rounded corners]
+            (1,-0.25) rectangle (6,0.25);
+    
+        \foreach \i in {1,...,5}
+    {
+    \filldraw [black!30!green, rounded corners]
+            (\i+0.1,1) rectangle (\i+0.9,1.75);
+    \draw [line width=0.8pt, black!70!green, rounded corners]
+            (\i+0.1,1) rectangle (\i+0.9,1.75);
+    \draw [dashed,line width=0.8pt, black, rounded corners]
+            (\i,-0.25) rectangle (\i+1,0.25);
+    \node[text=black] at (\i+0.5,1.375) {$\mathscr{B}_{b_{\i}}$};
+    \node[text=blue] at (\i+0.5,0) {$b_{\i}$};
+    
+    \draw [<->, line width=1pt,red] (\i+0.5,0.4) -- (\i+0.5,0.85);
+    \node[text=red] at (\i+0.9,0.625) {\small{$w_{b_{\i}}$}};
+    }
+    
+    \node[text=black] at (0.75,0) {$S$};
+    \end{tikzpicture}
+    \end{figure}
+    
+    \end{frame}
+
 
 
 \begin{frame}
